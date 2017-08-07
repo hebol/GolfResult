@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="Main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestGolf_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="center" id="4YH-vN-wzE">
+                            <items>
+                                <button alignment="left" title="&lt;" id="dDN-5h-3St">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <connections>
+                                        <action selector="showPreviousHole" destination="AgC-eL-Hgc" id="r2w-bB-XRd"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" verticalAlignment="center" text="1" id="fPN-NJ-mC4">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="30"/>
+                                </label>
+                                <imageView width="0.20000000000000001" height="0.59999999999999998" alignment="center" verticalAlignment="center" id="daT-sU-fA2"/>
+                                <button alignment="right" verticalAlignment="bottom" title="&gt;" id="Jpm-8H-oPY">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <connections>
+                                        <action selector="showNextHole" destination="AgC-eL-Hgc" id="F8x-er-yxY"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="Ojg-iR-5d4"/>
+                        <group width="1" alignment="left" id="WQ0-j4-Jh3">
+                            <items>
+                                <label alignment="left" text="Par:" id="kyh-eI-isg">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="26"/>
+                                </label>
+                                <label alignment="right" text="3 (5)" id="eFQ-Q4-QE5">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="26"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="EkU-jn-FeX">
+                            <items>
+                                <button alignment="left" title="Res:" id="XDi-O8-Hat">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="26"/>
+                                    <connections>
+                                        <action selector="selectScore" destination="AgC-eL-Hgc" id="SUb-PI-Z0Z"/>
+                                    </connections>
+                                </button>
+                                <label alignment="right" verticalAlignment="center" text="0" id="cZx-g3-5NW">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="26"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="holeLabel" destination="fPN-NJ-mC4" id="JG7-cC-E7z"/>
+                        <outlet property="lockImage" destination="daT-sU-fA2" id="2ts-gT-48X"/>
+                        <outlet property="scoreLabel" destination="cZx-g3-5NW" id="1X4-qC-gQE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Score-->
+        <scene sceneID="abw-ty-xVi">
+            <objects>
+                <controller identifier="Score" id="g9f-rO-paG" customClass="ScoreInterfaceController" customModule="TestGolf_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="M5E-lc-FIq">
+                            <items>
+                                <button width="0.5" alignment="center" title="Avbryt" id="LjX-4B-Il5">
+                                    <connections>
+                                        <action selector="cancel" destination="g9f-rO-paG" id="V5J-Sp-ahi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="CnO-f4-u0W">
+                            <items>
+                                <button width="0.20000000000000001" alignment="left" title="1" id="jrJ-uI-hhQ">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton1" destination="g9f-rO-paG" id="uat-4y-dtH"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="2" id="8Xm-LR-Dn0">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton2" destination="g9f-rO-paG" id="xU9-62-SRq"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="3" id="WtM-vY-aPB">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton3" destination="g9f-rO-paG" id="UUP-CH-Sgc"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="4" id="iOb-uP-z2r">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton4" destination="g9f-rO-paG" id="m11-dE-cjk"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="5" id="DM6-W1-x1z">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton5" destination="g9f-rO-paG" id="Nsv-wp-bMc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="6jQ-IV-JfN">
+                            <items>
+                                <button width="0.20000000000000001" alignment="left" title="6" id="tRj-hU-MTW">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton6" destination="g9f-rO-paG" id="qTx-YF-IGD"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="7" id="dFZ-jJ-0pg">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton7" destination="g9f-rO-paG" id="01c-xb-5Yz"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" alignment="left" title="8" id="b0F-yw-6qX">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton8" destination="g9f-rO-paG" id="zbp-89-eln"/>
+                                    </connections>
+                                </button>
+                                <picker width="0.40000000000000002" height="1" alignment="right" focusStyle="stack" id="uWI-kH-rXV">
+                                    <connections>
+                                        <action selector="selectScore" destination="g9f-rO-paG" id="NKh-EX-gjG"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="itemPicker" destination="uWI-kH-rXV" id="oab-tX-YOc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TestGolf_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
