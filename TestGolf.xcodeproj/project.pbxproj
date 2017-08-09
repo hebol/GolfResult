@@ -22,7 +22,12 @@
 		5B0A70CC1F2B4A1200AC6B17 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A70CB1F2B4A1200AC6B17 /* ExtensionDelegate.swift */; };
 		5B0A70CE1F2B4A1200AC6B17 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A70CD1F2B4A1200AC6B17 /* NotificationController.swift */; };
 		5B0A70D01F2B4A1200AC6B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0A70CF1F2B4A1200AC6B17 /* Assets.xcassets */; };
-		5B8C83841F2DB82400FB13A8 /* lock-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83831F2DB82400FB13A8 /* lock-128.png */; };
+		5B5CF6291F38F4690076293B /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6281F38F4690076293B /* ResultTableViewCell.swift */; };
+		5B5CF62B1F38F96B0076293B /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62A1F38F96B0076293B /* ResultTableViewController.swift */; };
+		5B5CF62D1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62C1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift */; };
+		5B5CF6301F3B38CB0076293B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62F1F3B38CB0076293B /* Util.swift */; };
+		5B5CF6311F3B38CB0076293B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62F1F3B38CB0076293B /* Util.swift */; };
+		5B8C83841F2DB82400FB13A8 /* unlock-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83831F2DB82400FB13A8 /* unlock-128.png */; };
 		5B8C83861F34D41700FB13A8 /* lock-128-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83851F34D41700FB13A8 /* lock-128-red.png */; };
 		5B8C83881F34DF0A00FB13A8 /* ScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */; };
 /* End PBXBuildFile section */
@@ -108,7 +113,11 @@
 		5B0A70CD1F2B4A1200AC6B17 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		5B0A70CF1F2B4A1200AC6B17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B0A70D11F2B4A1200AC6B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B8C83831F2DB82400FB13A8 /* lock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-128.png"; sourceTree = "<group>"; };
+		5B5CF6281F38F4690076293B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		5B5CF62A1F38F96B0076293B /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		5B5CF62C1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		5B5CF62F1F3B38CB0076293B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		5B8C83831F2DB82400FB13A8 /* unlock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-128.png"; sourceTree = "<group>"; };
 		5B8C83851F34D41700FB13A8 /* lock-128-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-128-red.png"; sourceTree = "<group>"; };
 		5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +157,7 @@
 		5B0A70821F2B4A1100AC6B17 = {
 			isa = PBXGroup;
 			children = (
+				5B5CF62E1F3B38A40076293B /* Utilities */,
 				5B0A708D1F2B4A1200AC6B17 /* TestGolf */,
 				5B0A70A21F2B4A1200AC6B17 /* TestGolfTests */,
 				5B0A70AD1F2B4A1200AC6B17 /* TestGolfUITests */,
@@ -178,6 +188,9 @@
 				5B0A70951F2B4A1200AC6B17 /* Assets.xcassets */,
 				5B0A70971F2B4A1200AC6B17 /* LaunchScreen.storyboard */,
 				5B0A709A1F2B4A1200AC6B17 /* Info.plist */,
+				5B5CF6281F38F4690076293B /* ResultTableViewCell.swift */,
+				5B5CF62A1F38F96B0076293B /* ResultTableViewController.swift */,
+				5B5CF62C1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift */,
 			);
 			path = TestGolf;
 			sourceTree = "<group>";
@@ -204,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8C83851F34D41700FB13A8 /* lock-128-red.png */,
-				5B8C83831F2DB82400FB13A8 /* lock-128.png */,
+				5B8C83831F2DB82400FB13A8 /* unlock-128.png */,
 				5B0A70B81F2B4A1200AC6B17 /* Interface.storyboard */,
 				5B0A70BB1F2B4A1200AC6B17 /* Assets.xcassets */,
 				5B0A70BD1F2B4A1200AC6B17 /* Info.plist */,
@@ -232,6 +245,14 @@
 				5B0A70C81F2B4A1200AC6B17 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B5CF62E1F3B38A40076293B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B5CF62F1F3B38CB0076293B /* Util.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,10 +374,13 @@
 					};
 					5B0A70B21F2B4A1200AC6B17 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JGUCJ8NA5F;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					5B0A70C11F2B4A1200AC6B17 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JGUCJ8NA5F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -413,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8C83861F34D41700FB13A8 /* lock-128-red.png in Resources */,
-				5B8C83841F2DB82400FB13A8 /* lock-128.png in Resources */,
+				5B8C83841F2DB82400FB13A8 /* unlock-128.png in Resources */,
 				5B0A70BC1F2B4A1200AC6B17 /* Assets.xcassets in Resources */,
 				5B0A70BA1F2B4A1200AC6B17 /* Interface.storyboard in Resources */,
 			);
@@ -434,7 +458,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5CF62B1F38F96B0076293B /* ResultTableViewController.swift in Sources */,
+				5B5CF6301F3B38CB0076293B /* Util.swift in Sources */,
+				5B5CF62D1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift in Sources */,
 				5B0A70911F2B4A1200AC6B17 /* ViewController.swift in Sources */,
+				5B5CF6291F38F4690076293B /* ResultTableViewCell.swift in Sources */,
 				5B0A708F1F2B4A1200AC6B17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +489,7 @@
 			files = (
 				5B8C83881F34DF0A00FB13A8 /* ScoreInterfaceController.swift in Sources */,
 				5B0A70CE1F2B4A1200AC6B17 /* NotificationController.swift in Sources */,
+				5B5CF6311F3B38CB0076293B /* Util.swift in Sources */,
 				5B0A70CC1F2B4A1200AC6B17 /* ExtensionDelegate.swift in Sources */,
 				5B0A70CA1F2B4A1200AC6B17 /* InterfaceController.swift in Sources */,
 			);
@@ -618,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = JGUCJ8NA5F;
 				INFOPLIST_FILE = "TestGolf WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.sjoblom.TestGolf.watchkitapp.watchkitextension;
@@ -634,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = JGUCJ8NA5F;
 				INFOPLIST_FILE = "TestGolf WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.sjoblom.TestGolf.watchkitapp.watchkitextension;
@@ -651,12 +682,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JGUCJ8NA5F;
 				IBSC_MODULE = TestGolf_WatchKit_Extension;
 				INFOPLIST_FILE = "TestGolf WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.sjoblom.TestGolf.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
@@ -668,8 +703,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JGUCJ8NA5F;
 				IBSC_MODULE = TestGolf_WatchKit_Extension;
 				INFOPLIST_FILE = "TestGolf WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = se.sjoblom.TestGolf.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

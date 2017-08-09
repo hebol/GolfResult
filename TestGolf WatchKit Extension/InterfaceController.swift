@@ -9,36 +9,118 @@
 import WatchKit
 import Foundation
 import UIKit
+import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, ScoreHandler {
+class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegate {
     @IBOutlet weak var holeLabel: WKInterfaceLabel!
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!
     @IBOutlet weak var lockImage: WKInterfaceImage!
-    var currentHole = 1;
+    @IBOutlet weak var parLabel: WKInterfaceLabel!
+    
+    var currentHole = 1
+    var results   = [String:[Int]]()
+    var names     = [String]()
+    var hcps      = [Int]()
+    var courseHcp = [Int]()
+    
+    var session : WCSession!
+    
+    let notification = Notification.Name(rawValue:"ScoreNotification")
     
     func selectedScore(_ value: Int) {
-        scoreLabel.setText(String(value))
+        results[String(currentHole)] = [value]
+        displayHole(currentHole);
+        do {
+            try session.updateApplicationContext(results)
+        } catch {
+            print("error")
+        }
     }
 
+    override init() {
+        super.init()
+        if (session == nil) {
+            if (WCSession.isSupported()) {
+                session = WCSession.default()
+                session.delegate = self
+                session.activate()
+            }
+        } else {
+            NSLog("WK Session already initiated!")
+        }
+        
+        NotificationCenter.default.addObserver(forName:notification, object:nil, queue:nil, using:scoreNotification)
+    }
+    
+    func scoreNotification(notification:Notification) -> Void {
+        NSLog("WK Did receive notification %@", notification.userInfo!)
+        var data = (notification.userInfo as! [String:Any])
+        
+        //let tempResults = (data["reszlts"] as! [[Int]])
+        names           = (data["names"] as! [String])
+        hcps            = (data["hcps"] as! [Int])
+        courseHcp       = (data["courseHcp"] as! [Int])
+        results = [String:[Int]]()
+        currentHole     = 1
+        displayHole(currentHole)
+    }
     
     @IBAction func selectScore() {
-        NSLog("Will present controller")
         self.presentController(withName: "Score", context: self)
     }
+    
     @IBAction func showNextHole() {
         currentHole += 1;
         if currentHole > 18 {
             currentHole = 1;
         }
-        holeLabel.setText(String(currentHole));
+        displayHole(currentHole)
     }
+    
+    func displayHole(_ hole: Int) {
+        holeLabel.setText(String(hole));
+        let value = results[String(hole)]
+        if (value != nil) {
+            scoreLabel.setText(String(value![0]))
+        } else {
+            scoreLabel.setText("-")
+        }
+        let hcp = 3 + (hcps[0] / 18) + (hcps[0] % 18 >= courseHcp[hole - 1] ? 1 : 0);
+        parLabel.setText(String(hcp) + " (" + String(courseHcp[hole - 1]) + ")")
+    }
+    
     @IBAction func showPreviousHole() {
         currentHole -= 1;
         if currentHole < 1 {
             currentHole = 18;
         }
-        
-        holeLabel.setText(String(currentHole));
+        displayHole(currentHole)
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        NSLog("activationDidCompleteWith session:%@", session)
+    }
+    func sessionReachabilityDidChange(_ session: WCSession) {
+        NSLog("sessionReachabilityDidChange session:%@", session)
+    }
+    
+     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        NSLog("WK: got message from App %@", message)
+    }
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) ->
+        Void) {
+        NSLog("WK: got message from App %@", message)
+        replyHandler(["reply":results])
+    }
+    
+
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        NSLog("WK Received data %@", applicationContext)
+        //Use this to update the UI instantaneously (otherwise, takes a little while)
+        DispatchQueue.main.async() {
+            NotificationCenter.default.post(name:self.notification, object: nil, userInfo:applicationContext)
+        }
     }
     
     override func awake(withContext context: Any?) {

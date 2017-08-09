@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="holeLabel" destination="fPN-NJ-mC4" id="JG7-cC-E7z"/>
                         <outlet property="lockImage" destination="daT-sU-fA2" id="2ts-gT-48X"/>
+                        <outlet property="parLabel" destination="eFQ-Q4-QE5" id="1BS-xW-CaO"/>
                         <outlet property="scoreLabel" destination="cZx-g3-5NW" id="1X4-qC-gQE"/>
                     </connections>
                 </controller>
@@ -85,69 +86,61 @@
                         </group>
                         <group width="1" alignment="left" id="CnO-f4-u0W">
                             <items>
-                                <button width="0.20000000000000001" alignment="left" title="1" id="jrJ-uI-hhQ">
+                                <button width="0.25" alignment="left" title="1" id="jrJ-uI-hhQ">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton1" destination="g9f-rO-paG" id="uat-4y-dtH"/>
                                     </connections>
                                 </button>
-                                <button width="0.20000000000000001" alignment="left" title="2" id="8Xm-LR-Dn0">
+                                <button width="0.25" alignment="left" title="2" id="8Xm-LR-Dn0">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton2" destination="g9f-rO-paG" id="xU9-62-SRq"/>
                                     </connections>
                                 </button>
-                                <button width="0.20000000000000001" alignment="left" title="3" id="WtM-vY-aPB">
+                                <button width="0.25" alignment="left" title="3" id="WtM-vY-aPB">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton3" destination="g9f-rO-paG" id="UUP-CH-Sgc"/>
                                     </connections>
                                 </button>
-                                <button width="0.20000000000000001" alignment="left" title="4" id="iOb-uP-z2r">
+                                <button width="0.25" alignment="left" title="4" id="iOb-uP-z2r">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton4" destination="g9f-rO-paG" id="m11-dE-cjk"/>
-                                    </connections>
-                                </button>
-                                <button width="0.20000000000000001" alignment="left" title="5" id="DM6-W1-x1z">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton5" destination="g9f-rO-paG" id="Nsv-wp-bMc"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="6jQ-IV-JfN">
                             <items>
-                                <button width="0.20000000000000001" alignment="left" title="6" id="tRj-hU-MTW">
+                                <button width="0.25" alignment="left" title="5" id="DM6-W1-x1z">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton5" destination="g9f-rO-paG" id="Nsv-wp-bMc"/>
+                                    </connections>
+                                </button>
+                                <button width="0.25" alignment="left" title="6" id="tRj-hU-MTW">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton6" destination="g9f-rO-paG" id="qTx-YF-IGD"/>
                                     </connections>
                                 </button>
-                                <button width="0.20000000000000001" alignment="left" title="7" id="dFZ-jJ-0pg">
+                                <button width="0.25" alignment="left" title="7" id="dFZ-jJ-0pg">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton7" destination="g9f-rO-paG" id="01c-xb-5Yz"/>
                                     </connections>
                                 </button>
-                                <button width="0.20000000000000001" alignment="left" title="8" id="b0F-yw-6qX">
+                                <button width="0.25" alignment="left" title="8" id="b0F-yw-6qX">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton8" destination="g9f-rO-paG" id="zbp-89-eln"/>
                                     </connections>
                                 </button>
-                                <picker width="0.40000000000000002" height="1" alignment="right" focusStyle="stack" id="uWI-kH-rXV">
-                                    <connections>
-                                        <action selector="selectScore" destination="g9f-rO-paG" id="NKh-EX-gjG"/>
-                                    </connections>
-                                </picker>
                             </items>
                         </group>
                     </items>
-                    <connections>
-                        <outlet property="itemPicker" destination="uWI-kH-rXV" id="oab-tX-YOc"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>

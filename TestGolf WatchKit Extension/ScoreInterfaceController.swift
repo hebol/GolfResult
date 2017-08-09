@@ -61,22 +61,6 @@ class ScoreInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         self.delegate = context as? ScoreHandler
         // Configure interface objects here.
-        NSLog(self.delegate != nil ? "Set" : "Not Set");
-
-        let pickerItems: [WKPickerItem] = options.map {
-            let pickerItem = WKPickerItem()
-            pickerItem.title = $0.0
-            pickerItem.caption = $0.1
-            return pickerItem
-        }
-        NSLog("Setting items %@", pickerItems)
-        itemPicker.setItems(pickerItems)
+        //NSLog(self.delegate != nil ? "Set" : "Not Set");
     }
-    
-    var options: [(String, String)] = [
-        ("9", "9"),
-        ("10", "10"),
-        ("11", "11"),
-        ("12", "12")]
-    
 }
