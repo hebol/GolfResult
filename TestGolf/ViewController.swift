@@ -103,9 +103,15 @@ class ViewController: UIViewController {
     
     @IBAction func startRound(_ sender: Any) {
         NSLog("App: Starting round")
-        NotificationCenter.default.post(name:self.roundNotification, object: nil,
-                                        userInfo:["names":getNames(),
-                                                  "hcps": getHcps()])
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if (appDelegate.getPlayerResults().count == 0) {
+            NotificationCenter.default.post(name:self.roundNotification, object: nil,
+                                            userInfo:["names":getNames(),
+                                                      "hcps": getHcps()])
+            
+        } else {
+            NSLog("App: Reusing old values");
+        }
     }
 }
 

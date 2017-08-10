@@ -17,6 +17,8 @@ class ResultTableViewController: UITableViewController {
         let alert = UIAlertController(title: "Avsluta runda", message: "Skall du avsluta rundan?", preferredStyle: .alert)
         let clearAction = UIAlertAction(title: "Ja, Avsluta", style: .destructive) { (alert: UIAlertAction!) -> Void in
             _ = self.navigationController?.popViewController(animated: true)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.clearResults()
         }
         let cancelAction = UIAlertAction(title: "Nej, Fortsätt", style: .default) { (alert: UIAlertAction!) -> Void in
             //print("You pressed Cancel")

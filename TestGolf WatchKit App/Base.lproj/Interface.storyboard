@@ -64,6 +64,7 @@
                         <outlet property="holeLabel" destination="fPN-NJ-mC4" id="JG7-cC-E7z"/>
                         <outlet property="lockImage" destination="daT-sU-fA2" id="2ts-gT-48X"/>
                         <outlet property="parLabel" destination="eFQ-Q4-QE5" id="1BS-xW-CaO"/>
+                        <outlet property="resultButton" destination="XDi-O8-Hat" id="caX-FU-FbP"/>
                         <outlet property="scoreLabel" destination="cZx-g3-5NW" id="1X4-qC-gQE"/>
                     </connections>
                 </controller>

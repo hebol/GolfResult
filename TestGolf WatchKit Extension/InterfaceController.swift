@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!
     @IBOutlet weak var lockImage: WKInterfaceImage!
     @IBOutlet weak var parLabel: WKInterfaceLabel!
+    @IBOutlet weak var resultButton: WKInterfaceButton!
     
     var currentHole = 1
     var results   = [String:[Int]]()
@@ -79,6 +80,8 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     func displayHole(_ hole: Int) {
         holeLabel.setText(String(hole));
         let values = results[String(hole)]
+        resultButton.setEnabled(values == nil)
+        
         if (values != nil) {
             var result = ""
             for value in values! {
@@ -88,8 +91,10 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
                 result += String(value)
             }
             scoreLabel.setText(result)
+            lockImage.setImageNamed("lock-128-red.png")
         } else {
             scoreLabel.setText("-")
+            lockImage.setImageNamed("unlock-128.png")
         }
         let hcp = 3 + (hcps[0] / 18) + (hcps[0] % 18 >= courseHcp[hole - 1] ? 1 : 0);
         parLabel.setText(String(hcp) + " (" + String(courseHcp[hole - 1]) + ")")
@@ -129,7 +134,6 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        lockImage.setImageNamed("lock-128-red.png")
         
         // Configure interface objects here.
     }

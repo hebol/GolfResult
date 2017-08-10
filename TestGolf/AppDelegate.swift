@@ -32,7 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         if let temp = defaults.object(forKey: "hcps") {
             hcps = temp as! [Int]
         }
-
+/*        if let temp = defaults.object(forKey: "results") {
+            results = temp as! [[Int]]
+        }*/
 
         // Registering for notification
         NotificationCenter.default.addObserver(forName:roundNotification, object:nil, queue:nil, using:newRound)
@@ -52,6 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     func getPlayerResults() -> [[Int]] {
         return results
+    }
+    func clearResults() {
+        results = [[Int]]()
     }
     
     func newRound(notification:Notification) -> Void {
@@ -92,6 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                 }
                 self.results.append(resultList)
             }
+            let defaults = UserDefaults.standard
+            defaults.set(self.results, forKey: "results")
             NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["results":self.results])
         }
     }
