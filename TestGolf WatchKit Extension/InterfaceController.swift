@@ -27,8 +27,8 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     
     let notification = Notification.Name(rawValue:"ScoreNotification")
     
-    func selectedScore(_ value: Int) {
-        results[String(currentHole)] = [value]
+    func selectedScore(_ values: [Int]) {
+        results[String(currentHole)] = values
         displayHole(currentHole);
         do {
             try session.updateApplicationContext(results)
@@ -56,7 +56,6 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
         NSLog("WK Did receive notification %@", notification.userInfo!)
         var data = (notification.userInfo as! [String:Any])
         
-        //let tempResults = (data["reszlts"] as! [[Int]])
         names           = (data["names"] as! [String])
         hcps            = (data["hcps"] as! [Int])
         courseHcp       = (data["courseHcp"] as! [Int])
@@ -66,7 +65,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     }
     
     @IBAction func selectScore() {
-        self.presentController(withName: "Score", context: self)
+        self.presentController(withName: "Score", context: ["delegate":self, "names": names])
     }
     
     @IBAction func showNextHole() {
@@ -79,9 +78,16 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     
     func displayHole(_ hole: Int) {
         holeLabel.setText(String(hole));
-        let value = results[String(hole)]
-        if (value != nil) {
-            scoreLabel.setText(String(value![0]))
+        let values = results[String(hole)]
+        if (values != nil) {
+            var result = ""
+            for value in values! {
+                if (result.characters.count > 0) {
+                    result += " "
+                }
+                result += String(value)
+            }
+            scoreLabel.setText(result)
         } else {
             scoreLabel.setText("-")
         }
@@ -112,8 +118,6 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
         NSLog("WK: got message from App %@", message)
         replyHandler(["reply":results])
     }
-    
-
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         NSLog("WK Received data %@", applicationContext)

@@ -10,47 +10,49 @@ import WatchKit
 import Foundation
 
 protocol ScoreHandler {
-    func selectedScore(_ value: Int)
+    func selectedScore(_ value: [Int])
 }
 
 class ScoreInterfaceController: WKInterfaceController {
-    @IBOutlet var itemPicker: WKInterfacePicker!
+    @IBOutlet var nameLabel: WKInterfaceLabel!
     var delegate: ScoreHandler?
+    var names: [String]?
+    var results = [Int]()
     
-    @IBAction func pickerSelectedItemChanged(value: Int) {
-        NSLog("Selected %d", value)
+    func process(_ value: Int) {
+        results.append(value)
+        NSLog("WK:Process %d => %@", value, results)
+        if (results.count >= (names?.count)!) {
+            delegate?.selectedScore(results)
+            self.dismiss()
+        } else {
+            nameLabel.setText(names?[results.count])
+        }
     }
+    
     @IBAction func selectedButton1() {
-        self.delegate?.selectedScore(1)
-        self.dismiss()
+        process(1);
     }
     @IBAction func selectedButton2() {
-        self.delegate?.selectedScore(2)
-        self.dismiss()
+        process(2);
     }
     @IBAction func selectedButton3() {
-        self.delegate?.selectedScore(3)
-        self.dismiss()
+        process(3);
     }
     @IBAction func selectedButton4() {
-        self.delegate?.selectedScore(4)
-        self.dismiss()
+        process(4);
     }
     @IBAction func selectedButton5() {
-        self.delegate?.selectedScore(5)
-        self.dismiss()
+        process(5);
     }
     @IBAction func selectedButton6() {
-        self.delegate?.selectedScore(6)
-        self.dismiss()
+        process(6);
     }
     @IBAction func selectedButton7() {
-        self.delegate?.selectedScore(7)
-        self.dismiss()
+        process(7);
     }
     @IBAction func selectedButton8() {
-        self.delegate?.selectedScore(8)
-        self.dismiss()
+        process(8);
     }
     
     @IBAction func cancel() {
@@ -59,7 +61,11 @@ class ScoreInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        self.delegate = context as? ScoreHandler
+        let data = context as! [String:Any]
+        self.delegate = data["delegate"] as? ScoreHandler
+        self.names    = data["names"] as? [String]
+        nameLabel.setText(names?[results.count])
+
         // Configure interface objects here.
         //NSLog(self.delegate != nil ? "Set" : "Not Set");
     }

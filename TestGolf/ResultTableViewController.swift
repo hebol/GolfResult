@@ -11,7 +11,6 @@ import UIKit
 class ResultTableViewController: UITableViewController {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
     let scoreNotification = Notification.Name(rawValue:"ScoreNotification")
-    var names = [String]()
 
    
     @IBAction func avslutaRunda(_ sender: Any) {
@@ -47,6 +46,38 @@ class ResultTableViewController: UITableViewController {
         self.tableView.tableHeaderView = headerCell;
     }
     
+    override public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let cellIdentifier = "ResultFooterSectionTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? ResultFooterSectionTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of " + cellIdentifier + ".")
+        }
+        cell.roundDirectionLabel.text = section == 0 ? "Ut" : "In"
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let names = appDelegate.getPlayerNames()
+        let start   = section == 0 ? 0 : 9
+        let results = appDelegate.getPlayerResults()
+        
+        let resultFields = [cell.player1ResultLabel, cell.player2ResultLabel, cell.player3ResultLabel, cell.player4ResultLabel]
+        
+        for col in 0 ..< 4 {
+            resultFields[col]?.isHidden = col >= names.count
+            var result = 0
+            for row in start ..< start + 9 {
+                if row < results.count && col < results[row].count {
+                    result += results[row][col]
+                }
+            }
+            resultFields[col]?.text = String(result)
+        }
+
+        return cell;
+    }
+    
+    override func tableView( _ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 44
+    }
+    
     func updatedScore(notification:Notification) -> Void {
         NSLog("App: Did receive notification %@", notification.userInfo!)
         result = notification.userInfo!["results"] as! [[Int]]
@@ -55,20 +86,8 @@ class ResultTableViewController: UITableViewController {
     
     func newRound(notification:Notification) -> Void {
         NSLog("App: Did receive notification %@", notification.userInfo!)
-        names = notification.userInfo!["names"] as! [String]
-        setNameList(names)
         
         tableView.reloadData()
-    }
-    
-    func setNameList(_ names: [String]) {
-        guard let headerCell = self.tableView.tableHeaderView as? ResultHeaderTableViewCell  else {
-            fatalError("No header view!")
-        }
-        headerCell.spelare1Label.text = names[0].trim()
-        headerCell.spelare2Label.text = names[1].trim()
-        headerCell.spelare3Label.text = names[2].trim()
-        headerCell.spelare4Label.text = names[3].trim()
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,11 +100,11 @@ class ResultTableViewController: UITableViewController {
     var result = [[Int]]()
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return result.count
+        return 9
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,15 +112,17 @@ class ResultTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ResultTableViewCell  else {
             fatalError("The dequeued cell is not an instance of " + cellIdentifier + ".")
         }
-        cell.halLabel.text = String(indexPath.row + 1)
-        cell.result1Label.isHidden = result[indexPath.row].count < 1;
-        cell.result2Label.isHidden = result[indexPath.row].count < 2;
-        cell.result3Label.isHidden = result[indexPath.row].count < 3;
-        cell.result4Label.isHidden = result[indexPath.row].count < 4;
-        cell.result1Label.text = getValue(0, result[indexPath.row]);
-        cell.result2Label.text = getValue(1, result[indexPath.row]);
-        cell.result3Label.text = getValue(2, result[indexPath.row]);
-        cell.result4Label.text = getValue(3, result[indexPath.row]);
+        let row = indexPath.row + 9 * indexPath.section
+        cell.halLabel.text = String(row + 1)
+        let data = row < result.count ? result[row] : [Int]()
+        cell.result1Label.isHidden = data.count < 1
+        cell.result2Label.isHidden = data.count < 2
+        cell.result3Label.isHidden = data.count < 3
+        cell.result4Label.isHidden = data.count < 4
+        cell.result1Label.text = getValue(0, data)
+        cell.result2Label.text = getValue(1, data)
+        cell.result3Label.text = getValue(2, data)
+        cell.result4Label.text = getValue(3, data)
 
         return cell
     }

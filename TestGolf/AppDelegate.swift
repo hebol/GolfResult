@@ -24,6 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             session.delegate = self;
             session.activate()
         }
+        
+        let defaults = UserDefaults.standard
+        if let temp = defaults.object(forKey: "names") {
+            names = temp as! [String]
+        }
+        if let temp = defaults.object(forKey: "hcps") {
+            hcps = temp as! [Int]
+        }
+
 
         // Registering for notification
         NotificationCenter.default.addObserver(forName:roundNotification, object:nil, queue:nil, using:newRound)
@@ -38,6 +47,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func getPlayerNames() -> [String] {
         return names
     }
+    func getPlayerHcps() -> [Int] {
+        return hcps
+    }
+    func getPlayerResults() -> [[Int]] {
+        return results
+    }
     
     func newRound(notification:Notification) -> Void {
         NSLog("App(del): Did receive notification %@", notification.userInfo!)
@@ -45,6 +60,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             var data = notification.userInfo! as! [String : Any]
             names = data["names"] as! [String]
             hcps  = data["hcps"] as! [Int]
+            
+            let defaults = UserDefaults.standard
+            defaults.set(names, forKey: "names")
+            defaults.set(hcps, forKey: "hcps")
+
             
             results = [[Int]]()
             

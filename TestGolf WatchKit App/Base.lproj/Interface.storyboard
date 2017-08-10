@@ -84,6 +84,7 @@
                                 </button>
                             </items>
                         </group>
+                        <label alignment="center" text="Label" textAlignment="center" id="ONb-3k-8Qd"/>
                         <group width="1" alignment="left" id="CnO-f4-u0W">
                             <items>
                                 <button width="0.25" alignment="left" title="1" id="jrJ-uI-hhQ">
@@ -141,6 +142,9 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="ONb-3k-8Qd" id="hHr-25-Ere"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>

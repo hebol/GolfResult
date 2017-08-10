@@ -27,6 +27,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let names = appDelegate.getPlayerNames()
+        let nameLabels = [spelare1TextField, spelare2TextField, spelare3TextField, spelare4TextField]
+        for index in 0  ..< nameLabels.count  {
+            nameLabels[index]?.text = names.count > index ? names[index] : ""
+        }
+        let hcps = appDelegate.getPlayerHcps()
+        let hcpLabels = [spelare1Hcp, spelare2Hcp, spelare3Hcp, spelare4Hcp]
+        for index in 0  ..< hcpLabels.count  {
+            hcpLabels[index]?.text = hcps.count > index ? String(hcps[index]) : ""
+            hcpfieldWasUpdated(hcpLabels[index] as Any)
+        }
+
         startButton.isEnabled = hasSetValue(spelare1TextField) && hasSetValue(spelare1Hcp);
     }
     
@@ -40,15 +54,15 @@ class ViewController: UIViewController {
         let label  = labelMap[senderField]
         if (hasSetValue(senderField)) {
             let hcp    = Float(senderField.text!)
-            label??.text = convertHcp(hcp!)
+            label??.text = convertHcp(hcp)
         } else {
             label??.text = ""
         }
     }
     
-    func convertHcp(_ value: Float) -> String {
-        if (value != Float.nan) {
-            return String(Int(roundf(value)))
+    func convertHcp(_ value: Float?) -> String {
+        if (value != nil && value != Float.nan) {
+            return String(Int(roundf(value!)))
         } else {
             return "";
         }
@@ -67,8 +81,9 @@ class ViewController: UIViewController {
         var result = [String]()
         let fields = [spelare1TextField, spelare2TextField, spelare3TextField, spelare4TextField]
         for field in fields {
-            if (field?.text?.trim() != nil) {
-                result.append(field!.text!.trim())
+            let value = field!.text!.trim()
+            if (!value.isEmpty) {
+                result.append(value)
             }
         }
         
