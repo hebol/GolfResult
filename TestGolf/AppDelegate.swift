@@ -52,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func getPlayerHcps() -> [Int] {
         return hcps
     }
+    func getCourseHcps() -> [Int] {
+        return courseHcp
+    }
     func getPlayerResults() -> [[Int]] {
         return results
     }
@@ -60,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func newRound(notification:Notification) -> Void {
-        NSLog("App(del): Did receive notification %@", notification.userInfo!)
+        NSLog("App(del): Did receive notification", notification.userInfo!)
         do {
             var data = notification.userInfo! as! [String : Any]
             names = data["names"] as! [String]

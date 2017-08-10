@@ -60,17 +60,27 @@ class ResultTableViewController: UITableViewController {
         let start   = section == 0 ? 0 : 9
         let results = appDelegate.getPlayerResults()
         
+        let playerHcps = appDelegate.getPlayerHcps()
+        let courseHcps = appDelegate.getCourseHcps()
+        
         let resultFields = [cell.player1ResultLabel, cell.player2ResultLabel, cell.player3ResultLabel, cell.player4ResultLabel]
         
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = col >= names.count
-            var result = 0
+            var result:Int       = 0
+            var resultPoints:Int = 0
             for row in start ..< start + 9 {
                 if row < results.count && col < results[row].count {
-                    result += results[row][col]
+                    let strokes = results[row][col]
+                    result += strokes
+                    
+                    let courseHcp = courseHcps[row]
+                    let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
+                    let points = max(hcp - strokes, 0) + 2;
+                    resultPoints += points
                 }
             }
-            resultFields[col]?.text = String(result)
+            resultFields[col]?.text = String(result) + " (" + String(resultPoints) + ")"
         }
 
         return cell;
@@ -115,24 +125,37 @@ class ResultTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of " + cellIdentifier + ".")
         }
         let row = indexPath.row + 9 * indexPath.section
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let courseHcp = appDelegate.getCourseHcps()[row]
+        
         cell.halLabel.text = String(row + 1)
+        cell.hcpLabel.text = "(" + String(courseHcp) + ")"
         let data = row < result.count ? result[row] : [Int]()
-        cell.result1Label.isHidden = data.count < 1
-        cell.result2Label.isHidden = data.count < 2
-        cell.result3Label.isHidden = data.count < 3
-        cell.result4Label.isHidden = data.count < 4
-        cell.result1Label.text = getValue(0, data)
-        cell.result2Label.text = getValue(1, data)
-        cell.result3Label.text = getValue(2, data)
-        cell.result4Label.text = getValue(3, data)
+        let resultFields = [cell.result1Label, cell.result2Label, cell.result3Label, cell.result4Label]
+        let names = appDelegate.getPlayerNames()
+        let playerHcps = appDelegate.getPlayerHcps()
+        
+        for col in 0 ..< 4 {
+            resultFields[col]?.isHidden = data.count <= col
+            if (col < names.count) {
+                let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
+                let strokes = getValue(col, data)
+                let points = max(hcp - strokes, 0) + 2;
+                
+                resultFields[col]?.text = String(strokes) + " (" + String(points) + ")"
+                if (strokes > 0) {
+                    NSLog("Player %@ hcp:%d strokes:%d points: %d", names[col], hcp, strokes, points);
+                }
+            }
+        }
 
         return cell
     }
     
-    func getValue( _ index: Int, _ array: [Int]) -> String {
-        var returnValue = "";
+    func getValue( _ index: Int, _ array: [Int]) -> Int {
+        var returnValue = 0;
         if (array.count > index) {
-            returnValue = String(array[index]);
+            returnValue = array[index];
         }
         return returnValue;
     }

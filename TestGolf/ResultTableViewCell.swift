@@ -16,6 +16,7 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var result2Label: UILabel!
     @IBOutlet weak var result3Label: UILabel!
     @IBOutlet weak var result4Label: UILabel!
+    @IBOutlet weak var hcpLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -25,7 +25,11 @@
                                 <label alignment="center" verticalAlignment="center" text="1" id="fPN-NJ-mC4">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="30"/>
                                 </label>
-                                <imageView width="0.20000000000000001" height="0.59999999999999998" alignment="center" verticalAlignment="center" id="daT-sU-fA2"/>
+                                <button width="0.20000000000000001" height="0.59999999999999998" alignment="center" verticalAlignment="center" backgroundImage="lock-128-red" id="Mek-9a-DsS">
+                                    <connections>
+                                        <action selector="unlockResult" destination="AgC-eL-Hgc" id="wtJ-Bc-iP7"/>
+                                    </connections>
+                                </button>
                                 <button alignment="right" verticalAlignment="bottom" title="&gt;" id="Jpm-8H-oPY">
                                     <fontDescription key="font" type="system" pointSize="30"/>
                                     <connections>
@@ -62,7 +66,7 @@
                     </items>
                     <connections>
                         <outlet property="holeLabel" destination="fPN-NJ-mC4" id="JG7-cC-E7z"/>
-                        <outlet property="lockImage" destination="daT-sU-fA2" id="2ts-gT-48X"/>
+                        <outlet property="lockButton" destination="Mek-9a-DsS" id="sS7-At-fMk"/>
                         <outlet property="parLabel" destination="eFQ-Q4-QE5" id="1BS-xW-CaO"/>
                         <outlet property="resultButton" destination="XDi-O8-Hat" id="caX-FU-FbP"/>
                         <outlet property="scoreLabel" destination="cZx-g3-5NW" id="1X4-qC-gQE"/>

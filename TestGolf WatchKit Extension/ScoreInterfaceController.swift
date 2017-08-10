@@ -21,7 +21,7 @@ class ScoreInterfaceController: WKInterfaceController {
     
     func process(_ value: Int) {
         results.append(value)
-        NSLog("WK:Process %d => %@", value, results)
+        //NSLog("WK:Process %d => %@", value, results)
         if (results.count >= (names?.count)!) {
             delegate?.selectedScore(results)
             self.dismiss()

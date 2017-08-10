@@ -14,9 +14,9 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegate {
     @IBOutlet weak var holeLabel: WKInterfaceLabel!
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!
-    @IBOutlet weak var lockImage: WKInterfaceImage!
     @IBOutlet weak var parLabel: WKInterfaceLabel!
     @IBOutlet weak var resultButton: WKInterfaceButton!
+    @IBOutlet weak var lockButton: WKInterfaceButton!
     
     var currentHole = 1
     var results   = [String:[Int]]()
@@ -26,6 +26,11 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     
     var session : WCSession!
     
+    @IBAction func unlockResult() {
+        resultButton.setEnabled(true)
+        lockButton.setBackgroundImageNamed("unlock-128.png")
+    }
+    
     let notification = Notification.Name(rawValue:"ScoreNotification")
     
     func selectedScore(_ values: [Int]) {
@@ -34,7 +39,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
         do {
             try session.updateApplicationContext(results)
         } catch {
-            print("error")
+            print("WK: error uppdating IOS")
         }
     }
 
@@ -91,13 +96,20 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
                 result += String(value)
             }
             scoreLabel.setText(result)
-            lockImage.setImageNamed("lock-128-red.png")
+            lockButton.setBackgroundImageNamed("lock-128-red.png")
         } else {
             scoreLabel.setText("-")
-            lockImage.setImageNamed("unlock-128.png")
+            lockButton.setBackgroundImageNamed("unlock-128.png")
         }
-        let hcp = 3 + (hcps[0] / 18) + (hcps[0] % 18 >= courseHcp[hole - 1] ? 1 : 0);
-        parLabel.setText(String(hcp) + " (" + String(courseHcp[hole - 1]) + ")")
+        var result = ""
+        for index in 0..<names.count {
+            if (result.characters.count > 0) {
+                result += " "
+            }
+            let hcp = 3 + (hcps[index] / 18) + (hcps[index] % 18 >= courseHcp[hole - 1] ? 1 : 0);
+            result += String(hcp)
+        }
+        parLabel.setText(result + " (" + String(courseHcp[hole - 1]) + ")")
     }
     
     @IBAction func showPreviousHole() {
