@@ -76,7 +76,7 @@ class ResultTableViewController: UITableViewController {
                     
                     let courseHcp = courseHcps[row]
                     let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
-                    let points = max(hcp - strokes, 0) + 2;
+                    let points = max(hcp - strokes + 2, 0);
                     resultPoints += points
                 }
             }
@@ -140,7 +140,7 @@ class ResultTableViewController: UITableViewController {
             if (col < names.count) {
                 let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
                 let strokes = getValue(col, data)
-                let points = max(hcp - strokes, 0) + 2;
+                let points = max(hcp - strokes + 2, 0);
                 
                 resultFields[col]?.text = String(strokes) + " (" + String(points) + ")"
                 if (strokes > 0) {
