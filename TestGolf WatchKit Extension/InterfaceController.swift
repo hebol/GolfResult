@@ -27,6 +27,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     var session : WCSession!
     
     @IBAction func unlockResult() {
+        WKInterfaceDevice.current().play(WKHapticType.success)
         selectedScore([Int]())
     }
     
@@ -74,6 +75,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     }
     
     @IBAction func showNextHole() {
+        WKInterfaceDevice.current().play(WKHapticType.click)
         currentHole += 1;
         if currentHole > 18 {
             currentHole = 1;
@@ -113,6 +115,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     }
     
     @IBAction func showPreviousHole() {
+        WKInterfaceDevice.current().play(WKHapticType.click)
         currentHole -= 1;
         if currentHole < 1 {
             currentHole = 18;

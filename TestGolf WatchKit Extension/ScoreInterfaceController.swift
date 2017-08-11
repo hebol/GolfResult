@@ -20,6 +20,7 @@ class ScoreInterfaceController: WKInterfaceController {
     var results = [Int]()
     
     func process(_ value: Int) {
+        WKInterfaceDevice.current().play(WKHapticType.click)
         results.append(value)
         //NSLog("WK:Process %d => %@", value, results)
         if (results.count >= (names?.count)!) {
