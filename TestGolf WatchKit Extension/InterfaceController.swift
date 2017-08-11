@@ -27,8 +27,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     var session : WCSession!
     
     @IBAction func unlockResult() {
-        resultButton.setEnabled(true)
-        lockButton.setBackgroundImageNamed("unlock-128.png")
+        selectedScore([Int]())
     }
     
     let notification = Notification.Name(rawValue:"ScoreNotification")
@@ -85,9 +84,10 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     func displayHole(_ hole: Int) {
         holeLabel.setText(String(hole));
         let values = results[String(hole)]
-        resultButton.setEnabled(values == nil)
+        let hasValue = values != nil && values!.count > 0;
+        resultButton.setEnabled(!hasValue)
         
-        if (values != nil) {
+        if (hasValue) {
             var result = ""
             for value in values! {
                 if (result.characters.count > 0) {

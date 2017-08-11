@@ -91,13 +91,13 @@ class ResultTableViewController: UITableViewController {
     }
     
     func updatedScore(notification:Notification) -> Void {
-        NSLog("App: Did receive notification %@", notification.userInfo!)
+        NSLog("App: Did receive notification score", notification.userInfo!)
         result = notification.userInfo!["results"] as! [[Int]]
         tableView.reloadData()
     }
     
     func newRound(notification:Notification) -> Void {
-        NSLog("App: Did receive notification %@", notification.userInfo!)
+        NSLog("App: Did receive notification new round", notification.userInfo!)
         
         tableView.reloadData()
     }
@@ -143,9 +143,9 @@ class ResultTableViewController: UITableViewController {
                 let points = max(hcp - strokes + 2, 0);
                 
                 resultFields[col]?.text = String(strokes) + " (" + String(points) + ")"
-                if (strokes > 0) {
+/*                if (strokes > 0) {
                     NSLog("Player %@ hcp:%d strokes:%d points: %d", names[col], hcp, strokes, points);
-                }
+                }*/
             }
         }
 

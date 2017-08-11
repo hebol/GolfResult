@@ -21,10 +21,12 @@ class ResultHeaderTableViewCell: UITableViewCell {
         NSLog("App: header init")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let names = appDelegate.getPlayerNames()
-        spelare1Label.text = names.count > 0 ? names[0] : ""
-        spelare2Label.text = names.count > 1 ? names[1] : ""
-        spelare3Label.text = names.count > 2 ? names[2] : ""
-        spelare4Label.text = names.count > 3 ? names[3] : ""
+        let hcps = appDelegate.getPlayerHcps()
+        let fields = [spelare1Label, spelare2Label, spelare3Label, spelare4Label]
+        for col in 0..<4 {
+            let hcp = hcps.count > col ? String(hcps[col]) : ""
+            fields[col]?.text = (names.count > col ? names[col]  + " (" + hcp + ")" : "")
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -16,7 +16,7 @@
                     <items>
                         <group width="1" alignment="center" id="4YH-vN-wzE">
                             <items>
-                                <button alignment="left" title="&lt;" id="dDN-5h-3St">
+                                <button alignment="left" title=" &lt; " id="dDN-5h-3St">
                                     <fontDescription key="font" type="system" pointSize="30"/>
                                     <connections>
                                         <action selector="showPreviousHole" destination="AgC-eL-Hgc" id="r2w-bB-XRd"/>
@@ -25,12 +25,12 @@
                                 <label alignment="center" verticalAlignment="center" text="1" id="fPN-NJ-mC4">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="30"/>
                                 </label>
-                                <button width="0.20000000000000001" height="0.59999999999999998" alignment="center" verticalAlignment="center" backgroundImage="lock-128-red" id="Mek-9a-DsS">
+                                <button width="0.25" height="0.69999999999999996" alignment="center" verticalAlignment="center" backgroundImage="lock-128-red" id="Mek-9a-DsS">
                                     <connections>
                                         <action selector="unlockResult" destination="AgC-eL-Hgc" id="wtJ-Bc-iP7"/>
                                     </connections>
                                 </button>
-                                <button alignment="right" verticalAlignment="bottom" title="&gt;" id="Jpm-8H-oPY">
+                                <button alignment="right" verticalAlignment="bottom" title=" &gt; " id="Jpm-8H-oPY">
                                     <fontDescription key="font" type="system" pointSize="30"/>
                                     <connections>
                                         <action selector="showNextHole" destination="AgC-eL-Hgc" id="F8x-er-yxY"/>
@@ -82,56 +82,6 @@
                     <items>
                         <group width="1" alignment="left" verticalAlignment="bottom" id="M5E-lc-FIq">
                             <items>
-                                <button width="0.5" alignment="center" title="Avbryt" id="LjX-4B-Il5">
-                                    <connections>
-                                        <action selector="cancel" destination="g9f-rO-paG" id="V5J-Sp-ahi"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <label alignment="center" text="Label" textAlignment="center" id="ONb-3k-8Qd"/>
-                        <group width="1" alignment="left" id="CnO-f4-u0W">
-                            <items>
-                                <button width="0.25" alignment="left" title="1" id="jrJ-uI-hhQ">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton1" destination="g9f-rO-paG" id="uat-4y-dtH"/>
-                                    </connections>
-                                </button>
-                                <button width="0.25" alignment="left" title="2" id="8Xm-LR-Dn0">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton2" destination="g9f-rO-paG" id="xU9-62-SRq"/>
-                                    </connections>
-                                </button>
-                                <button width="0.25" alignment="left" title="3" id="WtM-vY-aPB">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton3" destination="g9f-rO-paG" id="UUP-CH-Sgc"/>
-                                    </connections>
-                                </button>
-                                <button width="0.25" alignment="left" title="4" id="iOb-uP-z2r">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton4" destination="g9f-rO-paG" id="m11-dE-cjk"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="6jQ-IV-JfN">
-                            <items>
-                                <button width="0.25" alignment="left" title="5" id="DM6-W1-x1z">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton5" destination="g9f-rO-paG" id="Nsv-wp-bMc"/>
-                                    </connections>
-                                </button>
-                                <button width="0.25" alignment="left" title="6" id="tRj-hU-MTW">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
-                                    <connections>
-                                        <action selector="selectedButton6" destination="g9f-rO-paG" id="qTx-YF-IGD"/>
-                                    </connections>
-                                </button>
                                 <button width="0.25" alignment="left" title="7" id="dFZ-jJ-0pg">
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
@@ -142,6 +92,56 @@
                                     <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
                                     <connections>
                                         <action selector="selectedButton8" destination="g9f-rO-paG" id="zbp-89-eln"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="center" title="Avbryt" id="LjX-4B-Il5">
+                                    <connections>
+                                        <action selector="cancel" destination="g9f-rO-paG" id="V5J-Sp-ahi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="center" text="Label" textAlignment="center" id="ONb-3k-8Qd"/>
+                        <group width="1" alignment="left" id="CnO-f4-u0W">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="1" id="jrJ-uI-hhQ">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton1" destination="g9f-rO-paG" id="uat-4y-dtH"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="2" id="8Xm-LR-Dn0">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton2" destination="g9f-rO-paG" id="xU9-62-SRq"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="3" id="WtM-vY-aPB">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton3" destination="g9f-rO-paG" id="UUP-CH-Sgc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="6jQ-IV-JfN">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="4" id="iOb-uP-z2r">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton4" destination="g9f-rO-paG" id="m11-dE-cjk"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="5" id="DM6-W1-x1z">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton5" destination="g9f-rO-paG" id="Nsv-wp-bMc"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="6" id="tRj-hU-MTW">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                    <connections>
+                                        <action selector="selectedButton6" destination="g9f-rO-paG" id="qTx-YF-IGD"/>
                                     </connections>
                                 </button>
                             </items>
