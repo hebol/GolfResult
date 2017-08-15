@@ -12,7 +12,7 @@
         <!--Main-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TestGolf_WatchKit_App" customModuleProvider="target">
+                <controller identifier="Main" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="TestGolf_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="center" id="4YH-vN-wzE">
                             <items>
@@ -74,6 +74,17 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Waiting-->
+        <scene sceneID="Qli-a5-nqT">
+            <objects>
+                <controller identifier="Waiting" id="vmg-dr-8MP" customClass="WaitingInterfaceController" customModule="TestGolf_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="95" alignment="center" verticalAlignment="center" text="Väntar på att en ny runda skall starta på telefonen" textAlignment="center" numberOfLines="4" id="wkn-xP-SGi"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="470" y="57"/>
         </scene>
         <!--Score-->
         <scene sceneID="abw-ty-xVi">

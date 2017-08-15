@@ -25,7 +25,7 @@ class ScoreInterfaceController: WKInterfaceController {
         //NSLog("WK:Process %d => %@", value, results)
         if (results.count >= (names?.count)!) {
             delegate?.selectedScore(results)
-            self.dismiss()
+            self.pop()
         } else {
             nameLabel.setText(names?[results.count])
         }
@@ -65,7 +65,9 @@ class ScoreInterfaceController: WKInterfaceController {
         let data = context as! [String:Any]
         self.delegate = data["delegate"] as? ScoreHandler
         self.names    = data["names"] as? [String]
-        nameLabel.setText(names?[results.count])
+        if (names != nil && (names?.count)! > results.count) {
+            nameLabel.setText(names?[results.count])
+        }
 
         // Configure interface objects here.
         //NSLog(self.delegate != nil ? "Set" : "Not Set");

@@ -1,5 +1,5 @@
 //
-//  InterfaceController.swift
+//  MainInterfaceController.swift
 //  TestGolf WatchKit Extension
 //
 //  Created by Martin Sjöblom on 2017-07-28.
@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegate {
+class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegate {
     @IBOutlet weak var holeLabel: WKInterfaceLabel!
     @IBOutlet weak var scoreLabel: WKInterfaceLabel!
     @IBOutlet weak var parLabel: WKInterfaceLabel!
@@ -56,6 +56,9 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
         }
         
         NotificationCenter.default.addObserver(forName:notification, object:nil, queue:nil, using:scoreNotification)
+        if (names.count == 0) {
+            self.pushController(withName: "Waiting", context: [])
+        }
     }
     
     func scoreNotification(notification:Notification) -> Void {
@@ -71,7 +74,7 @@ class InterfaceController: WKInterfaceController, ScoreHandler, WCSessionDelegat
     }
     
     @IBAction func selectScore() {
-        self.presentController(withName: "Score", context: ["delegate":self, "names": names])
+        self.pushController(withName: "Score", context: ["delegate":self, "names": names])
     }
     
     @IBAction func showNextHole() {
