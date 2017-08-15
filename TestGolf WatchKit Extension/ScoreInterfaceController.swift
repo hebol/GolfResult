@@ -57,7 +57,7 @@ class ScoreInterfaceController: WKInterfaceController {
     }
     
     @IBAction func cancel() {
-        self.dismiss()
+        self.pop()
     }
     
     override func awake(withContext context: Any?) {

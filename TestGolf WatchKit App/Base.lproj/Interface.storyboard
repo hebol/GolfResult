@@ -107,7 +107,7 @@
                                 </button>
                                 <button width="0.5" alignment="center" title="Avbryt" id="LjX-4B-Il5">
                                     <connections>
-                                        <action selector="cancel" destination="g9f-rO-paG" id="V5J-Sp-ahi"/>
+                                        <action selector="cancel" destination="g9f-rO-paG" id="w4A-pP-RuI"/>
                                     </connections>
                                 </button>
                             </items>
