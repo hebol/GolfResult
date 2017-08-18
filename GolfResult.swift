@@ -17,4 +17,14 @@ class GolfResult {
     func hasStarted() -> Bool {
         return names.count > 0
     }
+    
+    static func calculateHcp(_ holePar: Int, _ holeIndex: Int, _ playerHcp: Int) -> Int {
+        var hcp = holePar + (playerHcp / 18)
+        if (playerHcp >= 0) {
+            hcp += (playerHcp % 18 >= holeIndex ? 1 : 0);
+        } else {
+            hcp += (17 - (playerHcp % 18) <= holeIndex ? -1 : 0)
+        }
+        return hcp
+    }
 }

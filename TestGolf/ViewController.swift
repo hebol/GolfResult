@@ -60,9 +60,20 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func convertHcp(_ value: Float?) -> String {
         if (value != nil && value != Float.nan) {
-            return String(Int(roundf(value!)))
+            var result: String? = nil;
+            for index in 0..<GullbringaNyaData.slopeList.count {
+                if (value! >= GullbringaNyaData.slopeList[index][0] && value! <= GullbringaNyaData.slopeList[index][1]) {
+                    result = String(Int(GullbringaNyaData.slopeList[index][2]))
+                    break;
+                }
+            }
+            if (result == nil) {
+                result = String(Int(roundf(value!)))
+            }
+            return result!
         } else {
             return "";
         }

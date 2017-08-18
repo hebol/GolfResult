@@ -41,7 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         return true
     }
     
-    var courseHcp = [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10]
+//    var courseHcp = [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10]
+    var courseHcp = GullbringaNyaData.hcpList
+//    var coursePar = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    var coursePar = GullbringaNyaData.parList
     var results = [[Int]]()
     var names = [String]()
     var hcps = [Int]()
@@ -80,6 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             data["results"]   = results
             data["names"]     = names
             data["hcps"]      = hcps
+            data["pars"]      = coursePar
             data["courseHcp"] = courseHcp
             try session.updateApplicationContext(data)
         } catch {

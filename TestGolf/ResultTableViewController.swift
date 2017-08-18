@@ -75,7 +75,8 @@ class ResultTableViewController: UITableViewController {
                     result += strokes
                     
                     let courseHcp = courseHcps[row]
-                    let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
+                    
+                    let hcp = GolfResult.calculateHcp(GullbringaNyaData.parList[row], courseHcp, playerHcps[col])
                     let points = max(hcp - strokes + 2, 0);
                     resultPoints += points
                 }
@@ -138,7 +139,7 @@ class ResultTableViewController: UITableViewController {
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = data.count <= col
             if (col < names.count) {
-                let hcp = 3 + (playerHcps[col] / 18) + (playerHcps[col] % 18 >= courseHcp ? 1 : 0);
+                let hcp = GolfResult.calculateHcp(GullbringaNyaData.parList[row], courseHcp, playerHcps[col])
                 let strokes = getValue(col, data)
                 let points = max(hcp - strokes + 2, 0);
                 

@@ -18,10 +18,11 @@ class ScoreInterfaceController: WKInterfaceController {
     var delegate: ScoreHandler?
     var names: [String]?
     var results = [Int]()
+    var added = 0
     
     func process(_ value: Int) {
         WKInterfaceDevice.current().play(WKHapticType.click)
-        results.append(value)
+        results.append(value + added)
         //NSLog("WK:Process %d => %@", value, results)
         if (results.count >= (names?.count)!) {
             delegate?.selectedScore(results)
@@ -29,6 +30,7 @@ class ScoreInterfaceController: WKInterfaceController {
         } else {
             nameLabel.setText(names?[results.count])
         }
+        added = 0
     }
     
     @IBAction func selectedButton1() {
@@ -54,6 +56,10 @@ class ScoreInterfaceController: WKInterfaceController {
     }
     @IBAction func selectedButton8() {
         process(8);
+    }
+    @IBAction func selectedPlus() {
+        WKInterfaceDevice.current().play(WKHapticType.click)
+        added += 8;
     }
     
     @IBAction func cancel() {

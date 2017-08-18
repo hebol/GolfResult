@@ -22,6 +22,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
     var results   = [String:[Int]]()
     var names     = [String]()
     var hcps      = [Int]()
+    var pars      = [Int]()
     var courseHcp = [Int]()
     
     var session : WCSession!
@@ -67,6 +68,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         
         names           = (data["names"] as! [String])
         hcps            = (data["hcps"] as! [Int])
+        pars            = (data["pars"] as! [Int])
         courseHcp       = (data["courseHcp"] as! [Int])
         results = [String:[Int]]()
         currentHole     = 1
@@ -107,14 +109,16 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
             lockButton.setBackgroundImageNamed("unlock-128.png")
         }
         var result = ""
+        let holePar   = pars[hole - 1]
+        let holeIndex = courseHcp[hole - 1]
         for index in 0..<names.count {
             if (result.characters.count > 0) {
                 result += " "
             }
-            let hcp = 3 + (hcps[index] / 18) + (hcps[index] % 18 >= courseHcp[hole - 1] ? 1 : 0);
+            let hcp = GolfResult.calculateHcp(holePar, holeIndex, hcps[index])
             result += String(hcp)
         }
-        parLabel.setText(result + " (" + String(courseHcp[hole - 1]) + ")")
+        parLabel.setText(result + " (" + String(holeIndex) + ")")
     }
     
     @IBAction func showPreviousHole() {

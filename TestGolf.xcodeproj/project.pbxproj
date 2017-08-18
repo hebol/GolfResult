@@ -29,6 +29,7 @@
 		5B5CF6311F3B38CB0076293B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62F1F3B38CB0076293B /* Util.swift */; };
 		5B5CF6331F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6321F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift */; };
 		5B5CF6381F3DE0BF0076293B /* WaitingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6371F3DE0BF0076293B /* WaitingInterfaceController.swift */; };
+		5B79CF8E1F46C982006B7418 /* GullbringaNyaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */; };
 		5B8C83841F2DB82400FB13A8 /* unlock-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83831F2DB82400FB13A8 /* unlock-128.png */; };
 		5B8C83861F34D41700FB13A8 /* lock-128-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83851F34D41700FB13A8 /* lock-128-red.png */; };
 		5B8C83881F34DF0A00FB13A8 /* ScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */; };
@@ -123,6 +124,7 @@
 		5B5CF62F1F3B38CB0076293B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		5B5CF6321F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultFooterSectionTableViewCell.swift; sourceTree = "<group>"; };
 		5B5CF6371F3DE0BF0076293B /* WaitingInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingInterfaceController.swift; sourceTree = "<group>"; };
+		5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GullbringaNyaData.swift; sourceTree = "<group>"; };
 		5B8C83831F2DB82400FB13A8 /* unlock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-128.png"; sourceTree = "<group>"; };
 		5B8C83851F34D41700FB13A8 /* lock-128-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-128-red.png"; sourceTree = "<group>"; };
 		5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInterfaceController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				5B5CF62F1F3B38CB0076293B /* Util.swift */,
 				5BF1580B1F437BFB00382CC9 /* GolfResult.swift */,
+				5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				5B5CF62B1F38F96B0076293B /* ResultTableViewController.swift in Sources */,
 				5B5CF6301F3B38CB0076293B /* Util.swift in Sources */,
 				5BF1580C1F437BFB00382CC9 /* GolfResult.swift in Sources */,
+				5B79CF8E1F46C982006B7418 /* GullbringaNyaData.swift in Sources */,
 				5B5CF62D1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift in Sources */,
 				5B0A70911F2B4A1200AC6B17 /* ViewController.swift in Sources */,
 				5B5CF6291F38F4690076293B /* ResultTableViewCell.swift in Sources */,
