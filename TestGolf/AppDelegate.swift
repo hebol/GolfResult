@@ -41,10 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         return true
     }
     
-//    var courseHcp = [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10]
-    var courseHcp = GullbringaNyaData.hcpList
-//    var coursePar = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
-    var coursePar = GullbringaNyaData.parList
+    static var courseHcp = SaroPark54Data.getHcpList()
+    var coursePar = SaroPark54Data.getParList()
     var results = [[Int]]()
     var names = [String]()
     var hcps = [Int]()
@@ -55,14 +53,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func getPlayerHcps() -> [Int] {
         return hcps
     }
-    func getCourseHcps() -> [Int] {
+    static func getCourseHcps() -> [Int] {
         return courseHcp
     }
     func getPlayerResults() -> [[Int]] {
         return results
     }
     func clearResults() {
-        results = [[Int]]()
+        do {
+            results = [[Int]]()
+            var data = [String : Any]()
+            data["date"]      = Date()
+            data["results"]   = results
+            data["names"]     = []
+            data["hcps"]      = hcps
+            data["pars"]      = coursePar
+            data["courseHcp"] = AppDelegate.courseHcp
+            
+            try session.updateApplicationContext(data)
+        } catch {
+            NSLog("App: error")
+        }
     }
     
     func newRound(notification:Notification) -> Void {
@@ -84,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             data["names"]     = names
             data["hcps"]      = hcps
             data["pars"]      = coursePar
-            data["courseHcp"] = courseHcp
+            data["courseHcp"] = AppDelegate.courseHcp
             try session.updateApplicationContext(data)
         } catch {
             NSLog("App: error")

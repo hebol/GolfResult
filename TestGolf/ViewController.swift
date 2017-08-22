@@ -64,9 +64,9 @@ class ViewController: UIViewController {
     func convertHcp(_ value: Float?) -> String {
         if (value != nil && value != Float.nan) {
             var result: String? = nil;
-            for index in 0..<GullbringaNyaData.slopeList.count {
-                if (value! >= GullbringaNyaData.slopeList[index][0] && value! <= GullbringaNyaData.slopeList[index][1]) {
-                    result = String(Int(GullbringaNyaData.slopeList[index][2]))
+            for index in 0..<SaroPark54Data.getSlopeList().count {
+                if (value! >= SaroPark54Data.getSlopeList()[index][0] && value! <= SaroPark54Data.getSlopeList()[index][1]) {
+                    result = String(Int(SaroPark54Data.getSlopeList()[index][2]))
                     break;
                 }
             }

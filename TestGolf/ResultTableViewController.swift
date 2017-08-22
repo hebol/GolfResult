@@ -61,7 +61,7 @@ class ResultTableViewController: UITableViewController {
         let results = appDelegate.getPlayerResults()
         
         let playerHcps = appDelegate.getPlayerHcps()
-        let courseHcps = appDelegate.getCourseHcps()
+        let courseHcps = AppDelegate.getCourseHcps()
         
         let resultFields = [cell.player1ResultLabel, cell.player2ResultLabel, cell.player3ResultLabel, cell.player4ResultLabel]
         
@@ -76,7 +76,7 @@ class ResultTableViewController: UITableViewController {
                     
                     let courseHcp = courseHcps[row]
                     
-                    let hcp = GolfResult.calculateHcp(GullbringaNyaData.parList[row], courseHcp, playerHcps[col])
+                    let hcp = GolfResult.calculateHcp(SaroPark54Data.getParList()[row], courseHcp, playerHcps[col])
                     let points = max(hcp - strokes + 2, 0);
                     resultPoints += points
                 }
@@ -127,7 +127,7 @@ class ResultTableViewController: UITableViewController {
         }
         let row = indexPath.row + 9 * indexPath.section
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let courseHcp = appDelegate.getCourseHcps()[row]
+        let courseHcp = AppDelegate.getCourseHcps()[row]
         
         cell.halLabel.text = String(row + 1)
         cell.hcpLabel.text = "(" + String(courseHcp) + ")"
@@ -139,7 +139,7 @@ class ResultTableViewController: UITableViewController {
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = data.count <= col
             if (col < names.count) {
-                let hcp = GolfResult.calculateHcp(GullbringaNyaData.parList[row], courseHcp, playerHcps[col])
+                let hcp = GolfResult.calculateHcp(SaroPark54Data.getParList()[row], courseHcp, playerHcps[col])
                 let strokes = getValue(col, data)
                 let points = max(hcp - strokes + 2, 0);
                 

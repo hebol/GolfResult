@@ -71,8 +71,12 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         pars            = (data["pars"] as! [Int])
         courseHcp       = (data["courseHcp"] as! [Int])
         results = [String:[Int]]()
-        currentHole     = 1
-        displayHole(currentHole)
+        if (names.count == 0) {
+            self.pushController(withName: "Waiting", context: [])
+        } else {
+            currentHole     = 1
+            displayHole(currentHole)
+        }
     }
     
     @IBAction func selectScore() {
