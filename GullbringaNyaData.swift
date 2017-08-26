@@ -30,11 +30,13 @@ class Round {
 }
 
 class GolfCourse {
-    init(_ slope: [[Float]], _ par: [Int], _ index: [Int]) {
-        slopeList = slope
-        parList = par
-        indexList = index
+    init(_ name: String, _ slope: [[Float]], _ par: [Int], _ index: [Int]) {
+        self.name      = name
+        self.slopeList = slope
+        self.parList   = par
+        self.indexList = index
     }
+    let name : String
     let slopeList: [[Float]]
     let parList : [Int]
     let indexList : [Int]
