@@ -32,10 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         if let temp = defaults.object(forKey: "hcps") {
             hcps = temp as! [Int]
         }
-/*        if let temp = defaults.object(forKey: "results") {
-            results = temp as! [[Int]]
-        }*/
-
         // Registering for notification
         NotificationCenter.default.addObserver(forName:roundNotification, object:nil, queue:nil, using:newRound)
         return true

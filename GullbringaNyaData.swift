@@ -8,6 +8,52 @@
 
 import Foundation
 
+class Player {
+    init(_ name: String, _ exactHcp: Float, _ effectiveHcp: Int) {
+        self.name = name;
+        self.exactHcp = exactHcp;
+        self.effectiveHcp = effectiveHcp;
+    }
+    let name : String;
+    let exactHcp : Float;
+    let effectiveHcp : Int;
+}
+
+class Round {
+    init(_ players: [Player], _ course: GolfCourse) {
+        self.players = players
+        self.course = course
+    }
+    let players : [Player];
+    let course : GolfCourse;
+    let result = [[Int]]()
+}
+
+class GolfCourse {
+    init(_ slope: [[Float]], _ par: [Int], _ index: [Int]) {
+        slopeList = slope
+        parList = par
+        indexList = index
+    }
+    let slopeList: [[Float]]
+    let parList : [Int]
+    let indexList : [Int]
+    
+    func getEffectiveHcp( _ player: Player) -> Int {
+        var result: Int? = nil;
+        for index in 0 ..< slopeList.count {
+            if (player.exactHcp >= slopeList[index][0] && player.exactHcp <= slopeList[index][1]) {
+                result = Int(slopeList[index][2])
+                break;
+            }
+        }
+        if (result == nil) {
+            result = Int(roundf(player.exactHcp))
+        }
+        return result!
+    }
+}
+
 protocol GolfCourseData {
     static func getSlopeList() -> [[Float]]
     static func getHcpList() -> [Int]

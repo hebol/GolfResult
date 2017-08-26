@@ -60,6 +60,8 @@ class ScoreInterfaceController: WKInterfaceController {
     @IBAction func selectedPlus() {
         WKInterfaceDevice.current().play(WKHapticType.click)
         added += 8;
+        let name = names?[results.count];
+        nameLabel.setText(name! + " +" + String(added))
     }
     
     @IBAction func cancel() {

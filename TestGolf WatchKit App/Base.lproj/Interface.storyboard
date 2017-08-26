@@ -17,21 +17,21 @@
                         <group width="1" alignment="center" id="4YH-vN-wzE">
                             <items>
                                 <button alignment="left" title=" &lt; " id="dDN-5h-3St">
-                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <fontDescription key="font" type="system" pointSize="26"/>
                                     <connections>
                                         <action selector="showPreviousHole" destination="AgC-eL-Hgc" id="r2w-bB-XRd"/>
                                     </connections>
                                 </button>
-                                <label alignment="center" verticalAlignment="center" text="1" id="fPN-NJ-mC4">
-                                    <fontDescription key="font" type="system" weight="semibold" pointSize="30"/>
+                                <label alignment="center" verticalAlignment="center" text="18" id="fPN-NJ-mC4">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="26"/>
                                 </label>
-                                <button width="0.25" height="0.69999999999999996" alignment="center" verticalAlignment="center" backgroundImage="lock-128-red" id="Mek-9a-DsS">
+                                <button width="0.20000000000000001" height="0.69999999999999996" alignment="center" verticalAlignment="center" backgroundImage="lock-128-red" id="Mek-9a-DsS">
                                     <connections>
                                         <action selector="unlockResult" destination="AgC-eL-Hgc" id="wtJ-Bc-iP7"/>
                                     </connections>
                                 </button>
                                 <button alignment="right" verticalAlignment="bottom" title=" &gt; " id="Jpm-8H-oPY">
-                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <fontDescription key="font" type="system" pointSize="26"/>
                                     <connections>
                                         <action selector="showNextHole" destination="AgC-eL-Hgc" id="F8x-er-yxY"/>
                                     </connections>
