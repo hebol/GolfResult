@@ -26,45 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
         
         let defaults = UserDefaults.standard
-        if let temp = defaults.object(forKey: "names") {
-            names = temp as! [String]
-        }
-        if let temp = defaults.object(forKey: "hcps") {
-            hcps = temp as! [Int]
+        if let temp = defaults.object(forKey: "players") {
+            players = temp as? [Player]
         }
         // Registering for notification
         NotificationCenter.default.addObserver(forName:roundNotification, object:nil, queue:nil, using:newRound)
         return true
     }
     
-    static var courseHcp = SaroPark54Data.getHcpList()
-    var coursePar = SaroPark54Data.getParList()
-    var results = [[Int]]()
-    var names = [String]()
-    var hcps = [Int]()
+    var round : Round?;
+    var players : [Player]?;
     
-    func getPlayerNames() -> [String] {
-        return names
-    }
-    func getPlayerHcps() -> [Int] {
-        return hcps
-    }
-    static func getCourseHcps() -> [Int] {
-        return courseHcp
-    }
-    func getPlayerResults() -> [[Int]] {
-        return results
-    }
     func clearResults() {
         do {
-            results = [[Int]]()
+            round?.results = [[Int]]()
             var data = [String : Any]()
-            data["date"]      = Date()
-            data["results"]   = results
-            data["names"]     = []
-            data["hcps"]      = hcps
-            data["pars"]      = coursePar
-            data["courseHcp"] = AppDelegate.courseHcp
+            data["date"]  = Date()
+            data["round"] = round
             
             try session.updateApplicationContext(data)
         } catch {
@@ -76,22 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         NSLog("App(del): Did receive notification", notification.userInfo!)
         do {
             var data = notification.userInfo! as! [String : Any]
-            names = data["names"] as! [String]
-            hcps  = data["hcps"] as! [Int]
+            round   = data["round"] as? Round
+            players = round?.players
             
             let defaults = UserDefaults.standard
-            defaults.set(names, forKey: "names")
-            defaults.set(hcps, forKey: "hcps")
+            defaults.set(players, forKey: "players")
 
-            
-            results = [[Int]]()
+            round?.results = [[Int]]()
             
             data["date"]      = Date()
-            data["results"]   = results
-            data["names"]     = names
-            data["hcps"]      = hcps
-            data["pars"]      = coursePar
-            data["courseHcp"] = AppDelegate.courseHcp
             try session.updateApplicationContext(data)
         } catch {
             NSLog("App: error")
@@ -102,18 +73,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         NSLog("App(del): Received data", applicationContext)
         //Use this to update the UI instantaneously (otherwise, takes a little while)
         DispatchQueue.main.async() {
-            self.results = [[Int]]()
+            self.round?.results = [[Int]]()
             for index in 1...18 {
                 let key:String = String(index)
                 var resultList = [Int]()
                 if (applicationContext[key] != nil) {
                     resultList = (applicationContext[key] as! [Int])
                 }
-                self.results.append(resultList)
+                self.round?.results.append(resultList)
             }
             let defaults = UserDefaults.standard
-            defaults.set(self.results, forKey: "results")
-            NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["results":self.results])
+            defaults.set(self.round, forKey: "round")
+            NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["round":self.round!])
         }
     }
     

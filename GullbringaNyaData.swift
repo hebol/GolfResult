@@ -23,10 +23,11 @@ class Round {
     init(_ players: [Player], _ course: GolfCourse) {
         self.players = players
         self.course = course
+        results = [[Int]]()
     }
-    let players : [Player];
-    let course : GolfCourse;
-    let result = [[Int]]()
+    let players : [Player]
+    let course : GolfCourse
+    var results : [[Int]]
 }
 
 class GolfCourse {
