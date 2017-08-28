@@ -122,19 +122,19 @@ class ResultTableViewController: UITableViewController {
         }
         let row = indexPath.row + 9 * indexPath.section
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let courseHcp = AppDelegate.getCourseHcps()[row]
+        let courseHcp = appDelegate.round!.course.parList[row]
+        let courseIndex = appDelegate.round!.course.indexList[row]
         
         cell.halLabel.text = String(row + 1)
         cell.hcpLabel.text = "(" + String(courseHcp) + ")"
         let data = row < result.count ? result[row] : [Int]()
         let resultFields = [cell.result1Label, cell.result2Label, cell.result3Label, cell.result4Label]
-        let names = appDelegate.getPlayerNames()
-        let playerHcps = appDelegate.getPlayerHcps()
+        let players = appDelegate.round!.players
         
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = data.count <= col
-            if (col < names.count) {
-                let hcp = GolfResult.calculateHcp(SaroPark54Data.getParList()[row], courseHcp, playerHcps[col])
+            if (col < players.count) {
+                let hcp = GolfResult.calculateHcp(courseIndex, courseHcp, players[col].effectiveHcp)
                 let strokes = getValue(col, data)
                 let points = max(hcp - strokes + 2, 0);
                 

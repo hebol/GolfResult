@@ -29,15 +29,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let names = appDelegate.getPlayerNames()
+        let players = appDelegate.round?.players ?? []
         let nameLabels = [spelare1TextField, spelare2TextField, spelare3TextField, spelare4TextField]
         for index in 0  ..< nameLabels.count  {
-            nameLabels[index]?.text = names.count > index ? names[index] : ""
+            nameLabels[index]?.text = players.count > index ? players[index].name : ""
         }
-        let hcps = appDelegate.getPlayerHcps()
         let hcpLabels = [spelare1Hcp, spelare2Hcp, spelare3Hcp, spelare4Hcp]
         for index in 0  ..< hcpLabels.count  {
-            hcpLabels[index]?.text = hcps.count > index ? String(hcps[index]) : ""
+            hcpLabels[index]?.text = players.count > index ? String(players[index].exactHcp) : ""
             hcpfieldWasUpdated(hcpLabels[index] as Any)
         }
 
@@ -64,10 +63,14 @@ class ViewController: UIViewController {
     func convertHcp(_ value: Float?) -> String {
         if (value != nil && value != Float.nan) {
             var result: String? = nil;
-            for index in 0..<SaroPark54Data.getSlopeList().count {
-                if (value! >= SaroPark54Data.getSlopeList()[index][0] && value! <= SaroPark54Data.getSlopeList()[index][1]) {
-                    result = String(Int(SaroPark54Data.getSlopeList()[index][2]))
-                    break;
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let slopeList = appDelegate.round?.course.slopeList
+            if (slopeList != nil) {
+                for index in 0..<slopeList!.count {
+                    if (value! >= slopeList![index][0] && value! <= slopeList![index][1]) {
+                        result = String(Int(slopeList![index][2]))
+                        break;
+                    }
                 }
             }
             if (result == nil) {
@@ -88,24 +91,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getNames() -> [String] {
-        var result = [String]()
-        let fields = [spelare1TextField, spelare2TextField, spelare3TextField, spelare4TextField]
-        for field in fields {
-            let value = field!.text!.trim()
-            if (!value.isEmpty) {
-                result.append(value)
-            }
-        }
-        
-        return result
-    }
-    func getHcps() -> [Int] {
-        var result = [Int]()
-        let fields = [spelare1Slag, spelare2Slag, spelare3Slag, spelare4Slag]
-        for field in fields {
-            if (!(field?.text!.isEmpty)!) {
-                result.append(Int((field?.text!)!)!)
+    func getPlayers() -> [Player] {
+        var result = [Player]()
+        let nameFields = [spelare1TextField, spelare2TextField, spelare3TextField, spelare4TextField]
+        let effectiveHcpFields = [spelare1Slag, spelare2Slag, spelare3Slag, spelare4Slag]
+        let exactHcpFields = [spelare1Hcp, spelare2Hcp, spelare3Hcp, spelare4Hcp]
+        for index in 0 ..< nameFields.count {
+            let name         = nameFields[index]!.text!.trim()
+            let effectiveHcp = effectiveHcpFields[index]!.text!.trim()
+            let exactHcp     = exactHcpFields[index]!.text!.trim()
+            if (!name.isEmpty && !effectiveHcp.isEmpty && !exactHcp.isEmpty) {
+                result.append(Player(name, Float(exactHcp)!, Int(effectiveHcp)!))
             }
         }
         
@@ -115,10 +111,11 @@ class ViewController: UIViewController {
     @IBAction func startRound(_ sender: Any) {
         NSLog("App: Starting round")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if (appDelegate.getPlayerResults().count == 0) {
+        if (appDelegate.round == nil || appDelegate.round!.results.count == 0) {
+            let players = getPlayers()
+            let round = Round(players, SaroPark54Data)
             NotificationCenter.default.post(name:self.roundNotification, object: nil,
-                                            userInfo:["names":getNames(),
-                                                      "hcps": getHcps()])
+                                            userInfo:["round":round])
             
         } else {
             NSLog("App: Reusing old values");

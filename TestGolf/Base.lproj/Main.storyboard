@@ -182,7 +182,6 @@
                                 <state key="normal" title="Starta runda"/>
                                 <connections>
                                     <action selector="startRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cht-SY-MS6"/>
-                                    <segue destination="2aF-UF-LBA" kind="show" id="bxI-s2-yOB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTm-SZ-mp0">

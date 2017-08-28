@@ -63,19 +63,7 @@ protocol GolfCourseData {
     static func getParList() -> [Int]
 }
 
-class SaroPark54Data : GolfCourseData {
-    static func getParList() -> [Int] {
-        return [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
-    }
-
-    static func getHcpList() -> [Int] {
-        return [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10]
-    }
-
-    static func getSlopeList() -> [[Float]] {
-        return []
-    }
-}
+let SaroPark54Data = GolfCourse("Park 54", [], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10])
 
 class GullbringaNyaData : GolfCourseData {
     static func getSlopeList() -> [[Float]] {

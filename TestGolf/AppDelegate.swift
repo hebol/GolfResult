@@ -64,6 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             
             data["date"]      = Date()
             try session.updateApplicationContext(data)
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "Resultat") as! ResultTableViewController
+            self.window!.rootViewController!.present(newViewController, animated: true, completion: nil)
         } catch {
             NSLog("App: error")
         }
@@ -88,9 +91,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
     }
     
-//    optional public func session(_ session: WCSession, didReceiveMessage message: [String : Any])
-
-
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         NSLog("App(del): activationDidCompleteWith session:%@", session)
         if (session.isReachable) {
