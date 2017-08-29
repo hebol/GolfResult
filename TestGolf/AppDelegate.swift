@@ -57,8 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             round   = data["round"] as? Round
             players = round?.players
             
-            let defaults = UserDefaults.standard
-            defaults.set(players, forKey: "players")
+            Player.toDefaults(players!, UserDefaults.standard)
 
             round?.results = [[Int]]()
             

@@ -17,6 +17,12 @@ class Player {
     let name : String;
     let exactHcp : Float;
     let effectiveHcp : Int;
+    static func toDefaults(_ data: [Player], _ defaults: [String:Any]) {
+        var defaults = defaults
+        defaults["playerNames"]         = data.map {$0.name}
+        defaults["playerEffectiveHcps"] = data.map {$0.effectiveHcp}
+        defaults["playerExactHcps"]     = data.map {$0.exactHcp}
+    }
 }
 
 class Round {
@@ -28,6 +34,13 @@ class Round {
     let players : [Player]
     let course : GolfCourse
     var results : [[Int]]
+    
+    func toDefaults(_ defaults: [String:Any]) {
+        var defaults = defaults
+        Player.toDefaults(players, defaults)
+        defaults["results"] = results
+        course.toDefaults(defaults)
+    }
 }
 
 class GolfCourse {
@@ -41,6 +54,14 @@ class GolfCourse {
     let slopeList: [[Float]]
     let parList : [Int]
     let indexList : [Int]
+    
+    func toDefaults(_ defaults: [String:Any]) {
+        var defaults = defaults
+        defaults["name"]      = name
+        defaults["slopeList"] = slopeList
+        defaults["parList"]   = parList
+        defaults["indexList"] = indexList
+    }
     
     func getEffectiveHcp( _ player: Player) -> Int {
         var result: Int? = nil;
