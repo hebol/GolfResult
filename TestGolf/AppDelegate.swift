@@ -40,9 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func clearResults() {
         do {
             round?.results = [[Int]]()
-            var data = [String : Any]()
+            var data = round!.toDefaults()
             data["date"]  = Date()
-            data["round"] = round
             
             try session.updateApplicationContext(data)
         } catch {
@@ -53,19 +52,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func newRound(notification:Notification) -> Void {
         NSLog("App(del): Did receive notification", notification.userInfo!)
         do {
-            var data = notification.userInfo! as! [String : Any]
-            round   = data["round"] as? Round
-            players = round?.players
+            round = (notification.userInfo! as! [String : Any])["round"] as? Round
+            players = round!.players
+            var data : [String:Any] = round!.toDefaults()
             
-            Player.toDefaults(players!, UserDefaults.standard)
+            round!.results = [[Int]]()
+            
+            UserDefaults.standard.setDefault(data)
 
-            round?.results = [[Int]]()
-            
             data["date"]      = Date()
             try session.updateApplicationContext(data)
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Resultat") as! ResultTableViewController
-            self.window!.rootViewController!.present(newViewController, animated: true, completion: nil)
+            let root = self.window!.rootViewController! as! UINavigationController
+            root.show(newViewController, sender: self)
         } catch {
             NSLog("App: error")
         }
@@ -84,8 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                 }
                 self.round?.results.append(resultList)
             }
-            let defaults = UserDefaults.standard
-            defaults.set(self.round, forKey: "round")
+//            let defaults = UserDefaults.standard
+//            defaults.set(self.round, forKey: "round")
             NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["round":self.round!])
         }
     }

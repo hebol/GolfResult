@@ -20,10 +20,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
     
     var currentHole = 1
     var results   = [String:[Int]]()
-    var names     = [String]()
-    var hcps      = [Int]()
-    var pars      = [Int]()
-    var courseHcp = [Int]()
+    var round :Round?
     
     var session : WCSession!
     
@@ -57,21 +54,17 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         }
         
         NotificationCenter.default.addObserver(forName:notification, object:nil, queue:nil, using:scoreNotification)
-        if (names.count == 0) {
+        if (round == nil || round?.players.count == 0) {
             self.pushController(withName: "Waiting", context: [])
         }
     }
     
     func scoreNotification(notification:Notification) -> Void {
         NSLog("WK Did receive notification %@", notification.userInfo!)
-        var data = (notification.userInfo as! [String:Any])
+        round = (notification.userInfo as! [String:Any])["round"] as? Round
         
-        names           = (data["names"] as! [String])
-        hcps            = (data["hcps"] as! [Int])
-        pars            = (data["pars"] as! [Int])
-        courseHcp       = (data["courseHcp"] as! [Int])
         results = [String:[Int]]()
-        if (names.count == 0) {
+        if (round == nil || round?.players.count == 0) {
             self.pushController(withName: "Waiting", context: [])
         } else {
             currentHole     = 1
@@ -80,7 +73,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
     }
     
     @IBAction func selectScore() {
-        self.pushController(withName: "Score", context: ["delegate":self, "names": names])
+        self.pushController(withName: "Score", context: ["delegate":self, "players": round!.players])
     }
     
     @IBAction func showNextHole() {
@@ -113,13 +106,13 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
             lockButton.setBackgroundImageNamed("unlock-128.png")
         }
         var result = ""
-        let holePar   = pars[hole - 1]
-        let holeIndex = courseHcp[hole - 1]
-        for index in 0..<names.count {
+        let holePar   = round!.course.parList[hole - 1]
+        let holeIndex = round!.course.indexList[hole - 1]
+        for index in 0..<round!.players.count {
             if (result.characters.count > 0) {
                 result += " "
             }
-            let hcp = GolfResult.calculateHcp(holePar, holeIndex, hcps[index])
+            let hcp = GolfResult.calculateHcp(holePar:holePar, holeIndex:holeIndex, playerHcp: round!.players[index].effectiveHcp)
             result += String(hcp)
         }
         parLabel.setText(result + " (" + String(holeIndex) + ")")
@@ -154,7 +147,8 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         NSLog("WK Received data %@", applicationContext)
         //Use this to update the UI instantaneously (otherwise, takes a little while)
         DispatchQueue.main.async() {
-            NotificationCenter.default.post(name:self.notification, object: nil, userInfo:applicationContext)
+            let data = Round.fromDefaults(applicationContext)
+            NotificationCenter.default.post(name:self.notification, object: nil, userInfo:["round":data])
         }
     }
     

@@ -17,11 +17,27 @@ class Player {
     let name : String;
     let exactHcp : Float;
     let effectiveHcp : Int;
-    static func toDefaults(_ data: [Player], _ defaults: [String:Any]) {
-        var defaults = defaults
-        defaults["playerNames"]         = data.map {$0.name}
-        defaults["playerEffectiveHcps"] = data.map {$0.effectiveHcp}
-        defaults["playerExactHcps"]     = data.map {$0.exactHcp}
+    
+    static func toDefaults(_ data: [Player]) -> [String:Any] {
+        var result = [String:Any]()
+        result["playerNames"]         = data.map {$0.name}
+        result["playerEffectiveHcps"] = data.map {$0.effectiveHcp}
+        result["playerExactHcps"]     = data.map {$0.exactHcp}
+        
+        return result;
+    }
+    
+    static func fromDefaults(_ defaults: [String:Any]) -> [Player] {
+        var result = [Player]()
+        let playerNames         = defaults["playerNames"] as! [String]
+        let playerExactHcps     = defaults["playerExactHcps"] as! [Float]
+        let playerEffectiveHcps = defaults["playerEffectiveHcps"] as! [Int]
+        
+        for index in 0..<playerNames.count {
+            result.append(Player(playerNames[index], playerExactHcps[index], playerEffectiveHcps[index]))
+        }
+        
+        return result
     }
 }
 
@@ -35,11 +51,13 @@ class Round {
     let course : GolfCourse
     var results : [[Int]]
     
-    func toDefaults(_ defaults: [String:Any]) {
-        var defaults = defaults
-        Player.toDefaults(players, defaults)
-        defaults["results"] = results
-        course.toDefaults(defaults)
+    func toDefaults() -> [String:Any] {
+        var result = Player.toDefaults(players)
+        result["results"] = results
+        return course.toDefaults() + result
+    }
+    static func fromDefaults(_ defaults: [String:Any]) -> Round {
+        return Round(Player.fromDefaults(defaults), GolfCourse.fromDefaults(defaults))
     }
 }
 
@@ -55,12 +73,19 @@ class GolfCourse {
     let parList : [Int]
     let indexList : [Int]
     
-    func toDefaults(_ defaults: [String:Any]) {
-        var defaults = defaults
-        defaults["name"]      = name
-        defaults["slopeList"] = slopeList
-        defaults["parList"]   = parList
-        defaults["indexList"] = indexList
+    func toDefaults() -> [String:Any] {
+        var result = [String:Any]()
+        
+        result["name"]      = name
+        result["slopeList"] = slopeList
+        result["parList"]   = parList
+        result["indexList"] = indexList
+        
+        return result
+    }
+    
+    static func fromDefaults(_ defaults: [String:Any]) -> GolfCourse {
+        return GolfCourse(defaults["name"] as! String, defaults["slopeList"] as! [[Float]], defaults["parList"] as! [Int], defaults["indexList"] as! [Int])
     }
     
     func getEffectiveHcp( _ player: Player) -> Int {

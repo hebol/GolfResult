@@ -71,7 +71,7 @@ class ResultTableViewController: UITableViewController {
                     let strokes = round.results[row][col]
                     result += strokes
                     
-                    let hcp = GolfResult.calculateHcp(round.course.parList[row], round.course.indexList[row], round.players[col].effectiveHcp)
+                    let hcp = GolfResult.calculateHcp(holePar: round.course.parList[row], holeIndex: round.course.indexList[row], playerHcp: round.players[col].effectiveHcp)
                     let points = max(hcp - strokes + 2, 0);
                     resultPoints += points
                 }
@@ -88,7 +88,7 @@ class ResultTableViewController: UITableViewController {
     
     func updatedScore(notification:Notification) -> Void {
         NSLog("App: Did receive notification score", notification.userInfo!)
-        result = notification.userInfo!["results"] as! [[Int]]
+        result = (notification.userInfo!["round"] as! Round).results
         tableView.reloadData()
     }
     
@@ -134,7 +134,7 @@ class ResultTableViewController: UITableViewController {
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = data.count <= col
             if (col < players.count) {
-                let hcp = GolfResult.calculateHcp(courseIndex, courseHcp, players[col].effectiveHcp)
+                let hcp = GolfResult.calculateHcp(holePar: courseHcp, holeIndex: courseIndex, playerHcp: players[col].effectiveHcp)
                 let strokes = getValue(col, data)
                 let points = max(hcp - strokes + 2, 0);
                 

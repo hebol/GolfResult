@@ -16,7 +16,7 @@ protocol ScoreHandler {
 class ScoreInterfaceController: WKInterfaceController {
     @IBOutlet var nameLabel: WKInterfaceLabel!
     var delegate: ScoreHandler?
-    var names: [String]?
+    var players: [Player]?
     var results = [Int]()
     var added = 0
     
@@ -24,11 +24,11 @@ class ScoreInterfaceController: WKInterfaceController {
         WKInterfaceDevice.current().play(WKHapticType.click)
         results.append(value + added)
         //NSLog("WK:Process %d => %@", value, results)
-        if (results.count >= (names?.count)!) {
+        if (results.count >= (players?.count)!) {
             delegate?.selectedScore(results)
             self.pop()
         } else {
-            nameLabel.setText(names?[results.count])
+            nameLabel.setText(players?[results.count].name)
         }
         added = 0
     }
@@ -60,7 +60,7 @@ class ScoreInterfaceController: WKInterfaceController {
     @IBAction func selectedPlus() {
         WKInterfaceDevice.current().play(WKHapticType.click)
         added += 8;
-        let name = names?[results.count];
+        let name = players?[results.count].name;
         nameLabel.setText(name! + " +" + String(added))
     }
     
@@ -71,13 +71,10 @@ class ScoreInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         let data = context as! [String:Any]
+        self.players  = data["players"] as! [Player]
         self.delegate = data["delegate"] as? ScoreHandler
-        self.names    = data["names"] as? [String]
-        if (names != nil && (names?.count)! > results.count) {
-            nameLabel.setText(names?[results.count])
+        if (players != nil && (players?.count)! > results.count) {
+            nameLabel.setText(players?[results.count].name)
         }
-
-        // Configure interface objects here.
-        //NSLog(self.delegate != nil ? "Set" : "Not Set");
     }
 }

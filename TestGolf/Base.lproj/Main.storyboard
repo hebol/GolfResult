@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Setup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestGolf" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,7 +201,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MEO-GD-TL3"/>
+                    <navigationItem key="navigationItem" title="Setup" id="MEO-GD-TL3"/>
                     <connections>
                         <outlet property="spelare1Hcp" destination="Hwk-ml-WLy" id="gS5-cX-x5w"/>
                         <outlet property="spelare1Slag" destination="ajD-7z-w8W" id="3fg-2w-9IC"/>
@@ -225,7 +225,7 @@
         <!--Resultat-->
         <scene sceneID="paP-GA-AWt">
             <objects>
-                <tableViewController id="2aF-UF-LBA" customClass="ResultTableViewController" customModule="TestGolf" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Resultat" id="2aF-UF-LBA" customClass="ResultTableViewController" customModule="TestGolf" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gxD-LW-ImK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,13 +400,17 @@
                             <outlet property="delegate" destination="2aF-UF-LBA" id="gD3-vs-FKJ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="LJS-lG-zIk"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Resultat" id="7Fj-cG-85K">
-                        <barButtonItem key="rightBarButtonItem" title="Avsluta" id="BkG-n3-8XS">
+                        <barButtonItem key="rightBarButtonItem" title="Avsluta" id="0P0-K6-IXb">
                             <connections>
-                                <action selector="avslutaRunda:" destination="2aF-UF-LBA" id="UNu-L0-ISz"/>
+                                <action selector="avslutaRunda:" destination="2aF-UF-LBA" id="ZWq-Tz-JSN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rry-YJ-Uwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="vu8-hf-9xC">
