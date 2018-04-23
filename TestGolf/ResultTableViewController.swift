@@ -71,7 +71,7 @@ class ResultTableViewController: UITableViewController {
                     let strokes = round.results[row][col]
                     result += strokes
                     
-                    let hcp = GolfResult.calculateHcp(holePar: round.course.parList[row], holeIndex: round.course.indexList[row], playerHcp: round.players[col].effectiveHcp)
+                    let hcp = GolfResult.calculateHcp(holePar: round.course.parList[row], holeIndex: round.course.indexList[row], playerHcp: round.players[col].effectiveHcp!)
                     let points = max(hcp - strokes + 2, 0);
                     resultPoints += points
                 }
@@ -134,7 +134,7 @@ class ResultTableViewController: UITableViewController {
         for col in 0 ..< 4 {
             resultFields[col]?.isHidden = data.count <= col
             if (col < players.count) {
-                let hcp = GolfResult.calculateHcp(holePar: courseHcp, holeIndex: courseIndex, playerHcp: players[col].effectiveHcp)
+                let hcp = GolfResult.calculateHcp(holePar: courseHcp, holeIndex: courseIndex, playerHcp: players[col].effectiveHcp!)
                 let strokes = getValue(col, data)
                 let points = max(hcp - strokes + 2, 0);
                 
@@ -154,6 +154,15 @@ class ResultTableViewController: UITableViewController {
             returnValue = array[index];
         }
         return returnValue;
+    }
+    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let index = tableView.indexPath(for:sender as! UITableViewCell)?.row;
+        let section = tableView.indexPath(for:sender as! UITableViewCell)?.section;
+        let detailVC = segue.destination as! ScoreViewController
+        detailVC.currentHole = index! + 9 * section!;
+        NSLog("prepareForSegue %d", detailVC.currentHole);
     }
     
     /*

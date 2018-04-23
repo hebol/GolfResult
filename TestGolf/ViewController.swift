@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
 
     @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet weak var spelare1TextField: UITextField!
     @IBOutlet weak var spelare2TextField: UITextField!
     @IBOutlet weak var spelare3TextField: UITextField!
     @IBOutlet weak var spelare4TextField: UITextField!
+    
     @IBOutlet weak var spelare1Hcp: UITextField!
     @IBOutlet weak var spelare2Hcp: UITextField!
     @IBOutlet weak var spelare3Hcp: UITextField!
     @IBOutlet weak var spelare4Hcp: UITextField!
+    
     @IBOutlet weak var spelare1Slag: UILabel!
     @IBOutlet weak var spelare2Slag: UILabel!
     @IBOutlet weak var spelare3Slag: UILabel!

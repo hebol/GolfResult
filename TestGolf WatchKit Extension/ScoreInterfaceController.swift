@@ -71,7 +71,7 @@ class ScoreInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         let data = context as! [String:Any]
-        self.players  = data["players"] as! [Player]
+        self.players  = data["players"] as? [Player]
         self.delegate = data["delegate"] as? ScoreHandler
         if (players != nil && (players?.count)! > results.count) {
             nameLabel.setText(players?[results.count].name)

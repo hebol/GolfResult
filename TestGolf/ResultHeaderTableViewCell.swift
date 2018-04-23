@@ -18,12 +18,12 @@ class ResultHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        NSLog("App: header init")
+        NSLog("HeaderTable: header init")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let players = appDelegate.round!.players
         let fields = [spelare1Label, spelare2Label, spelare3Label, spelare4Label]
         for col in 0..<4 {
-            let hcp = players.count > col ? String(players[col].effectiveHcp) : ""
+            let hcp = players.count > col ? String(players[col].effectiveHcp!) : ""
             fields[col]?.text = (players.count > col ? players[col].name  + " (" + hcp + ")" : "")
         }
     }

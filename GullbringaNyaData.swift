@@ -9,14 +9,14 @@
 import Foundation
 
 class Player {
-    init(_ name: String, _ exactHcp: Float, _ effectiveHcp: Int) {
+    init(_ name: String, _ exactHcp: Float, _ effectiveHcp: Int?) {
         self.name = name;
         self.exactHcp = exactHcp;
         self.effectiveHcp = effectiveHcp;
     }
     let name : String;
     let exactHcp : Float;
-    let effectiveHcp : Int;
+    let effectiveHcp : Int?;
     
     static func toDefaults(_ data: [Player]) -> [String:Any] {
         var result = [String:Any]()
@@ -29,12 +29,14 @@ class Player {
     
     static func fromDefaults(_ defaults: [String:Any]) -> [Player] {
         var result = [Player]()
-        let playerNames         = defaults["playerNames"] as! [String]
-        let playerExactHcps     = defaults["playerExactHcps"] as! [Float]
-        let playerEffectiveHcps = defaults["playerEffectiveHcps"] as! [Int]
-        
-        for index in 0..<playerNames.count {
-            result.append(Player(playerNames[index], playerExactHcps[index], playerEffectiveHcps[index]))
+            let playerNames         = defaults["playerNames"] as? [String]
+            let playerExactHcps     = defaults["playerExactHcps"] as? [Float]
+            let playerEffectiveHcps = defaults["playerEffectiveHcps"] as? [Int]
+
+        if (playerNames != nil && playerExactHcps != nil) {
+            for index in 0..<playerNames!.count {
+                result.append(Player(playerNames![index], playerExactHcps![index], playerEffectiveHcps?[index]))
+            }
         }
         
         return result

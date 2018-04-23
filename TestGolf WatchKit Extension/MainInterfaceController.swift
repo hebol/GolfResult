@@ -112,7 +112,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
             if (result.characters.count > 0) {
                 result += " "
             }
-            let hcp = GolfResult.calculateHcp(holePar:holePar, holeIndex:holeIndex, playerHcp: round!.players[index].effectiveHcp)
+            let hcp = GolfResult.calculateHcp(holePar:holePar, holeIndex:holeIndex, playerHcp: round!.players[index].effectiveHcp!)
             result += String(hcp)
         }
         parLabel.setText(result + " (" + String(holeIndex) + ")")

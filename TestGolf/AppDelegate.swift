@@ -26,9 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
         
         let defaults = UserDefaults.standard
-        if let temp = defaults.object(forKey: "players") {
-            players = temp as? [Player]
-        }
+        players = Player.fromDefaults(defaults.dictionaryRepresentation());
         // Registering for notification
         NotificationCenter.default.addObserver(forName:roundNotification, object:nil, queue:nil, using:newRound)
         return true
@@ -45,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             
             try session.updateApplicationContext(data)
         } catch {
-            NSLog("App: error")
+            NSLog("App: error clearing results")
         }
     }
     
@@ -61,13 +59,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             UserDefaults.standard.setDefault(data)
 
             data["date"]      = Date()
-            try session.updateApplicationContext(data)
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "Resultat") as! ResultTableViewController
             let root = self.window!.rootViewController! as! UINavigationController
             root.show(newViewController, sender: self)
+            
+            try session.updateApplicationContext(data)
         } catch {
-            NSLog("App: error")
+            NSLog("App: error notifying new round")
         }
     }
     
@@ -88,6 +87,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 //            defaults.set(self.round, forKey: "round")
             NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["round":self.round!])
         }
+    }
+    
+    func addResult(_ hole: Int, _ result: [Int]) {
+        while (round!.results.count <= hole) {
+            round?.results.append([Int]())
+        }
+        round!.results[hole] = result
+        NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["round":self.round!])
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
