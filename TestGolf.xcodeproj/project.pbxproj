@@ -25,6 +25,7 @@
 		5B21B90C1F5BFBF100B3F804 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B21B90B1F5BFBF100B3F804 /* ScoreViewController.swift */; };
 		5B21B90E1F5BFE5100B3F804 /* LeftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B21B90D1F5BFE5100B3F804 /* LeftArrow.png */; };
 		5B21B9101F5BFE5500B3F804 /* RightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B21B90F1F5BFE5500B3F804 /* RightArrow.png */; };
+		5B42D57A208F42ED00246B12 /* StartScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B42D579208F42EC00246B12 /* StartScreen.png */; };
 		5B5CF6291F38F4690076293B /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6281F38F4690076293B /* ResultTableViewCell.swift */; };
 		5B5CF62B1F38F96B0076293B /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62A1F38F96B0076293B /* ResultTableViewController.swift */; };
 		5B5CF62D1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF62C1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift */; };
@@ -35,7 +36,6 @@
 		5B79CF8E1F46C982006B7418 /* GullbringaNyaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */; };
 		5B81E8D4208E5C0E0006A639 /* golf-ball-2400px.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */; };
 		5B81E8D6208E5D550006A639 /* appiconmaker.co_ios in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */; };
-		5B81E8D8208E5EAC0006A639 /* GolfStartImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */; };
 		5B8C83841F2DB82400FB13A8 /* unlock-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83831F2DB82400FB13A8 /* unlock-128.png */; };
 		5B8C83861F34D41700FB13A8 /* lock-128-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83851F34D41700FB13A8 /* lock-128-red.png */; };
 		5B8C83881F34DF0A00FB13A8 /* ScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */; };
@@ -128,6 +128,7 @@
 		5B21B90B1F5BFBF100B3F804 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		5B21B90D1F5BFE5100B3F804 /* LeftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftArrow.png; sourceTree = "<group>"; };
 		5B21B90F1F5BFE5500B3F804 /* RightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightArrow.png; sourceTree = "<group>"; };
+		5B42D579208F42EC00246B12 /* StartScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StartScreen.png; sourceTree = "<group>"; };
 		5B5CF6281F38F4690076293B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		5B5CF62A1F38F96B0076293B /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		5B5CF62C1F3B0D0B0076293B /* ResultHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,7 +138,6 @@
 		5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GullbringaNyaData.swift; sourceTree = "<group>"; };
 		5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "golf-ball-2400px.png"; sourceTree = "<group>"; };
 		5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = appiconmaker.co_ios; sourceTree = "<group>"; };
-		5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GolfStartImage.png; sourceTree = "<group>"; };
 		5B8C83831F2DB82400FB13A8 /* unlock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-128.png"; sourceTree = "<group>"; };
 		5B8C83851F34D41700FB13A8 /* lock-128-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-128-red.png"; sourceTree = "<group>"; };
 		5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInterfaceController.swift; sourceTree = "<group>"; };
@@ -204,12 +204,12 @@
 		5B0A708D1F2B4A1200AC6B17 /* TestGolf */ = {
 			isa = PBXGroup;
 			children = (
-				5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */,
 				5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */,
 				5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */,
 				5B21B90F1F5BFE5500B3F804 /* RightArrow.png */,
 				5B21B90D1F5BFE5100B3F804 /* LeftArrow.png */,
 				5B0A708E1F2B4A1200AC6B17 /* AppDelegate.swift */,
+				5B42D579208F42EC00246B12 /* StartScreen.png */,
 				5B0A70901F2B4A1200AC6B17 /* ViewController.swift */,
 				5B0A70921F2B4A1200AC6B17 /* Main.storyboard */,
 				5B0A70951F2B4A1200AC6B17 /* Assets.xcassets */,
@@ -451,8 +451,8 @@
 				5B81E8D6208E5D550006A639 /* appiconmaker.co_ios in Resources */,
 				5B21B9101F5BFE5500B3F804 /* RightArrow.png in Resources */,
 				5B21B90E1F5BFE5100B3F804 /* LeftArrow.png in Resources */,
-				5B81E8D8208E5EAC0006A639 /* GolfStartImage.png in Resources */,
 				5B0A70941F2B4A1200AC6B17 /* Main.storyboard in Resources */,
+				5B42D57A208F42ED00246B12 /* StartScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
