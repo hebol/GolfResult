@@ -33,6 +33,9 @@
 		5B5CF6331F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6321F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift */; };
 		5B5CF6381F3DE0BF0076293B /* WaitingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CF6371F3DE0BF0076293B /* WaitingInterfaceController.swift */; };
 		5B79CF8E1F46C982006B7418 /* GullbringaNyaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */; };
+		5B81E8D4208E5C0E0006A639 /* golf-ball-2400px.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */; };
+		5B81E8D6208E5D550006A639 /* appiconmaker.co_ios in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */; };
+		5B81E8D8208E5EAC0006A639 /* GolfStartImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */; };
 		5B8C83841F2DB82400FB13A8 /* unlock-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83831F2DB82400FB13A8 /* unlock-128.png */; };
 		5B8C83861F34D41700FB13A8 /* lock-128-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C83851F34D41700FB13A8 /* lock-128-red.png */; };
 		5B8C83881F34DF0A00FB13A8 /* ScoreInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */; };
@@ -132,6 +135,9 @@
 		5B5CF6321F3C69CD0076293B /* ResultFooterSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultFooterSectionTableViewCell.swift; sourceTree = "<group>"; };
 		5B5CF6371F3DE0BF0076293B /* WaitingInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingInterfaceController.swift; sourceTree = "<group>"; };
 		5B79CF8D1F46C982006B7418 /* GullbringaNyaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GullbringaNyaData.swift; sourceTree = "<group>"; };
+		5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "golf-ball-2400px.png"; sourceTree = "<group>"; };
+		5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */ = {isa = PBXFileReference; lastKnownFileType = folder; path = appiconmaker.co_ios; sourceTree = "<group>"; };
+		5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GolfStartImage.png; sourceTree = "<group>"; };
 		5B8C83831F2DB82400FB13A8 /* unlock-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlock-128.png"; sourceTree = "<group>"; };
 		5B8C83851F34D41700FB13A8 /* lock-128-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-128-red.png"; sourceTree = "<group>"; };
 		5B8C83871F34DF0A00FB13A8 /* ScoreInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInterfaceController.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 		5B0A708D1F2B4A1200AC6B17 /* TestGolf */ = {
 			isa = PBXGroup;
 			children = (
+				5B81E8D7208E5EAC0006A639 /* GolfStartImage.png */,
+				5B81E8D5208E5D550006A639 /* appiconmaker.co_ios */,
+				5B81E8D3208E5C0E0006A639 /* golf-ball-2400px.png */,
 				5B21B90F1F5BFE5500B3F804 /* RightArrow.png */,
 				5B21B90D1F5BFE5100B3F804 /* LeftArrow.png */,
 				5B0A708E1F2B4A1200AC6B17 /* AppDelegate.swift */,
@@ -289,6 +298,7 @@
 				5B0A70881F2B4A1100AC6B17 /* Frameworks */,
 				5B0A70891F2B4A1100AC6B17 /* Resources */,
 				5B0A70DB1F2B4A1200AC6B17 /* Embed Watch Content */,
+				5B81E8D9208E658C0006A639 /* Increment Build */,
 			);
 			buildRules = (
 			);
@@ -437,8 +447,11 @@
 			files = (
 				5B0A70991F2B4A1200AC6B17 /* LaunchScreen.storyboard in Resources */,
 				5B0A70961F2B4A1200AC6B17 /* Assets.xcassets in Resources */,
+				5B81E8D4208E5C0E0006A639 /* golf-ball-2400px.png in Resources */,
+				5B81E8D6208E5D550006A639 /* appiconmaker.co_ios in Resources */,
 				5B21B9101F5BFE5500B3F804 /* RightArrow.png in Resources */,
 				5B21B90E1F5BFE5100B3F804 /* LeftArrow.png in Resources */,
+				5B81E8D8208E5EAC0006A639 /* GolfStartImage.png in Resources */,
 				5B0A70941F2B4A1200AC6B17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +490,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B81E8D9208E658C0006A639 /* Increment Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/TestGolf WatchKit App/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/TestGolf WatchKit Extension/Info.plist\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B0A70871F2B4A1100AC6B17 /* Sources */ = {

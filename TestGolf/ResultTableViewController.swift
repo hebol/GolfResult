@@ -53,12 +53,12 @@ class ResultTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? ResultFooterSectionTableViewCell  else {
             fatalError("The dequeued cell is not an instance of " + cellIdentifier + ".")
         }
-        cell.roundDirectionLabel.text = section == 0 ? "Ut" : "In"
+        cell.roundDirectionLabel.text = section == 0 ? "Ut" : (section == 1 ? "In" : "Tot")
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let round = appDelegate.round!
-        let start   = section == 0 ? 0 : 9
-        
+        let round  = appDelegate.round!
+        let start  = section == 1 ?  9 : 0
+        let length = section == 2 ? 18 : 9
 
         let resultFields = [cell.player1ResultLabel, cell.player2ResultLabel, cell.player3ResultLabel, cell.player4ResultLabel]
         
@@ -66,7 +66,7 @@ class ResultTableViewController: UITableViewController {
             resultFields[col]?.isHidden = col >= round.players.count
             var result:Int       = 0
             var resultPoints:Int = 0
-            for row in start ..< start + 9 {
+            for row in start ..< start + length {
                 if row < round.results.count && col < round.results[row].count {
                     let strokes = round.results[row][col]
                     result += strokes
@@ -108,11 +108,11 @@ class ResultTableViewController: UITableViewController {
     var result = [[Int]]()
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return section <  2 ? 9 : 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

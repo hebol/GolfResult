@@ -34,12 +34,22 @@ class ScoreViewController: UIViewController {
     
     func displayValues() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var isFirst = true;
         for anIndex in 0..<appDelegate.players!.count {
             var value = "";
+            spelareLabels[anIndex].font = UIFont.systemFont(ofSize: 17)
             if (anIndex < values.count) {
                 value = String(values[anIndex]);
+            } else {
+                if (isFirst) {
+                    spelareLabels[anIndex].font = UIFont.boldSystemFont(ofSize: 17)
+                    isFirst = false;
+                }
             }
             resultLabels[anIndex].text = value;
+        }
+        if (isFirst) {
+            spelareLabels[0].font = UIFont.boldSystemFont(ofSize: 17)
         }
     }
     
@@ -96,14 +106,12 @@ class ScoreViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         halLabel.text = "Hål " + String(hole + 1)
         increasedValue = 0;
-        for index in 0..<appDelegate.players!.count {
-            let hasResult = appDelegate.round!.results.count > currentHole && appDelegate.round!.results[currentHole].count > index
-            var result = ""
-            if (hasResult) {
-                result = String(appDelegate.round!.results[currentHole][index])
-            }
-            resultLabels[index].text = result
+        if (appDelegate.round!.results.count > currentHole) {
+            values = appDelegate.round!.results[currentHole];
+        } else {
+            values = [Int]();
         }
+        displayValues()
     }
 
     override func didReceiveMemoryWarning() {

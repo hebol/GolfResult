@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
 
     @IBOutlet weak var startButton: UIButton!
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     
     func hasSetValue(_ field: UITextField) -> Bool {
-        return (field.text?.trim().characters.count)! > 0
+        return (field.text?.trim().count)! > 0
     }
     
     @IBAction func hcpfieldWasUpdated(_ sender: Any) {
@@ -60,6 +60,12 @@ class ViewController: UIViewController {
         } else {
             label??.text = ""
         }
+        player1NameChanged(sender);
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
     }
     
     
