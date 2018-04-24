@@ -27,6 +27,7 @@ class ScoreViewController: UIViewController {
         
         if (values.count >= numberOfPlayers) {
             appDelegate.addResult(currentHole, values)
+            nextHole(sender);
         }
         increasedValue = 0;
         displayValues();
@@ -35,21 +36,22 @@ class ScoreViewController: UIViewController {
     func displayValues() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         var isFirst = true;
+        let fontSize : CGFloat = 25;
         for anIndex in 0..<appDelegate.players!.count {
             var value = "";
-            spelareLabels[anIndex].font = UIFont.systemFont(ofSize: 17)
+            spelareLabels[anIndex].font = UIFont.systemFont(ofSize: fontSize)
             if (anIndex < values.count) {
                 value = String(values[anIndex]);
             } else {
                 if (isFirst) {
-                    spelareLabels[anIndex].font = UIFont.boldSystemFont(ofSize: 17)
+                    spelareLabels[anIndex].font = UIFont.boldSystemFont(ofSize: fontSize)
                     isFirst = false;
                 }
             }
             resultLabels[anIndex].text = value;
         }
         if (isFirst) {
-            spelareLabels[0].font = UIFont.boldSystemFont(ofSize: 17)
+            spelareLabels[0].font = UIFont.boldSystemFont(ofSize: fontSize)
         }
     }
     

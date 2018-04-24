@@ -94,7 +94,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         if (hasValue) {
             var result = ""
             for value in values! {
-                if (result.characters.count > 0) {
+                if (result.count > 0) {
                     result += " "
                 }
                 result += String(value)
@@ -109,7 +109,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         let holePar   = round!.course.parList[hole - 1]
         let holeIndex = round!.course.indexList[hole - 1]
         for index in 0..<round!.players.count {
-            if (result.characters.count > 0) {
+            if (result.count > 0) {
                 result += " "
             }
             let hcp = GolfResult.calculateHcp(holePar:holePar, holeIndex:holeIndex, playerHcp: round!.players[index].effectiveHcp!)
