@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 class ViewController: UIViewController, UITextFieldDelegate {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
@@ -118,7 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func startRound(_ sender: Any) {
-        NSLog("App: Starting round")
+        BFLog("App: Starting round")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if (appDelegate.round == nil || appDelegate.round!.results.count == 0) {
             let players = getPlayers()
@@ -127,7 +128,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                             userInfo:["round":round])
             
         } else {
-            NSLog("App: Reusing old values");
+            BFLog("App: Reusing old values");
         }
     }
 }

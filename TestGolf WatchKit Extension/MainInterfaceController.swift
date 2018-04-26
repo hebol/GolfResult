@@ -45,7 +45,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         super.init()
         if (session == nil) {
             if (WCSession.isSupported()) {
-                session = WCSession.default()
+                session = WCSession.default
                 session.delegate = self
                 session.activate()
             }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 class ResultTableViewController: UITableViewController {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
@@ -87,13 +88,13 @@ class ResultTableViewController: UITableViewController {
     }
     
     func updatedScore(notification:Notification) -> Void {
-        NSLog("App: Did receive notification score", notification.userInfo!)
+        BFLog("App: Did receive notification score", notification.userInfo!)
         result = (notification.userInfo!["round"] as! Round).results
         tableView.reloadData()
     }
     
     func newRound(notification:Notification) -> Void {
-        NSLog("App: Did receive notification new round", notification.userInfo!)
+        BFLog("App: Did receive notification new round", notification.userInfo!)
         
         tableView.reloadData()
     }
@@ -162,7 +163,7 @@ class ResultTableViewController: UITableViewController {
         let section = tableView.indexPath(for:sender as! UITableViewCell)?.section;
         let detailVC = segue.destination as! ScoreViewController
         detailVC.currentHole = index! + 9 * section!;
-        NSLog("prepareForSegue %d", detailVC.currentHole);
+        BFLog("prepareForSegue %d", detailVC.currentHole);
     }
     
     /*

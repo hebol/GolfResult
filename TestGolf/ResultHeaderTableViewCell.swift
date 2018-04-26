@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 class ResultHeaderTableViewCell: UITableViewCell {
 
@@ -18,7 +19,7 @@ class ResultHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        NSLog("HeaderTable: header init")
+        BFLog("HeaderTable: header init")
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let players = appDelegate.round!.players
         let fields = [spelare1Label, spelare2Label, spelare3Label, spelare4Label]

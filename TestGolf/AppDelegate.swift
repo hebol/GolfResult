@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import BugfenderSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
@@ -18,9 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        Bugfender.activateLogger("Afi6IeKlW38maXBXp2EL5KhKTSZHyFBe")
+//        Bugfender.enableUIEventLogging()  // optional, log user interactions automatically
+        Bugfender.enableCrashReporting() // optional, log crashes automatically
+        BFLog("Hello world!") // use BFLog as you would use NSLog
+
         // Override point for customization after application launch.
         if (WCSession.isSupported()) {
-            session = WCSession.default()
+            session = WCSession.default
             session.delegate = self;
             session.activate()
         }
@@ -66,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             
             try session.updateApplicationContext(data)
         } catch {
-            NSLog("App: error notifying new round")
+            BFLog("App: error notifying new round")
         }
     }
     
@@ -95,6 +101,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
         round!.results[hole] = result
         NotificationCenter.default.post(name:self.scoreNotification, object: nil, userInfo:["round":self.round!])
+//        do {
+//            try session.updateApplicationContext(round!.toDefaults())
+//       } catch {
+//            BFLog("App: error sending result from phone")
+//        }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -102,12 +113,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         if (session.isReachable) {
             NSLog("App(del): sending message to app")
             session.sendMessage(["getState":""], replyHandler: { reply in
-                NSLog("App(del): got result: %@", reply)
+                BFLog("App(del): got result: %@", reply)
             }, errorHandler: { error in
-                NSLog("App(del): got error: %@", error.localizedDescription)
+                BFLog("App(del): got error: %@", error.localizedDescription)
             })
         } else {
-            NSLog("App(del): Watch is NOT reachable")
+            BFLog("App(del): Watch is NOT reachable")
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugfenderSDK
 
 class ScoreViewController: UIViewController {
     var currentHole = 0
@@ -23,7 +24,7 @@ class ScoreViewController: UIViewController {
         
         let value = Int(sender.title(for: .normal)!);
         values.append(value! + increasedValue);
-        NSLog("Värde %d, nu lista %@", value!, values)
+        BFLog("Värde %d, nu lista %@", value!, values)
         
         if (values.count >= numberOfPlayers) {
             appDelegate.addResult(currentHole, values)
