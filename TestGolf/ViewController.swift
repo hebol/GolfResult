@@ -9,7 +9,7 @@
 import UIKit
 import BugfenderSDK
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
 
     @IBOutlet weak var startButton: UIButton!
@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var spelare2Slag: UILabel!
     @IBOutlet weak var spelare3Slag: UILabel!
     @IBOutlet weak var spelare4Slag: UILabel!
+    @IBOutlet weak var coursePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +45,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
             hcpfieldWasUpdated(hcpLabels[index] as Any)
         }
 
+        coursePicker.dataSource = self
+        coursePicker.delegate = self
+
+        
         startButton.isEnabled = hasSetValue(spelare1TextField) && hasSetValue(spelare1Hcp);
     }
     
     func hasSetValue(_ field: UITextField) -> Bool {
         return (field.text?.trim().count)! > 0
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return GolfCourses.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return GolfCourses[row].name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        SelectedCourse = GolfCourses[row]
     }
     
     @IBAction func hcpfieldWasUpdated(_ sender: Any) {
@@ -123,7 +144,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if (appDelegate.round == nil || appDelegate.round!.results.count == 0) {
             let players = getPlayers()
-            let round = Round(players, SaroPark54Data)
+            let round = Round(players, SelectedCourse)
             NotificationCenter.default.post(name:self.roundNotification, object: nil,
                                             userInfo:["round":round])
             

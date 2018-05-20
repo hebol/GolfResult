@@ -8,8 +8,9 @@
 
 import UIKit
 import BugfenderSDK
+import MessageUI
 
-class ResultTableViewController: UITableViewController {
+class ResultTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
     let scoreNotification = Notification.Name(rawValue:"ScoreNotification")
 
@@ -25,11 +26,64 @@ class ResultTableViewController: UITableViewController {
             //print("You pressed Cancel")
         }
         
+        if MFMailComposeViewController.canSendMail() {
+            let zeTarget = self;
+            let mailAction = UIAlertAction(title: "Nej, Maila bara", style: .default) { (alert: UIAlertAction!) -> Void in
+                let composeVC = MFMailComposeViewController()
+                composeVC.mailComposeDelegate = zeTarget;
+                
+                // Configure the fields of the interface.
+                composeVC.setToRecipients(["golfresult@sjoblom.se"])
+                
+                let dateformatter = DateFormatter()
+                dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
+                let now = dateformatter.string(from: NSDate() as Date)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                if (appDelegate.round != nil) {
+                    var result = "<table>";
+                    result += "<tr>";
+                    result += "<th>Hål</th>";
+                    for  player in appDelegate.round!.players {
+                        result += "<th>" + player.name + "</th>";
+                    }
+                    result += "</tr>";
+                    for index in 0 ..< SelectedCourse.parList.count {
+                        result += "<tr>";
+                        result += "<th>" + String(index + 1) + "</th>";
+                        if (index < appDelegate.round!.results.count) {
+                            for col in 0 ..< appDelegate.round!.players.count {
+                                result += "<td>" + String(appDelegate.round!.results[index][col]) + "</td>";
+                            }
+                        }
+                        result += "</tr>";
+                    }
+                    result += "</table>";
+                    composeVC.setMessageBody(result, isHTML: true)
+                } else {
+                    composeVC.setMessageBody("<h1>Ingen runda</h1>", isHTML: true)
+                }
+                composeVC.setSubject("Resultat från runda " + now + " på " + SelectedCourse.name)
+                
+                // Present the view controller modally.
+                zeTarget.navigationController?.present(composeVC, animated: true, completion: nil)
+            }
+            alert.addAction(mailAction)
+        }
+
         alert.addAction(clearAction)
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion:nil)
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult, error: Error?) {
+        BFLog("Mail ready %d", result.rawValue);
+        
+        // Dismiss the mail compose view controller.
+        controller.dismiss(animated: true, completion: nil)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
