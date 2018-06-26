@@ -29,17 +29,24 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
         if MFMailComposeViewController.canSendMail() {
             let zeTarget = self;
             let mailAction = UIAlertAction(title: "Nej, Maila bara", style: .default) { (alert: UIAlertAction!) -> Void in
+                BFLog("Will mail result");
                 let composeVC = MFMailComposeViewController()
                 composeVC.mailComposeDelegate = zeTarget;
                 
                 // Configure the fields of the interface.
                 composeVC.setToRecipients(["golfresult@sjoblom.se"])
-                
+                BFLog("Has set recipient");
+
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
                 let now = dateformatter.string(from: NSDate() as Date)
+                BFLog("Will send now");
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                var partSums = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
+                var partPoints = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
+
                 if (appDelegate.round != nil) {
+                    BFLog("Start of HTML");
                     var result = "<table>";
                     result += "<tr>";
                     result += "<th>Hål</th>";
@@ -47,23 +54,56 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
                         result += "<th>" + player.name + "</th>";
                     }
                     result += "</tr>";
+                    BFLog("Names set");
                     for index in 0 ..< SelectedCourse.parList.count {
                         result += "<tr>";
                         result += "<th>" + String(index + 1) + "</th>";
                         if (index < appDelegate.round!.results.count) {
                             for col in 0 ..< appDelegate.round!.players.count {
-                                result += "<td>" + String(appDelegate.round!.results[index][col]) + "</td>";
+                                let score = appDelegate.round!.results[index][col];
+                            
+                                let hcp = GolfResult.calculateHcp(holePar: appDelegate.round!.course.parList[index], holeIndex: appDelegate.round!.course.indexList[index], playerHcp: appDelegate.round!.players[col].effectiveHcp!)
+                                let points = max(hcp - score + 2, 0);
+                                partPoints[index < 9 ? 0 : 1][col] += points;
+                                
+                                result += "<td>" + String(score) + " (" + String(points) + ")</td>";
+
+                                partSums[index < 9 ? 0 : 1][col] += score;
                             }
                         }
                         result += "</tr>";
+                        if (index == 8) {
+                            result += "<tr><th>Ut</th>";
+                            if (index < appDelegate.round!.results.count) {
+                                for col in 0 ..< appDelegate.round!.players.count {
+                                    result += "<td>" + String(partSums[0][col]) + " (" + String(partPoints[0][col]) + ")</td>";
+                                }
+                            }
+                            result += "</tr>";
+                        }
+                        if (index == 17) {
+                            result += "<tr><th>In</th>";
+                            if (index < appDelegate.round!.results.count) {
+                                for col in 0 ..< appDelegate.round!.players.count {
+                                    result += "<td>" + String(partSums[1][col]) + " (" + String(partPoints[1][col]) + ")</td>";
+                                }
+                                result += "</tr><tr><th>Summa</th>";
+                                for col in 0 ..< appDelegate.round!.players.count {
+                                    result += "<td>" + String(partSums[0][col] + partSums[1][col]) + " (" + String(partPoints[0][col] + partPoints[1][col]) + ")</td>";
+                                }
+                            }
+                            result += "</tr>";
+                        }
                     }
                     result += "</table>";
+                    BFLog("HTML result ready!");
                     composeVC.setMessageBody(result, isHTML: true)
                 } else {
                     composeVC.setMessageBody("<h1>Ingen runda</h1>", isHTML: true)
                 }
                 composeVC.setSubject("Resultat från runda " + now + " på " + SelectedCourse.name)
                 
+                BFLog("Presenting mail view");
                 // Present the view controller modally.
                 zeTarget.navigationController?.present(composeVC, animated: true, completion: nil)
             }
@@ -86,6 +126,7 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
 
     
     override func viewDidLoad() {
+        BFLog("viewDidLoad");
         super.viewDidLoad()
         
         self.navigationItem.hidesBackButton = true
@@ -220,49 +261,4 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
         BFLog("prepareForSegue %d", detailVC.currentHole);
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

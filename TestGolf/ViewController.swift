@@ -119,6 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDataSour
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        BFLog("didReceiveMemoryWarning");
         // Dispose of any resources that can be recreated.
     }
     
