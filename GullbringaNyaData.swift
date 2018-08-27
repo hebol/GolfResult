@@ -108,8 +108,9 @@ class GolfCourse {
 let SaroPark54Data = GolfCourse("Park 54", [], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], [11, 3, 7, 15, 5, 1, 17, 13, 9, 12, 4, 8, 16, 6, 2, 18, 14, 10])
 let Saro62Data = GolfCourse("Särö 62", [], [4, 4, 5, 4, 4, 4, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3], [9, 13, 5, 1, 3, 15, 17, 7, 11, 12, 4, 8, 16, 6, 2, 18, 14, 10])
 let Saro70Data = GolfCourse("Särö 70", [], [4, 4, 5, 4, 4, 4, 3, 3, 4, 4, 4, 5, 4, 4, 4, 3, 3, 4], [9, 13, 5, 1, 3, 15, 17, 7, 11, 10, 14, 6, 2, 4, 16, 18, 8, 12])
+let ValldaGkData = GolfCourse("Vallda GK", [], [4, 4, 4, 5, 3, 5, 4, 3, 4,  5, 3, 4, 4, 4, 3, 5, 4, 4], [12, 10, 14, 4, 18, 2, 6, 8, 16,  7, 11, 5, 1, 17, 15, 13, 3, 9])
 
-let GolfCourses = [SaroPark54Data, Saro62Data, Saro70Data, GullbringaNyaData];
+let GolfCourses = [SaroPark54Data, Saro62Data, Saro70Data, GullbringaNyaData, ValldaGkData];
 var SelectedCourse = SaroPark54Data;
 
 let GullbringaNyaSlope : [[Float]] = [

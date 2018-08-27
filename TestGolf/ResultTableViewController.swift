@@ -13,7 +13,6 @@ import MessageUI
 class ResultTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
     let roundNotification = Notification.Name(rawValue:"RoundNotification")
     let scoreNotification = Notification.Name(rawValue:"ScoreNotification")
-
    
     @IBAction func avslutaRunda(_ sender: Any) {
         let alert = UIAlertController(title: "Avsluta runda", message: "Skall du avsluta rundan?", preferredStyle: .alert)
@@ -40,64 +39,19 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
                 let dateformatter = DateFormatter()
                 dateformatter.dateFormat = "yyyy-MM-dd HH:mm"
                 let now = dateformatter.string(from: NSDate() as Date)
-                BFLog("Will send now");
+                BFLog("Will send now: \(now)");
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                var partSums = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
-                var partPoints = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
 
                 if (appDelegate.round != nil) {
-                    BFLog("Start of HTML");
-                    var result = "<table>";
-                    result += "<tr>";
-                    result += "<th>Hål</th>";
-                    for  player in appDelegate.round!.players {
-                        result += "<th>" + player.name + "</th>";
+                    do {
+                        BFLog("Will generate HTML");
+                        let result = try self.generateHtmlReport(appDelegate);
+                        
+                        BFLog("HTML result ready!");
+                        composeVC.setMessageBody(result, isHTML: true)
+                    } catch {
+                        BFLog("Error generating HTML \(error)");
                     }
-                    result += "</tr>";
-                    BFLog("Names set");
-                    for index in 0 ..< SelectedCourse.parList.count {
-                        result += "<tr>";
-                        result += "<th>" + String(index + 1) + "</th>";
-                        if (index < appDelegate.round!.results.count) {
-                            for col in 0 ..< appDelegate.round!.players.count {
-                                let score = appDelegate.round!.results[index][col];
-                            
-                                let hcp = GolfResult.calculateHcp(holePar: appDelegate.round!.course.parList[index], holeIndex: appDelegate.round!.course.indexList[index], playerHcp: appDelegate.round!.players[col].effectiveHcp!)
-                                let points = max(hcp - score + 2, 0);
-                                partPoints[index < 9 ? 0 : 1][col] += points;
-                                
-                                result += "<td>" + String(score) + " (" + String(points) + ")</td>";
-
-                                partSums[index < 9 ? 0 : 1][col] += score;
-                            }
-                        }
-                        result += "</tr>";
-                        if (index == 8) {
-                            result += "<tr><th>Ut</th>";
-                            if (index < appDelegate.round!.results.count) {
-                                for col in 0 ..< appDelegate.round!.players.count {
-                                    result += "<td>" + String(partSums[0][col]) + " (" + String(partPoints[0][col]) + ")</td>";
-                                }
-                            }
-                            result += "</tr>";
-                        }
-                        if (index == 17) {
-                            result += "<tr><th>In</th>";
-                            if (index < appDelegate.round!.results.count) {
-                                for col in 0 ..< appDelegate.round!.players.count {
-                                    result += "<td>" + String(partSums[1][col]) + " (" + String(partPoints[1][col]) + ")</td>";
-                                }
-                                result += "</tr><tr><th>Summa</th>";
-                                for col in 0 ..< appDelegate.round!.players.count {
-                                    result += "<td>" + String(partSums[0][col] + partSums[1][col]) + " (" + String(partPoints[0][col] + partPoints[1][col]) + ")</td>";
-                                }
-                            }
-                            result += "</tr>";
-                        }
-                    }
-                    result += "</table>";
-                    BFLog("HTML result ready!");
-                    composeVC.setMessageBody(result, isHTML: true)
                 } else {
                     composeVC.setMessageBody("<h1>Ingen runda</h1>", isHTML: true)
                 }
@@ -114,6 +68,68 @@ class ResultTableViewController: UITableViewController, MFMailComposeViewControl
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion:nil)
+    }
+    
+    func generateHtmlReport(_ appDelegate: AppDelegate) throws -> String  {
+        var result = "";
+        if ( appDelegate.round != nil) {
+            var partSums = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
+            var partPoints = Array(repeating: Array(repeating: 0, count: appDelegate.round!.results.count), count: 2);
+
+            BFLog("Start of HTML");
+            result = "<table>";
+            result += "<tr>";
+            result += "<th>Hål</th>";
+            for  player in appDelegate.round!.players {
+                result += "<th>" + player.name + "</th>";
+            }
+            result += "</tr>";
+            BFLog("Names set");
+            for row in 0 ..< SelectedCourse.parList.count {
+                result += "<tr>";
+                result += "<th>" + String(row + 1) + "</th>";
+                if (row < appDelegate.round!.results.count) {
+                    for playerIndex in 0 ..< appDelegate.round!.players.count {
+                        let score = appDelegate.round!.results[row][playerIndex];
+                        
+                        let hcp = GolfResult.calculateHcp(holePar: appDelegate.round!.course.parList[row], holeIndex: appDelegate.round!.course.indexList[row], playerHcp: appDelegate.round!.players[playerIndex].effectiveHcp!)
+                        let points = max(hcp - score + 2, 0);
+                        partPoints[row < 9 ? 0 : 1][playerIndex] += points;
+                        
+                        result += "<td>" + String(score) + " (" + String(points) + ")</td>";
+                        
+                        partSums[row < 9 ? 0 : 1][playerIndex] += score;
+                    }
+                }
+                result += "</tr>";
+                if (row == 8) {
+                    BFLog("First summary");
+                    result += "<tr><th>Ut</th>";
+                    if (row < appDelegate.round!.results.count) {
+                        for playerIndex in 0 ..< appDelegate.round!.players.count {
+                            result += "<td>" + String(partSums[0][playerIndex]) + " (" + String(partPoints[0][playerIndex]) + ")</td>";
+                        }
+                    }
+                    result += "</tr>";
+                }
+                if (row == 17) {
+                    BFLog("Second summary");
+                    result += "<tr><th>In</th>";
+                    if (row < appDelegate.round!.results.count) {
+                        for playerIndex in 0 ..< appDelegate.round!.players.count {
+                            result += "<td>" + String(partSums[1][playerIndex]) + " (" + String(partPoints[1][playerIndex]) + ")</td>";
+                        }
+                        result += "</tr><tr><th>Summa</th>";
+                        for playerIndex in 0 ..< appDelegate.round!.players.count {
+                            result += "<td>" + String(partSums[0][playerIndex] + partSums[1][playerIndex]) + " (" + String(partPoints[0][playerIndex] + partPoints[1][playerIndex]) + ")</td>";
+                        }
+                    }
+                    result += "</tr>";
+                }
+            }
+            result += "</table>";
+        }
+        return result;
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController,

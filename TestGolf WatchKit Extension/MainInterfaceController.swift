@@ -139,8 +139,8 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
     }
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) ->
         Void) {
-        NSLog("WK: got message from App %@", message)
-        replyHandler(["reply":results])
+        NSLog("WK: got message from App %@ with reply handler", message);
+        replyHandler(["reply":results]);
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
@@ -148,7 +148,7 @@ class MainInterfaceController: WKInterfaceController, ScoreHandler, WCSessionDel
         //Use this to update the UI instantaneously (otherwise, takes a little while)
         DispatchQueue.main.async() {
             let data = Round.fromDefaults(applicationContext)
-            NotificationCenter.default.post(name:self.notification, object: nil, userInfo:["round":data])
+            NotificationCenter.default.post(name:self.notification, object: nil, userInfo:["round":data]);
         }
     }
     

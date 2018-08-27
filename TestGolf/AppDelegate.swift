@@ -113,12 +113,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         BFLog("App(del): activationDidCompleteWith session:%@", session)
         if (session.isReachable) {
-            BFLog("App(del): sending message to app")
-            session.sendMessage(["getState":""], replyHandler: { reply in
-                BFLog("App(del): got result: %@", reply)
-            }, errorHandler: { error in
-                BFLog("App(del): got error: %@", error.localizedDescription)
-            })
+            DispatchQueue.main.async() {
+                BFLog("App(del): sending message to app")
+                session.sendMessage(["getState":""], replyHandler: { reply in
+                    BFLog("App(del): got result: %@", reply)
+                }, errorHandler: { error in
+                    BFLog("App(del): got error: %@", error.localizedDescription)
+                })
+            }
         } else {
             BFLog("App(del): Watch is NOT reachable")
         }

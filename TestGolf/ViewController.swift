@@ -47,7 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDataSour
 
         coursePicker.dataSource = self
         coursePicker.delegate = self
-
         
         startButton.isEnabled = hasSetValue(spelare1TextField) && hasSetValue(spelare1Hcp);
     }
@@ -89,7 +88,6 @@ class ViewController: UIViewController, UITextFieldDelegate,UIPickerViewDataSour
         self.view.endEditing(true)
         return true;
     }
-    
     
     func convertHcp(_ value: Float?) -> String {
         if (value != nil && value != Float.nan) {
