@@ -1,0 +1,6 @@
+framework module Pods_TestGolfUITests {
+  umbrella header "Pods-TestGolfUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
