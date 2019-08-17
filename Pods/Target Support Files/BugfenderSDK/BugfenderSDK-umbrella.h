@@ -11,6 +11,8 @@
 #endif
 
 #import "BugfenderSDK.h"
+#import "BFUserFeedbackViewController.h"
+#import "BFUserFeedbackNavigationController.h"
 
 FOUNDATION_EXPORT double BugfenderSDKVersionNumber;
 FOUNDATION_EXPORT const unsigned char BugfenderSDKVersionString[];

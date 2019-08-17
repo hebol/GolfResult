@@ -6,7 +6,7 @@ target 'TestGolf' do
   use_frameworks!
 
   # Pods for TestGolf
-  pod 'BugfenderSDK', '~> 1.5'
+  pod 'BugfenderSDK', '~> 1.6'
 
   target 'TestGolfTests' do
     inherit! :search_paths
