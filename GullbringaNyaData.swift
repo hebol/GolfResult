@@ -109,8 +109,12 @@ let SaroPark54Data = GolfCourse("Park 54", [], [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
 let Saro62Data = GolfCourse("Särö 62", [], [4, 4, 5, 4, 4, 4, 3, 3, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3], [9, 13, 5, 1, 3, 15, 17, 7, 11, 12, 4, 8, 16, 6, 2, 18, 14, 10])
 let Saro70Data = GolfCourse("Särö 70", [], [4, 4, 5, 4, 4, 4, 3, 3, 4, 4, 4, 5, 4, 4, 4, 3, 3, 4], [9, 13, 5, 1, 3, 15, 17, 7, 11, 10, 14, 6, 2, 4, 16, 18, 8, 12])
 let ValldaGkData = GolfCourse("Vallda GK", [], [4, 4, 4, 5, 3, 5, 4, 3, 4,  5, 3, 4, 4, 4, 3, 5, 4, 4], [12, 10, 14, 4, 18, 2, 6, 8, 16,  7, 11, 5, 1, 17, 15, 13, 3, 9])
+let SkepparlovsGkData = GolfCourse("Skepparlövs", [], [4, 4, 3, 5, 4, 4, 4, 4, 4, 5, 3, 4, 5, 4, 4, 5, 3, 4], [8, 12, 14, 6, 10, 4, 16, 2, 18, 7, 17, 5, 11, 1, 13, 9, 15, 3])
+let PerstorpsGkData = GolfCourse("Perstorps", [], [4, 3, 4, 5, 3, 4, 4, 4, 4, 4, 5, 3, 5, 3, 4, 4, 4, 4], [13, 15, 7, 9, 11, 5, 3, 17, 1, 18, 8, 12, 2, 10, 4, 6, 16, 14])
+let SkyrupGkData = GolfCourse("Skyrup", [], [4, 4, 3, 5, 4, 3, 4, 4, 4, 5, 3, 4, 4, 3, 4, 4, 4, 5], [14, 4, 18, 10, 8, 6, 16, 2, 12, 7, 11, 1, 5, 13, 15, 17, 3, 9])
+let HasslegardenGkData = GolfCourse("Hässlegården", [], [5, 4, 3, 5, 4, 4, 4, 3, 4, 4, 3, 4, 5, 3, 5, 3, 4, 3], [9, 17, 11, 7, 1, 13, 3, 15, 5, 10, 18, 8, 4, 16, 2, 14, 6, 12])
 
-let GolfCourses = [SaroPark54Data, Saro62Data, Saro70Data, GullbringaNyaData, ValldaGkData];
+let GolfCourses = [SaroPark54Data, Saro62Data, Saro70Data, GullbringaNyaData, ValldaGkData, SkepparlovsGkData, PerstorpsGkData, SkyrupGkData, HasslegardenGkData];
 var SelectedCourse = SaroPark54Data;
 
 let GullbringaNyaSlope : [[Float]] = [
