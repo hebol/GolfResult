@@ -7,512 +7,441 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042EE5BF01D6860C0FD7E3C869C25658 /* Pods-TestGolfTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 854B5D489FB361828D522755AF903823 /* Pods-TestGolfTests-dummy.m */; };
-		05A3ED2A2E972697ED25A7D1DB74F1A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28746552FEC47FFD53453D9BAC49E3 /* MobileCoreServices.framework */; };
-		0645880021EE3426321F2870083B36FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
-		07E91EB81D28CB7C3556191EC6494E49 /* Bugfender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD7F83686AC2DF99A8C853FE3BD7DD /* Bugfender.swift */; };
-		23FB1BB3483395AA68A02768CDFD8D6A /* BugfenderSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEFF26CE1E413F395CFBBEFE0E5E90 /* BugfenderSDK-dummy.m */; };
-		2D0A39FD17E4130DFB1FA2CBB13D5B90 /* Pods-TestGolfUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AF3CE0101900F544173F7E56BA4A5E /* Pods-TestGolfUITests-dummy.m */; };
-		33EBF262E2418A693D16B987A6296FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */; };
-		371F147532F3A66C8615A809597D47C1 /* Pods-TestGolf WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D48BAD16CA84087E638A6C1FD3BF74 /* Pods-TestGolf WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		408D7A8943B498DABFDCB18683CF6336 /* Pods-TestGolfTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E807B09AF099AD7D65AABA4BE1F20E4 /* Pods-TestGolfTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E882ABDC50C975DED3E98DC918E15B7 /* Pods-TestGolf WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4957988E524E03F33EAB04A4A9C2DBC7 /* Pods-TestGolf WatchKit App-dummy.m */; };
-		4ED4C5C0867831119971B7FE86D38487 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */; };
-		61CA3F425D71D1EEFAB8DEC6129EB0E9 /* BugfenderSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B05007C422A2C221457F0C83816557 /* BugfenderSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DD19F995B929EA7446D4EB2EA72BA86 /* Pods-TestGolf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2078A3946F40529E6FDCB98236CB11 /* Pods-TestGolf-dummy.m */; };
-		7EBCD2D640DBC32236134D244D71E4A6 /* Pods-TestGolf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B59D2455B11D15A4F2BE8E01CE8F76 /* Pods-TestGolf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B3D88841B2EE0EDDC3D9AAEB836EC53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */; };
-		8E599AE100A9448A6921988539594C00 /* BFUserFeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C08B6DB7C0861BF4ADCDB3C8ABDD2BB /* BFUserFeedbackViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9771849ECC6732278D99992BC9520CC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */; };
-		A2D8DB3D3B704DF013D4E9A6DF77D487 /* Pods-TestGolf WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E501E56CD1165ADD00536428785F82 /* Pods-TestGolf WatchKit Extension-dummy.m */; };
-		B5CE78D7F1C7FD11E935BE6AB1D36B5B /* Pods-TestGolf WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ED1DFF245EFF4F0667DFA7B20D7FCAD /* Pods-TestGolf WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDE8E00D127E0E4D8BC747C8FD044288 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FFA74503709E64C30FD5B6CCD95166 /* Security.framework */; };
-		EBE5F8D76CFC387DC00FF6A11E162B6A /* BugfenderSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ACB5D01C66EEA2D8661106A4AA01816 /* BugfenderSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED965E7899912A9F2653120BB4DA0587 /* BFUserFeedbackNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1601915BAA457B86D3DB12C2A6F784 /* BFUserFeedbackNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EE7C2C15128D45F9B439B02A9C7B23FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */; };
-		FC73200082C4D98D1422914EB8326279 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632C3D2D0298118777E6155CE2FE5266 /* SystemConfiguration.framework */; };
-		FC95472DBA3691A335A6075F9B616F46 /* Pods-TestGolfUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2039AD9B41F1E13E4D7C09020D3B3DD /* Pods-TestGolfUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ACCA2AFE2D776A35FBB7584BAA0BF37 /* Pods-TestGolf WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF6577988F2DD8C73F175F3FBA2AD67B /* Pods-TestGolf WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BEAD621653009A18FB488284F388A95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */; };
+		1E4BAEBD8E4D90EAC0880DD9ED270738 /* Pods-TestGolfTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EA7417ADF2AC4AB718F5E763A0A27A /* Pods-TestGolfTests-dummy.m */; };
+		1FF64FA3494F3625BFCB76997CB4131C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA83449F590A0DC9FAEC560E83A9C4 /* Foundation.framework */; };
+		20F559B3594831E153D4964531E684D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA83449F590A0DC9FAEC560E83A9C4 /* Foundation.framework */; };
+		262EE324C0A762C601B15EF364E04FB4 /* Pods-TestGolf WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 918617F0C6A05178FC0D24F1E95246A1 /* Pods-TestGolf WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF1F8AE26C6241C9541113CF8F26B29 /* Bugfender.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C99E4BD791ED1A47EFC0072BBF47C /* Bugfender.swift */; };
+		3096F5BCA5FFA16132664A6C7D64226D /* Pods-TestGolfUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D20E75AD41FC6550856039FF66C194 /* Pods-TestGolfUITests-dummy.m */; };
+		33E68B075C56BF4514CF1AF97B9AA40D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6177A2D60A0F1D65B33ADE8B492854CF /* MobileCoreServices.framework */; };
+		431EA16A295BFC04226A4CCACDB2E5A5 /* Pods-TestGolf WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B36B27C11EB705AFE9F60185110A4325 /* Pods-TestGolf WatchKit App-dummy.m */; };
+		45BDB60BA70380DE6AFAE53965ECDD34 /* BFUserFeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A2C3A5ABA7BEC27EF6C08DF103AD4897 /* BFUserFeedbackViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		486DEC34E0E847779D3DAACB32EE312F /* BugfenderSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = BDADFCED917600221589784D70E4368B /* BugfenderSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C6710032F8AC54FC0F6E49FE540CA8C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97194D846310A249943811C801BF282B /* SystemConfiguration.framework */; };
+		551F3F6F12B79CD8B0D23F9EC15CB4BF /* Pods-TestGolfUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A2E4C95E45E595370B93A005B9723B9 /* Pods-TestGolfUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56E468E37612E177A53F85CBAF6B6080 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */; };
+		5DBD2763ECF2A93B5CFAF0F23691D3EF /* BugfenderSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A3D4365FF263EC23A93B14FA522742 /* BugfenderSDK-dummy.m */; };
+		6E4A9E2FB33B4F588BDFBD3D3613C768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */; };
+		7328FC646D6CE6B5BB745B54ADEA845D /* Pods-TestGolf WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEFDCD09D34773433BA09C471B69D6 /* Pods-TestGolf WatchKit Extension-dummy.m */; };
+		8F74FA474AAA104E99CAAC6CF2E153D7 /* Pods-TestGolf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBBFB52AAFACEC3921B51EFB5B5B0B5F /* Pods-TestGolf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30CAC24FF7821BF7BFBD7955F4DE73D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */; };
+		AE07C1F5C9233A27F4721263DC65618C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6BD15A9D32E489166AECE8A5D8E34E /* Security.framework */; };
+		B7D5C5E00C406D71015B91C61AAF1347 /* Pods-TestGolfTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E08F7B1995C8BD45FB0315D05305ACA8 /* Pods-TestGolfTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF41B20476FF72F441A121E2F8CA9366 /* Pods-TestGolf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C89313ED125EAE9D8FE4A0110D4785D /* Pods-TestGolf-dummy.m */; };
+		E38D71873D4C858F390113B02E845338 /* BFUserFeedbackNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9ABE1BC80B0ACAB2D9C49F6BC1EE7B0 /* BFUserFeedbackNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE9FFFDAAD12C3DFE6658F0B23DA592D /* BugfenderSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFC30021730C6BA191ACC965F4D2DB9 /* BugfenderSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		074843893CEBC5B020A818E5C0D6E559 /* PBXContainerItemProxy */ = {
+		9095F4B5715D68D9160A9A412604DA47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1627DDFA5AD9A893CA2209203912D455;
-			remoteInfo = "Pods-TestGolf";
-		};
-		1E62421898F03FCB9C49EA9753C764D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1627DDFA5AD9A893CA2209203912D455;
-			remoteInfo = "Pods-TestGolf";
-		};
-		DCE64086E070905DAA2644D44902F17C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4587F7FFAC3BBFF1066C5E07095EB0F;
+			remoteGlobalIDString = D45EA6D86BF2C0DF77CAFD5B580ACD51;
 			remoteInfo = BugfenderSDK;
+		};
+		C34E7F8D2315674D62B8E047F86B9300 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4FEE6399F1EDFBE7C5892B0D79C59AC;
+			remoteInfo = "Pods-TestGolf";
+		};
+		D109634B2348853EA575DE5DC02ECDF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4FEE6399F1EDFBE7C5892B0D79C59AC;
+			remoteInfo = "Pods-TestGolf";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0221B41C1E0FBB64A11CAC9E56FCBBC3 /* Pods-TestGolf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf.modulemap"; sourceTree = "<group>"; };
-		0286DFB7E7B6B167DD78B8D7F8557C7D /* BugfenderSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BugfenderSDK.framework; path = BugfenderSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		03D48BAD16CA84087E638A6C1FD3BF74 /* Pods-TestGolf WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf WatchKit App-umbrella.h"; sourceTree = "<group>"; };
-		08F64340469A71A3B7E9B5BDBDD38B52 /* libBugfenderSDKstatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libBugfenderSDKstatic.a; sourceTree = "<group>"; };
-		0CCEFF26CE1E413F395CFBBEFE0E5E90 /* BugfenderSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BugfenderSDK-dummy.m"; sourceTree = "<group>"; };
-		0E3AE6D96FF0C3381FC5BF31089AE107 /* Pods-TestGolf WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		13A12E5F361D93F313E222039EAB8A1F /* Pods-TestGolf-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf-resources.sh"; sourceTree = "<group>"; };
-		1DD8D5AE0CD96B31DA7FF50971661013 /* Pods-TestGolf WatchKit App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf WatchKit App-resources.sh"; sourceTree = "<group>"; };
-		1ED1DFF245EFF4F0667DFA7B20D7FCAD /* Pods-TestGolf WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
-		1F40A0BBD0D158C8CF7285B7CF75938E /* Pods-TestGolfTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolfTests-frameworks.sh"; sourceTree = "<group>"; };
-		277147E56A6B6D9CA8B064C5477F49D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27CC60E9DF30532D7CDE184942BE1A8D /* Pods_TestGolfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolfTests.framework; path = "Pods-TestGolfTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29B4DA925D55C339956592EF3528863B /* Pods-TestGolf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf.release.xcconfig"; sourceTree = "<group>"; };
-		2D291559DAA1A6DB6ACFE7500DAD98E5 /* BugfenderSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BugfenderSDK-prefix.pch"; sourceTree = "<group>"; };
-		3BD1294A4092073EFAC3244508628A80 /* Pods-TestGolf WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4957988E524E03F33EAB04A4A9C2DBC7 /* Pods-TestGolf WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf WatchKit App-dummy.m"; sourceTree = "<group>"; };
-		4B62EE21DA8C5AC08D0F50CD4A09493A /* Pods-TestGolf WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
-		4E807B09AF099AD7D65AABA4BE1F20E4 /* Pods-TestGolfTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolfTests-umbrella.h"; sourceTree = "<group>"; };
-		51644B8C41442B19C4331BF3A5586040 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55FF433B7EF5C44AA4FBC5490EB27975 /* Pods-TestGolfTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolfTests.modulemap"; sourceTree = "<group>"; };
-		5BD309AC23B07FA27E274D969E0BA541 /* Pods_TestGolf_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf_WatchKit_Extension.framework; path = "Pods-TestGolf WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C2DB43F1C1466F33F07B53167E235A3 /* Pods-TestGolfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5D28746552FEC47FFD53453D9BAC49E3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		60EA9884B6B20B82203E8CAFCBEACB93 /* Pods-TestGolf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf.debug.xcconfig"; sourceTree = "<group>"; };
-		61B73F1F812894EDA95A4DA391116C88 /* Pods-TestGolfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		632C3D2D0298118777E6155CE2FE5266 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		64B05007C422A2C221457F0C83816557 /* BugfenderSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BugfenderSDK.h; sourceTree = "<group>"; };
-		667120D29238D66FCFDF756264ACB1E1 /* Pods-TestGolfTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6D86FAA74DD3C647714375ACED73B30C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F5EC0F3133D4D2F8B60F269E3A42C00 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		73AE6CB0D256CAC9FD72BDF1F0784F16 /* Pods-TestGolfUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolfUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		76F224FC8FDFCED703E48124A549179F /* Pods-TestGolfUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolfUITests-frameworks.sh"; sourceTree = "<group>"; };
-		7ABD7F83686AC2DF99A8C853FE3BD7DD /* Bugfender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bugfender.swift; path = swift/Bugfender.swift; sourceTree = "<group>"; };
-		7C08B6DB7C0861BF4ADCDB3C8ABDD2BB /* BFUserFeedbackViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFUserFeedbackViewController.h; sourceTree = "<group>"; };
-		7F6828EC519F2A66AC8F6ECA5491FF92 /* Pods-TestGolf WatchKit App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf WatchKit App-frameworks.sh"; sourceTree = "<group>"; };
-		7F7CA83804BFABBE40C1A97B1E9DAA52 /* Pods-TestGolfUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7F9B7BEA3DF514E3C899099029B36780 /* Pods-TestGolf-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf-acknowledgements.plist"; sourceTree = "<group>"; };
-		82E501E56CD1165ADD00536428785F82 /* Pods-TestGolf WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
-		83FFA74503709E64C30FD5B6CCD95166 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		854B5D489FB361828D522755AF903823 /* Pods-TestGolfTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolfTests-dummy.m"; sourceTree = "<group>"; };
-		85566CC9A5FB39B42C1B57BE381D7D09 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88D6CE36E01E59EE85D14B92C11859FB /* Pods_TestGolfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolfUITests.framework; path = "Pods-TestGolfUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A2078A3946F40529E6FDCB98236CB11 /* Pods-TestGolf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf-dummy.m"; sourceTree = "<group>"; };
-		8D969112A95B3AB06B848CE5A648A3F6 /* Pods-TestGolfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfUITests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94DB9DC0D55E7293D3234C9B15702595 /* Pods-TestGolfUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolfUITests.modulemap"; sourceTree = "<group>"; };
-		95DBF58AA78966EBE82308D6EE134418 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A70A1FF5425443E97A3C928AEC71611 /* Pods-TestGolfTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolfTests-resources.sh"; sourceTree = "<group>"; };
-		9ACB5D01C66EEA2D8661106A4AA01816 /* BugfenderSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BugfenderSDK-umbrella.h"; sourceTree = "<group>"; };
-		9C11C88A943759AED2C0558AD29A2F09 /* Pods-TestGolf WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A012718F6CCC59E521F9E4E880C65D2D /* Pods_TestGolf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf.framework; path = "Pods-TestGolf.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A5731009709CB8061EAEAA53CEAE87F3 /* Pods-TestGolf-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AF145ED42E3BED1C7341BDD0BDAB78BC /* BugfenderSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BugfenderSDK.xcconfig; sourceTree = "<group>"; };
-		AF33D4358C920A077DB4D693CA4C5C0C /* Pods-TestGolf WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf WatchKit App.modulemap"; sourceTree = "<group>"; };
-		B4AF3CE0101900F544173F7E56BA4A5E /* Pods-TestGolfUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolfUITests-dummy.m"; sourceTree = "<group>"; };
-		B9543E118ED029F6D710F701A59A2F33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6F486912437EC4F748C1547AE173089 /* Pods_TestGolf_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf_WatchKit_App.framework; path = "Pods-TestGolf WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5FC27485CDC4767AE653815997A332 /* Pods-TestGolf WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
-		CFE8951EDCA77C4FE50FF49308D79304 /* Pods-TestGolf WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
-		D11A3C44DC178D6310E139DDBE41281A /* Pods-TestGolfTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolfTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D2F08856C725D565A97E7AAC4571E55A /* Pods-TestGolf WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
-		D3396680CE393E34884A8ED702257F3F /* Pods-TestGolf WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		E0DFFFFEA5B52CB22C22322C827ED153 /* Pods-TestGolf WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf WatchKit Extension.modulemap"; sourceTree = "<group>"; };
-		E2039AD9B41F1E13E4D7C09020D3B3DD /* Pods-TestGolfUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolfUITests-umbrella.h"; sourceTree = "<group>"; };
-		E729FF38667E967E2B82859055B19F84 /* Pods-TestGolfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfTests.release.xcconfig"; sourceTree = "<group>"; };
-		E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E8B59D2455B11D15A4F2BE8E01CE8F76 /* Pods-TestGolf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf-umbrella.h"; sourceTree = "<group>"; };
-		E9CB422679ECB8B46C5BA5531CFC0474 /* BugfenderSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BugfenderSDK.modulemap; sourceTree = "<group>"; };
-		F3BFF06CC894F09931ECA307987AFFBA /* Pods-TestGolf WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		F9E8375F03503B61A1179E0FC5E4E0FB /* Pods-TestGolf-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf-frameworks.sh"; sourceTree = "<group>"; };
-		FA1601915BAA457B86D3DB12C2A6F784 /* BFUserFeedbackNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFUserFeedbackNavigationController.h; sourceTree = "<group>"; };
-		FADA2F4F2D9A505A52668B7346F64D4C /* Pods-TestGolfUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolfUITests-resources.sh"; sourceTree = "<group>"; };
+		00EA7417ADF2AC4AB718F5E763A0A27A /* Pods-TestGolfTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolfTests-dummy.m"; sourceTree = "<group>"; };
+		0548DC9EE685813E0DC40C70EB28FA9D /* BugfenderSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BugfenderSDK.framework; path = BugfenderSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09AC5BF68F2A2D08FE75977824272E3D /* Pods-TestGolfTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolfTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		09FE62C39CF1E71352AC6011D174C38B /* Pods_TestGolfTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolfTests.framework; path = "Pods-TestGolfTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A6BD15A9D32E489166AECE8A5D8E34E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		0F2503C2C2B2EB5166C71BC3B9D4E708 /* Pods-TestGolf WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		122FC389C914A5F764EB74253F6FE6E0 /* libBugfenderSDKstatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libBugfenderSDKstatic.a; sourceTree = "<group>"; };
+		125F2C7D71113956C1B91D2EA8A8CA59 /* BugfenderSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BugfenderSDK.modulemap; sourceTree = "<group>"; };
+		1326E1D15C10BC219E94D0B55984838D /* Pods-TestGolf WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		17BDDAAA6EB56F617B1F60DCF439D0C5 /* Pods-TestGolfTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfTests-Info.plist"; sourceTree = "<group>"; };
+		1C89313ED125EAE9D8FE4A0110D4785D /* Pods-TestGolf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf-dummy.m"; sourceTree = "<group>"; };
+		1E1444B9FAE0F1A357AA8DA536C40AFA /* BugfenderSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BugfenderSDK-prefix.pch"; sourceTree = "<group>"; };
+		214ED1706F0042E60373B886E982C3F0 /* BugfenderSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BugfenderSDK-Info.plist"; sourceTree = "<group>"; };
+		2840C9D7D9D70EEC765D9B6CF7701580 /* Pods-TestGolfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F4BB3AFCC4C95D6CB79520B0C65CD55 /* Pods-TestGolf WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		3670AD63D79987B67ED3DE7D5112D8B6 /* Pods-TestGolf WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf WatchKit App.modulemap"; sourceTree = "<group>"; };
+		37D20E75AD41FC6550856039FF66C194 /* Pods-TestGolfUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolfUITests-dummy.m"; sourceTree = "<group>"; };
+		3FF0F37B1644C5AB1A3C999F5036702B /* Pods-TestGolf WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4338FA30A4C3A926DE9806722C1D6351 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		454FE46BB513760083D5254A99AB0D6A /* Pods-TestGolf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf.release.xcconfig"; sourceTree = "<group>"; };
+		47F3D20CE21A3C7A2FD3A6C6863F32BF /* Pods-TestGolfTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolfTests.modulemap"; sourceTree = "<group>"; };
+		5E9A1B1222F180A3475C3B60D1C3F27C /* Pods-TestGolfUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolfUITests.modulemap"; sourceTree = "<group>"; };
+		6177A2D60A0F1D65B33ADE8B492854CF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		6FADD9013469F970208FF2DEF80F72F8 /* Pods-TestGolf WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
+		6FD940F97DAFA4F49FA04DB81322AF15 /* Pods-TestGolf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf.debug.xcconfig"; sourceTree = "<group>"; };
+		705A4EF379CADAFED1C72EF34B6A4741 /* Pods-TestGolfUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolfUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		770D4F388ADB341C2C4A610FFD17FAFD /* Pods-TestGolfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A1D7D06B3AAA2B095FD8EB2BFE1C0F4 /* Pods-TestGolfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfTests.release.xcconfig"; sourceTree = "<group>"; };
+		8DAAD9F61BF22F9C928DFF4E7F750DF0 /* Pods-TestGolf WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E67E57F294354C1E7B8CF47C1D76B15 /* Pods-TestGolf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf-Info.plist"; sourceTree = "<group>"; };
+		8FDAD2B02E044981099324F6D244FF81 /* Pods-TestGolfUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		918617F0C6A05178FC0D24F1E95246A1 /* Pods-TestGolf WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		95A3FD5A82A03660053C3E573E1CFEC1 /* Pods_TestGolf_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf_WatchKit_Extension.framework; path = "Pods-TestGolf WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97194D846310A249943811C801BF282B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		978B1A55F2AF83D03F5F3E55E1D28188 /* Pods-TestGolf WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		997CFB9C969055FD238170771A73964D /* BugfenderSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BugfenderSDK.xcconfig; sourceTree = "<group>"; };
+		9A2E4C95E45E595370B93A005B9723B9 /* Pods-TestGolfUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolfUITests-umbrella.h"; sourceTree = "<group>"; };
+		9AB6000506D6A42A619E679121B754D9 /* Pods-TestGolf-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolf-acknowledgements.plist"; sourceTree = "<group>"; };
+		9B1358CC818A601F9D380BF7ADAA4348 /* Pods-TestGolf WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9BAEFDCD09D34773433BA09C471B69D6 /* Pods-TestGolf WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		9C8300554ABA7AEE608CDD9A47F6AEDD /* Pods-TestGolfUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfUITests-Info.plist"; sourceTree = "<group>"; };
+		9D42FD627C5FCD1B35F26C3B50119DC2 /* Pods_TestGolfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolfUITests.framework; path = "Pods-TestGolfUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2C3A5ABA7BEC27EF6C08DF103AD4897 /* BFUserFeedbackViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFUserFeedbackViewController.h; sourceTree = "<group>"; };
+		A53EC0B934D6EC1784640D65EDDFDB28 /* Pods-TestGolfTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestGolfTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B36B27C11EB705AFE9F60185110A4325 /* Pods-TestGolf WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestGolf WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		BBBFB52AAFACEC3921B51EFB5B5B0B5F /* Pods-TestGolf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf-umbrella.h"; sourceTree = "<group>"; };
+		BDADFCED917600221589784D70E4368B /* BugfenderSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BugfenderSDK.h; sourceTree = "<group>"; };
+		BEB4505B22200979E620EDDCBC9E46DD /* Pods-TestGolf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestGolf.modulemap"; sourceTree = "<group>"; };
+		C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C37C99E4BD791ED1A47EFC0072BBF47C /* Bugfender.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bugfender.swift; path = swift/Bugfender.swift; sourceTree = "<group>"; };
+		C9ABE1BC80B0ACAB2D9C49F6BC1EE7B0 /* BFUserFeedbackNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BFUserFeedbackNavigationController.h; sourceTree = "<group>"; };
+		CDFC30021730C6BA191ACC965F4D2DB9 /* BugfenderSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BugfenderSDK-umbrella.h"; sourceTree = "<group>"; };
+		D9DB8CB861FEC543E42BD6E9805B370C /* Pods-TestGolf-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestGolf-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DCFDAF37288A2F15D4C70DECBF9FE313 /* Pods-TestGolfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolfTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD41379122274315951C571DEB9C5419 /* Pods_TestGolf_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf_WatchKit_App.framework; path = "Pods-TestGolf WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF503AB3FAEEC07465E59BADE5A3D510 /* Pods-TestGolf-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestGolf-frameworks.sh"; sourceTree = "<group>"; };
+		DF6577988F2DD8C73F175F3FBA2AD67B /* Pods-TestGolf WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolf WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		E08F7B1995C8BD45FB0315D05305ACA8 /* Pods-TestGolfTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestGolfTests-umbrella.h"; sourceTree = "<group>"; };
+		E4E21F24A155110A8B4B4A53977BC625 /* Pods_TestGolf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestGolf.framework; path = "Pods-TestGolf.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E686EEB2EF3E1660AB9830186198964A /* Pods-TestGolf WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F18888D71632BC1E3A9B4745C2CE2677 /* Pods-TestGolf WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestGolf WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		F7A3D4365FF263EC23A93B14FA522742 /* BugfenderSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BugfenderSDK-dummy.m"; sourceTree = "<group>"; };
+		F8AA83449F590A0DC9FAEC560E83A9C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		14AA75C76A77B26B4449D9ABB54BE067 /* Frameworks */ = {
+		151BF910335C9417608DD75625DABB52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED4C5C0867831119971B7FE86D38487 /* Foundation.framework in Frameworks */,
+				6E4A9E2FB33B4F588BDFBD3D3613C768 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49FE8DDCF05CC725269D36B905A0102C /* Frameworks */ = {
+		3DFE6F4BB9B1E06F9CAC73BF01FB4842 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B3D88841B2EE0EDDC3D9AAEB836EC53 /* Foundation.framework in Frameworks */,
+				20F559B3594831E153D4964531E684D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D602EBA8D96A77345B294C83AA4DAB9 /* Frameworks */ = {
+		7BCFDAFA0211940D96700F0C0BB1CADE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7C2C15128D45F9B439B02A9C7B23FE /* Foundation.framework in Frameworks */,
+				56E468E37612E177A53F85CBAF6B6080 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F851BFCAAC5B96E16188DCA3B9AE058 /* Frameworks */ = {
+		C26BDA4426CFF0AD3198A51D41F345EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9771849ECC6732278D99992BC9520CC1 /* Foundation.framework in Frameworks */,
-				05A3ED2A2E972697ED25A7D1DB74F1A3 /* MobileCoreServices.framework in Frameworks */,
-				BDE8E00D127E0E4D8BC747C8FD044288 /* Security.framework in Frameworks */,
-				FC73200082C4D98D1422914EB8326279 /* SystemConfiguration.framework in Frameworks */,
+				A30CAC24FF7821BF7BFBD7955F4DE73D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FF5293900886A6549432E5F81F9C8BE /* Frameworks */ = {
+		D9B2BFAEAEE7535F540DD9AB4463B950 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33EBF262E2418A693D16B987A6296FCF /* Foundation.framework in Frameworks */,
+				1FF64FA3494F3625BFCB76997CB4131C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F344338464A334787653829CF9348606 /* Frameworks */ = {
+		D9C0B22D864A952861B78B5A8820659F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0645880021EE3426321F2870083B36FB /* Foundation.framework in Frameworks */,
+				0BEAD621653009A18FB488284F388A95 /* Foundation.framework in Frameworks */,
+				33E68B075C56BF4514CF1AF97B9AA40D /* MobileCoreServices.framework in Frameworks */,
+				AE07C1F5C9233A27F4721263DC65618C /* Security.framework in Frameworks */,
+				4C6710032F8AC54FC0F6E49FE540CA8C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		136A3B7B82CC0DCF8719BC3CEDE1B666 /* Pods-TestGolf */ = {
+		0404C308A12C8AEC73677FD10F6E0EEC /* Pods-TestGolfTests */ = {
 			isa = PBXGroup;
 			children = (
-				95DBF58AA78966EBE82308D6EE134418 /* Info.plist */,
-				0221B41C1E0FBB64A11CAC9E56FCBBC3 /* Pods-TestGolf.modulemap */,
-				A5731009709CB8061EAEAA53CEAE87F3 /* Pods-TestGolf-acknowledgements.markdown */,
-				7F9B7BEA3DF514E3C899099029B36780 /* Pods-TestGolf-acknowledgements.plist */,
-				8A2078A3946F40529E6FDCB98236CB11 /* Pods-TestGolf-dummy.m */,
-				F9E8375F03503B61A1179E0FC5E4E0FB /* Pods-TestGolf-frameworks.sh */,
-				13A12E5F361D93F313E222039EAB8A1F /* Pods-TestGolf-resources.sh */,
-				E8B59D2455B11D15A4F2BE8E01CE8F76 /* Pods-TestGolf-umbrella.h */,
-				60EA9884B6B20B82203E8CAFCBEACB93 /* Pods-TestGolf.debug.xcconfig */,
-				29B4DA925D55C339956592EF3528863B /* Pods-TestGolf.release.xcconfig */,
-			);
-			name = "Pods-TestGolf";
-			path = "Target Support Files/Pods-TestGolf";
-			sourceTree = "<group>";
-		};
-		290D61E53F28EF1576DA48BDAFBE580C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0286DFB7E7B6B167DD78B8D7F8557C7D /* BugfenderSDK.framework */,
-				A012718F6CCC59E521F9E4E880C65D2D /* Pods_TestGolf.framework */,
-				C6F486912437EC4F748C1547AE173089 /* Pods_TestGolf_WatchKit_App.framework */,
-				5BD309AC23B07FA27E274D969E0BA541 /* Pods_TestGolf_WatchKit_Extension.framework */,
-				27CC60E9DF30532D7CDE184942BE1A8D /* Pods_TestGolfTests.framework */,
-				88D6CE36E01E59EE85D14B92C11859FB /* Pods_TestGolfUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2983D8B20C076F739B862E62759E5F9D /* Pods-TestGolf WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				277147E56A6B6D9CA8B064C5477F49D2 /* Info.plist */,
-				E0DFFFFEA5B52CB22C22322C827ED153 /* Pods-TestGolf WatchKit Extension.modulemap */,
-				3BD1294A4092073EFAC3244508628A80 /* Pods-TestGolf WatchKit Extension-acknowledgements.markdown */,
-				D3396680CE393E34884A8ED702257F3F /* Pods-TestGolf WatchKit Extension-acknowledgements.plist */,
-				82E501E56CD1165ADD00536428785F82 /* Pods-TestGolf WatchKit Extension-dummy.m */,
-				CFE8951EDCA77C4FE50FF49308D79304 /* Pods-TestGolf WatchKit Extension-frameworks.sh */,
-				4B62EE21DA8C5AC08D0F50CD4A09493A /* Pods-TestGolf WatchKit Extension-resources.sh */,
-				1ED1DFF245EFF4F0667DFA7B20D7FCAD /* Pods-TestGolf WatchKit Extension-umbrella.h */,
-				6F5EC0F3133D4D2F8B60F269E3A42C00 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */,
-				0E3AE6D96FF0C3381FC5BF31089AE107 /* Pods-TestGolf WatchKit Extension.release.xcconfig */,
-			);
-			name = "Pods-TestGolf WatchKit Extension";
-			path = "Target Support Files/Pods-TestGolf WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		2AF09DF4F4B17D8C3F45F2177AE991BD /* Pods-TestGolfTests */ = {
-			isa = PBXGroup;
-			children = (
-				6D86FAA74DD3C647714375ACED73B30C /* Info.plist */,
-				55FF433B7EF5C44AA4FBC5490EB27975 /* Pods-TestGolfTests.modulemap */,
-				D11A3C44DC178D6310E139DDBE41281A /* Pods-TestGolfTests-acknowledgements.markdown */,
-				667120D29238D66FCFDF756264ACB1E1 /* Pods-TestGolfTests-acknowledgements.plist */,
-				854B5D489FB361828D522755AF903823 /* Pods-TestGolfTests-dummy.m */,
-				1F40A0BBD0D158C8CF7285B7CF75938E /* Pods-TestGolfTests-frameworks.sh */,
-				9A70A1FF5425443E97A3C928AEC71611 /* Pods-TestGolfTests-resources.sh */,
-				4E807B09AF099AD7D65AABA4BE1F20E4 /* Pods-TestGolfTests-umbrella.h */,
-				5C2DB43F1C1466F33F07B53167E235A3 /* Pods-TestGolfTests.debug.xcconfig */,
-				E729FF38667E967E2B82859055B19F84 /* Pods-TestGolfTests.release.xcconfig */,
+				47F3D20CE21A3C7A2FD3A6C6863F32BF /* Pods-TestGolfTests.modulemap */,
+				09AC5BF68F2A2D08FE75977824272E3D /* Pods-TestGolfTests-acknowledgements.markdown */,
+				A53EC0B934D6EC1784640D65EDDFDB28 /* Pods-TestGolfTests-acknowledgements.plist */,
+				00EA7417ADF2AC4AB718F5E763A0A27A /* Pods-TestGolfTests-dummy.m */,
+				17BDDAAA6EB56F617B1F60DCF439D0C5 /* Pods-TestGolfTests-Info.plist */,
+				E08F7B1995C8BD45FB0315D05305ACA8 /* Pods-TestGolfTests-umbrella.h */,
+				DCFDAF37288A2F15D4C70DECBF9FE313 /* Pods-TestGolfTests.debug.xcconfig */,
+				8A1D7D06B3AAA2B095FD8EB2BFE1C0F4 /* Pods-TestGolfTests.release.xcconfig */,
 			);
 			name = "Pods-TestGolfTests";
 			path = "Target Support Files/Pods-TestGolfTests";
 			sourceTree = "<group>";
 		};
-		2FD35904C29878B1048AC3B1F65D6871 /* Pods-TestGolf WatchKit App */ = {
+		074F768DFC967218206ACC1DD3AA4C67 /* Pods-TestGolf WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				51644B8C41442B19C4331BF3A5586040 /* Info.plist */,
-				AF33D4358C920A077DB4D693CA4C5C0C /* Pods-TestGolf WatchKit App.modulemap */,
-				9C11C88A943759AED2C0558AD29A2F09 /* Pods-TestGolf WatchKit App-acknowledgements.markdown */,
-				CE5FC27485CDC4767AE653815997A332 /* Pods-TestGolf WatchKit App-acknowledgements.plist */,
-				4957988E524E03F33EAB04A4A9C2DBC7 /* Pods-TestGolf WatchKit App-dummy.m */,
-				7F6828EC519F2A66AC8F6ECA5491FF92 /* Pods-TestGolf WatchKit App-frameworks.sh */,
-				1DD8D5AE0CD96B31DA7FF50971661013 /* Pods-TestGolf WatchKit App-resources.sh */,
-				03D48BAD16CA84087E638A6C1FD3BF74 /* Pods-TestGolf WatchKit App-umbrella.h */,
-				D2F08856C725D565A97E7AAC4571E55A /* Pods-TestGolf WatchKit App.debug.xcconfig */,
-				F3BFF06CC894F09931ECA307987AFFBA /* Pods-TestGolf WatchKit App.release.xcconfig */,
+				3670AD63D79987B67ED3DE7D5112D8B6 /* Pods-TestGolf WatchKit App.modulemap */,
+				9B1358CC818A601F9D380BF7ADAA4348 /* Pods-TestGolf WatchKit App-acknowledgements.markdown */,
+				978B1A55F2AF83D03F5F3E55E1D28188 /* Pods-TestGolf WatchKit App-acknowledgements.plist */,
+				B36B27C11EB705AFE9F60185110A4325 /* Pods-TestGolf WatchKit App-dummy.m */,
+				1326E1D15C10BC219E94D0B55984838D /* Pods-TestGolf WatchKit App-Info.plist */,
+				918617F0C6A05178FC0D24F1E95246A1 /* Pods-TestGolf WatchKit App-umbrella.h */,
+				0F2503C2C2B2EB5166C71BC3B9D4E708 /* Pods-TestGolf WatchKit App.debug.xcconfig */,
+				E686EEB2EF3E1660AB9830186198964A /* Pods-TestGolf WatchKit App.release.xcconfig */,
 			);
 			name = "Pods-TestGolf WatchKit App";
 			path = "Target Support Files/Pods-TestGolf WatchKit App";
 			sourceTree = "<group>";
 		};
-		32FF6D66E482D1B6F74FE509ED21D9A4 /* BugfenderSDK */ = {
+		1483B3D096B4BD566AA3ACC801ECAAF8 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				3DC42A3A459EAD66501C8E5C6E18CEBC /* Support Files */,
-				76B7227AE8488C3E1118ED63AF1830A2 /* Swift */,
+				C9ABE1BC80B0ACAB2D9C49F6BC1EE7B0 /* BFUserFeedbackNavigationController.h */,
+				A2C3A5ABA7BEC27EF6C08DF103AD4897 /* BFUserFeedbackViewController.h */,
+				C37C99E4BD791ED1A47EFC0072BBF47C /* Bugfender.swift */,
+				BDADFCED917600221589784D70E4368B /* BugfenderSDK.h */,
+				80C6753C5F72460D22B8AB53FCD06857 /* Frameworks */,
 			);
-			name = BugfenderSDK;
-			path = BugfenderSDK;
+			name = Swift;
 			sourceTree = "<group>";
 		};
-		3DC42A3A459EAD66501C8E5C6E18CEBC /* Support Files */ = {
+		24AE311B92EF6E89429DA868CD7D8E59 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				E9CB422679ECB8B46C5BA5531CFC0474 /* BugfenderSDK.modulemap */,
-				AF145ED42E3BED1C7341BDD0BDAB78BC /* BugfenderSDK.xcconfig */,
-				0CCEFF26CE1E413F395CFBBEFE0E5E90 /* BugfenderSDK-dummy.m */,
-				2D291559DAA1A6DB6ACFE7500DAD98E5 /* BugfenderSDK-prefix.pch */,
-				9ACB5D01C66EEA2D8661106A4AA01816 /* BugfenderSDK-umbrella.h */,
-				85566CC9A5FB39B42C1B57BE381D7D09 /* Info.plist */,
+				F8AA83449F590A0DC9FAEC560E83A9C4 /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		26718E5D279CC22EF8FAB985E75E77A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0548DC9EE685813E0DC40C70EB28FA9D /* BugfenderSDK.framework */,
+				E4E21F24A155110A8B4B4A53977BC625 /* Pods_TestGolf.framework */,
+				DD41379122274315951C571DEB9C5419 /* Pods_TestGolf_WatchKit_App.framework */,
+				95A3FD5A82A03660053C3E573E1CFEC1 /* Pods_TestGolf_WatchKit_Extension.framework */,
+				09FE62C39CF1E71352AC6011D174C38B /* Pods_TestGolfTests.framework */,
+				9D42FD627C5FCD1B35F26C3B50119DC2 /* Pods_TestGolfUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65C73FFD780837FFAD8196BB6E89B710 /* Pods-TestGolf */ = {
+			isa = PBXGroup;
+			children = (
+				BEB4505B22200979E620EDDCBC9E46DD /* Pods-TestGolf.modulemap */,
+				D9DB8CB861FEC543E42BD6E9805B370C /* Pods-TestGolf-acknowledgements.markdown */,
+				9AB6000506D6A42A619E679121B754D9 /* Pods-TestGolf-acknowledgements.plist */,
+				1C89313ED125EAE9D8FE4A0110D4785D /* Pods-TestGolf-dummy.m */,
+				DF503AB3FAEEC07465E59BADE5A3D510 /* Pods-TestGolf-frameworks.sh */,
+				8E67E57F294354C1E7B8CF47C1D76B15 /* Pods-TestGolf-Info.plist */,
+				BBBFB52AAFACEC3921B51EFB5B5B0B5F /* Pods-TestGolf-umbrella.h */,
+				6FD940F97DAFA4F49FA04DB81322AF15 /* Pods-TestGolf.debug.xcconfig */,
+				454FE46BB513760083D5254A99AB0D6A /* Pods-TestGolf.release.xcconfig */,
+			);
+			name = "Pods-TestGolf";
+			path = "Target Support Files/Pods-TestGolf";
+			sourceTree = "<group>";
+		};
+		80C6753C5F72460D22B8AB53FCD06857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				122FC389C914A5F764EB74253F6FE6E0 /* libBugfenderSDKstatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B8C07C9307BCB169DBDAEB73B6FE0FD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65C73FFD780837FFAD8196BB6E89B710 /* Pods-TestGolf */,
+				074F768DFC967218206ACC1DD3AA4C67 /* Pods-TestGolf WatchKit App */,
+				F84B2D7D30ECFA29048A0E5198ACA152 /* Pods-TestGolf WatchKit Extension */,
+				0404C308A12C8AEC73677FD10F6E0EEC /* Pods-TestGolfTests */,
+				D7D829738553F6E8F16E2E057DEE1CF1 /* Pods-TestGolfUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		95F7BF22E822B6D116CA02092CB3E3F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				125F2C7D71113956C1B91D2EA8A8CA59 /* BugfenderSDK.modulemap */,
+				997CFB9C969055FD238170771A73964D /* BugfenderSDK.xcconfig */,
+				F7A3D4365FF263EC23A93B14FA522742 /* BugfenderSDK-dummy.m */,
+				214ED1706F0042E60373B886E982C3F0 /* BugfenderSDK-Info.plist */,
+				1E1444B9FAE0F1A357AA8DA536C40AFA /* BugfenderSDK-prefix.pch */,
+				CDFC30021730C6BA191ACC965F4D2DB9 /* BugfenderSDK-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BugfenderSDK";
 			sourceTree = "<group>";
 		};
-		4086872DB905555F0C82E429D1B5225F /* watchOS */ = {
+		AE68D13555005733F48404DEA8177338 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A3D46ACFF746939E7EEF08FFB72E66D6 /* Foundation.framework */,
+				C134CB2AD50BC6D9B6F271FB5CFEEE7E /* Foundation.framework */,
+				6177A2D60A0F1D65B33ADE8B492854CF /* MobileCoreServices.framework */,
+				0A6BD15A9D32E489166AECE8A5D8E34E /* Security.framework */,
+				97194D846310A249943811C801BF282B /* SystemConfiguration.framework */,
 			);
-			name = watchOS;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		517ECD75A1E2AFB60296800128656B6D /* Pods-TestGolfUITests */ = {
+		C11F01A5123BAB37002135C10DBF8C81 /* BugfenderSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B9543E118ED029F6D710F701A59A2F33 /* Info.plist */,
-				94DB9DC0D55E7293D3234C9B15702595 /* Pods-TestGolfUITests.modulemap */,
-				73AE6CB0D256CAC9FD72BDF1F0784F16 /* Pods-TestGolfUITests-acknowledgements.markdown */,
-				7F7CA83804BFABBE40C1A97B1E9DAA52 /* Pods-TestGolfUITests-acknowledgements.plist */,
-				B4AF3CE0101900F544173F7E56BA4A5E /* Pods-TestGolfUITests-dummy.m */,
-				76F224FC8FDFCED703E48124A549179F /* Pods-TestGolfUITests-frameworks.sh */,
-				FADA2F4F2D9A505A52668B7346F64D4C /* Pods-TestGolfUITests-resources.sh */,
-				E2039AD9B41F1E13E4D7C09020D3B3DD /* Pods-TestGolfUITests-umbrella.h */,
-				61B73F1F812894EDA95A4DA391116C88 /* Pods-TestGolfUITests.debug.xcconfig */,
-				8D969112A95B3AB06B848CE5A648A3F6 /* Pods-TestGolfUITests.release.xcconfig */,
+				95F7BF22E822B6D116CA02092CB3E3F4 /* Support Files */,
+				1483B3D096B4BD566AA3ACC801ECAAF8 /* Swift */,
+			);
+			name = BugfenderSDK;
+			path = BugfenderSDK;
+			sourceTree = "<group>";
+		};
+		C792541F3A91C9A28022F0BC51ABCD1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C11F01A5123BAB37002135C10DBF8C81 /* BugfenderSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				E2F1AF604245D533C76A416C09A1D2A8 /* Frameworks */,
+				C792541F3A91C9A28022F0BC51ABCD1C /* Pods */,
+				26718E5D279CC22EF8FAB985E75E77A2 /* Products */,
+				8B8C07C9307BCB169DBDAEB73B6FE0FD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D7D829738553F6E8F16E2E057DEE1CF1 /* Pods-TestGolfUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5E9A1B1222F180A3475C3B60D1C3F27C /* Pods-TestGolfUITests.modulemap */,
+				705A4EF379CADAFED1C72EF34B6A4741 /* Pods-TestGolfUITests-acknowledgements.markdown */,
+				8FDAD2B02E044981099324F6D244FF81 /* Pods-TestGolfUITests-acknowledgements.plist */,
+				37D20E75AD41FC6550856039FF66C194 /* Pods-TestGolfUITests-dummy.m */,
+				9C8300554ABA7AEE608CDD9A47F6AEDD /* Pods-TestGolfUITests-Info.plist */,
+				9A2E4C95E45E595370B93A005B9723B9 /* Pods-TestGolfUITests-umbrella.h */,
+				770D4F388ADB341C2C4A610FFD17FAFD /* Pods-TestGolfUITests.debug.xcconfig */,
+				2840C9D7D9D70EEC765D9B6CF7701580 /* Pods-TestGolfUITests.release.xcconfig */,
 			);
 			name = "Pods-TestGolfUITests";
 			path = "Target Support Files/Pods-TestGolfUITests";
 			sourceTree = "<group>";
 		};
-		54FFBB6E888E0AAF55FDFF8C4A9D05A5 /* iOS */ = {
+		E2F1AF604245D533C76A416C09A1D2A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8A7B02C48623725E09FBAA8A3041549 /* Foundation.framework */,
-				5D28746552FEC47FFD53453D9BAC49E3 /* MobileCoreServices.framework */,
-				83FFA74503709E64C30FD5B6CCD95166 /* Security.framework */,
-				632C3D2D0298118777E6155CE2FE5266 /* SystemConfiguration.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		763F9A3BADCDBA5433E7A4316FF3721C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54FFBB6E888E0AAF55FDFF8C4A9D05A5 /* iOS */,
-				4086872DB905555F0C82E429D1B5225F /* watchOS */,
+				AE68D13555005733F48404DEA8177338 /* iOS */,
+				24AE311B92EF6E89429DA868CD7D8E59 /* watchOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		76B7227AE8488C3E1118ED63AF1830A2 /* Swift */ = {
+		F84B2D7D30ECFA29048A0E5198ACA152 /* Pods-TestGolf WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FA1601915BAA457B86D3DB12C2A6F784 /* BFUserFeedbackNavigationController.h */,
-				7C08B6DB7C0861BF4ADCDB3C8ABDD2BB /* BFUserFeedbackViewController.h */,
-				7ABD7F83686AC2DF99A8C853FE3BD7DD /* Bugfender.swift */,
-				64B05007C422A2C221457F0C83816557 /* BugfenderSDK.h */,
-				95A8F1B70A80B4B6C504D6F7A250725E /* Frameworks */,
+				2F4BB3AFCC4C95D6CB79520B0C65CD55 /* Pods-TestGolf WatchKit Extension.modulemap */,
+				3FF0F37B1644C5AB1A3C999F5036702B /* Pods-TestGolf WatchKit Extension-acknowledgements.markdown */,
+				8DAAD9F61BF22F9C928DFF4E7F750DF0 /* Pods-TestGolf WatchKit Extension-acknowledgements.plist */,
+				9BAEFDCD09D34773433BA09C471B69D6 /* Pods-TestGolf WatchKit Extension-dummy.m */,
+				6FADD9013469F970208FF2DEF80F72F8 /* Pods-TestGolf WatchKit Extension-Info.plist */,
+				DF6577988F2DD8C73F175F3FBA2AD67B /* Pods-TestGolf WatchKit Extension-umbrella.h */,
+				4338FA30A4C3A926DE9806722C1D6351 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */,
+				F18888D71632BC1E3A9B4745C2CE2677 /* Pods-TestGolf WatchKit Extension.release.xcconfig */,
 			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				763F9A3BADCDBA5433E7A4316FF3721C /* Frameworks */,
-				E15C77200AF00B4E903A5A140AB5770E /* Pods */,
-				290D61E53F28EF1576DA48BDAFBE580C /* Products */,
-				A343E1D506FCA183BC69CA4DA86672C0 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		95A8F1B70A80B4B6C504D6F7A250725E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				08F64340469A71A3B7E9B5BDBDD38B52 /* libBugfenderSDKstatic.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A343E1D506FCA183BC69CA4DA86672C0 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				136A3B7B82CC0DCF8719BC3CEDE1B666 /* Pods-TestGolf */,
-				2FD35904C29878B1048AC3B1F65D6871 /* Pods-TestGolf WatchKit App */,
-				2983D8B20C076F739B862E62759E5F9D /* Pods-TestGolf WatchKit Extension */,
-				2AF09DF4F4B17D8C3F45F2177AE991BD /* Pods-TestGolfTests */,
-				517ECD75A1E2AFB60296800128656B6D /* Pods-TestGolfUITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		E15C77200AF00B4E903A5A140AB5770E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				32FF6D66E482D1B6F74FE509ED21D9A4 /* BugfenderSDK */,
-			);
-			name = Pods;
+			name = "Pods-TestGolf WatchKit Extension";
+			path = "Target Support Files/Pods-TestGolf WatchKit Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		114B938C700C61BC91A67F0826BFB368 /* Headers */ = {
+		143815F82CB2B221C692F38A6FAF1213 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371F147532F3A66C8615A809597D47C1 /* Pods-TestGolf WatchKit App-umbrella.h in Headers */,
+				551F3F6F12B79CD8B0D23F9EC15CB4BF /* Pods-TestGolfUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5C34D9817F46CEBD8CAE9FEB03C36ACA /* Headers */ = {
+		506E1EF8A319BDF36344C21C8BF6BDE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408D7A8943B498DABFDCB18683CF6336 /* Pods-TestGolfTests-umbrella.h in Headers */,
+				8F74FA474AAA104E99CAAC6CF2E153D7 /* Pods-TestGolf-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93EEC7566620FC72D5A96CCB55AD1802 /* Headers */ = {
+		5914383462F192E8E80A2ED30E5A5EED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5CE78D7F1C7FD11E935BE6AB1D36B5B /* Pods-TestGolf WatchKit Extension-umbrella.h in Headers */,
+				262EE324C0A762C601B15EF364E04FB4 /* Pods-TestGolf WatchKit App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B849C6619D5F13B997BF1BB38B7C50B1 /* Headers */ = {
+		80C96818D7F4CFEAF9B41E6939B76892 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED965E7899912A9F2653120BB4DA0587 /* BFUserFeedbackNavigationController.h in Headers */,
-				8E599AE100A9448A6921988539594C00 /* BFUserFeedbackViewController.h in Headers */,
-				EBE5F8D76CFC387DC00FF6A11E162B6A /* BugfenderSDK-umbrella.h in Headers */,
-				61CA3F425D71D1EEFAB8DEC6129EB0E9 /* BugfenderSDK.h in Headers */,
+				E38D71873D4C858F390113B02E845338 /* BFUserFeedbackNavigationController.h in Headers */,
+				45BDB60BA70380DE6AFAE53965ECDD34 /* BFUserFeedbackViewController.h in Headers */,
+				FE9FFFDAAD12C3DFE6658F0B23DA592D /* BugfenderSDK-umbrella.h in Headers */,
+				486DEC34E0E847779D3DAACB32EE312F /* BugfenderSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BED8E929C95DAA30258EB9A1AB5E6D05 /* Headers */ = {
+		8A6362B6039205A94F9B3F68BBDF3114 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EBCD2D640DBC32236134D244D71E4A6 /* Pods-TestGolf-umbrella.h in Headers */,
+				0ACCA2AFE2D776A35FBB7584BAA0BF37 /* Pods-TestGolf WatchKit Extension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED70C31AD22BEE084E3E35C21ED82B15 /* Headers */ = {
+		F0FE6F4F50E9E167D71CEC33B06CCE6F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC95472DBA3691A335A6075F9B616F46 /* Pods-TestGolfUITests-umbrella.h in Headers */,
+				B7D5C5E00C406D71015B91C61AAF1347 /* Pods-TestGolfTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1627DDFA5AD9A893CA2209203912D455 /* Pods-TestGolf */ = {
+		13F56161F2E8C3517CED72EE792AA7F0 /* Pods-TestGolf WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DD9823D29D262FBAC15979B44B15F6D /* Build configuration list for PBXNativeTarget "Pods-TestGolf" */;
+			buildConfigurationList = 6BD40B07D0ABD67ED6431EC4241D74FE /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit App" */;
 			buildPhases = (
-				61DC2D85175749C26D08F6E19F48AF13 /* Sources */,
-				9FF5293900886A6549432E5F81F9C8BE /* Frameworks */,
-				BED8E929C95DAA30258EB9A1AB5E6D05 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C160A71A394A3DA9D5FD09E620015EC9 /* PBXTargetDependency */,
-			);
-			name = "Pods-TestGolf";
-			productName = "Pods-TestGolf";
-			productReference = A012718F6CCC59E521F9E4E880C65D2D /* Pods_TestGolf.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4E63A7BC88642A617304B2F1C39FF82D /* Pods-TestGolfTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DC97F14A7A157D1C29B17D4DCEC1267C /* Build configuration list for PBXNativeTarget "Pods-TestGolfTests" */;
-			buildPhases = (
-				BA4B4856C48EC66ED361E1522B3943A7 /* Sources */,
-				14AA75C76A77B26B4449D9ABB54BE067 /* Frameworks */,
-				5C34D9817F46CEBD8CAE9FEB03C36ACA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F2BA1E80A4926080D186251522FEB7F /* PBXTargetDependency */,
-			);
-			name = "Pods-TestGolfTests";
-			productName = "Pods-TestGolfTests";
-			productReference = 27CC60E9DF30532D7CDE184942BE1A8D /* Pods_TestGolfTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		527D9983A43B82063BAD46A5B4EE1CBE /* Pods-TestGolfUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 500CBB3A1536BDF7908872FD17794AE0 /* Build configuration list for PBXNativeTarget "Pods-TestGolfUITests" */;
-			buildPhases = (
-				610111AAF1CEF5E990FC536AE5902110 /* Sources */,
-				9D602EBA8D96A77345B294C83AA4DAB9 /* Frameworks */,
-				ED70C31AD22BEE084E3E35C21ED82B15 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6588ABF081FA8FFAAC721103FB63E069 /* PBXTargetDependency */,
-			);
-			name = "Pods-TestGolfUITests";
-			productName = "Pods-TestGolfUITests";
-			productReference = 88D6CE36E01E59EE85D14B92C11859FB /* Pods_TestGolfUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6CF439B5D3083C9EC20ACF146DCA3765 /* Pods-TestGolf WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0E8E5D8656065714C37AED0EAFF55B80 /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit App" */;
-			buildPhases = (
-				068A680289F891CAB1064A1A1E83A261 /* Sources */,
-				49FE8DDCF05CC725269D36B905A0102C /* Frameworks */,
-				114B938C700C61BC91A67F0826BFB368 /* Headers */,
+				5914383462F192E8E80A2ED30E5A5EED /* Headers */,
+				FFCBF0E0F45D4F07245A17C63880351F /* Sources */,
+				3DFE6F4BB9B1E06F9CAC73BF01FB4842 /* Frameworks */,
+				DAA5D0471D491E8F9BFE5C7E80843CDA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -520,16 +449,36 @@
 			);
 			name = "Pods-TestGolf WatchKit App";
 			productName = "Pods-TestGolf WatchKit App";
-			productReference = C6F486912437EC4F748C1547AE173089 /* Pods_TestGolf_WatchKit_App.framework */;
+			productReference = DD41379122274315951C571DEB9C5419 /* Pods_TestGolf_WatchKit_App.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		79C0CBADA4AC0414A66AC8070F1186D8 /* Pods-TestGolf WatchKit Extension */ = {
+		1CD6FC2440DC5DC4DD1FC347C124EF04 /* Pods-TestGolfUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D004FCEC990E15D4E15756E353DA3ECD /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit Extension" */;
+			buildConfigurationList = 17C4E2AE5655001694166B5D76802513 /* Build configuration list for PBXNativeTarget "Pods-TestGolfUITests" */;
 			buildPhases = (
-				2D3B7AD80E65F31F8D453BAAE4A68DF0 /* Sources */,
-				F344338464A334787653829CF9348606 /* Frameworks */,
-				93EEC7566620FC72D5A96CCB55AD1802 /* Headers */,
+				143815F82CB2B221C692F38A6FAF1213 /* Headers */,
+				3AB7A6968F5BEDF7A27780D79120C99B /* Sources */,
+				7BCFDAFA0211940D96700F0C0BB1CADE /* Frameworks */,
+				C1B79FA89D74753FF326A431685F561E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0331AFF7BE2599446AB491DDEC43E3F /* PBXTargetDependency */,
+			);
+			name = "Pods-TestGolfUITests";
+			productName = "Pods-TestGolfUITests";
+			productReference = 9D42FD627C5FCD1B35F26C3B50119DC2 /* Pods_TestGolfUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9C6323AE24467B379A06340274A427C0 /* Pods-TestGolf WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F44D25BB0E29277B41A93907755893 /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit Extension" */;
+			buildPhases = (
+				8A6362B6039205A94F9B3F68BBDF3114 /* Headers */,
+				74B478D3155B829B85906FF71462390B /* Sources */,
+				D9B2BFAEAEE7535F540DD9AB4463B950 /* Frameworks */,
+				3749F4E49F33075E82D0599BE8FAE855 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -537,16 +486,36 @@
 			);
 			name = "Pods-TestGolf WatchKit Extension";
 			productName = "Pods-TestGolf WatchKit Extension";
-			productReference = 5BD309AC23B07FA27E274D969E0BA541 /* Pods_TestGolf_WatchKit_Extension.framework */;
+			productReference = 95A3FD5A82A03660053C3E573E1CFEC1 /* Pods_TestGolf_WatchKit_Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F4587F7FFAC3BBFF1066C5E07095EB0F /* BugfenderSDK */ = {
+		B824A5E6C78023403097DCAC5602A1FB /* Pods-TestGolfTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60F2E2D3178F588C53E9F5ACDFA7E0C1 /* Build configuration list for PBXNativeTarget "BugfenderSDK" */;
+			buildConfigurationList = 7F8075378EA1410120BE5B2D46B700E6 /* Build configuration list for PBXNativeTarget "Pods-TestGolfTests" */;
 			buildPhases = (
-				24FBAF32757DA162DCCA2A44F39E1F14 /* Sources */,
-				9F851BFCAAC5B96E16188DCA3B9AE058 /* Frameworks */,
-				B849C6619D5F13B997BF1BB38B7C50B1 /* Headers */,
+				F0FE6F4F50E9E167D71CEC33B06CCE6F /* Headers */,
+				F5385691ACF6A210F0A879A588A4B10F /* Sources */,
+				151BF910335C9417608DD75625DABB52 /* Frameworks */,
+				264A11EFC8B5F9A04E705FA8D0B291FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF24E934F533DD506B2C1E9EDE639FB4 /* PBXTargetDependency */,
+			);
+			name = "Pods-TestGolfTests";
+			productName = "Pods-TestGolfTests";
+			productReference = 09FE62C39CF1E71352AC6011D174C38B /* Pods_TestGolfTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D45EA6D86BF2C0DF77CAFD5B580ACD51 /* BugfenderSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF43625084425C3D55073A3B41ED09B5 /* Build configuration list for PBXNativeTarget "BugfenderSDK" */;
+			buildPhases = (
+				80C96818D7F4CFEAF9B41E6939B76892 /* Headers */,
+				48DFD157A34634A2BE61597D65BC3095 /* Sources */,
+				D9C0B22D864A952861B78B5A8820659F /* Frameworks */,
+				4341D343E5018DEF4C70DCA007B0E7D1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -554,117 +523,181 @@
 			);
 			name = BugfenderSDK;
 			productName = BugfenderSDK;
-			productReference = 0286DFB7E7B6B167DD78B8D7F8557C7D /* BugfenderSDK.framework */;
+			productReference = 0548DC9EE685813E0DC40C70EB28FA9D /* BugfenderSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E4FEE6399F1EDFBE7C5892B0D79C59AC /* Pods-TestGolf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 812D094C53FF8B1200137A87B25CBE12 /* Build configuration list for PBXNativeTarget "Pods-TestGolf" */;
+			buildPhases = (
+				506E1EF8A319BDF36344C21C8BF6BDE6 /* Headers */,
+				7D949D710AF6E8445FF1FE585285DCE8 /* Sources */,
+				C26BDA4426CFF0AD3198A51D41F345EA /* Frameworks */,
+				54205A436781350FAA399D47D8D09AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E6CC4CA0C119F1749B89726A3F89321 /* PBXTargetDependency */,
+			);
+			name = "Pods-TestGolf";
+			productName = "Pods-TestGolf";
+			productReference = E4E21F24A155110A8B4B4A53977BC625 /* Pods_TestGolf.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 290D61E53F28EF1576DA48BDAFBE580C /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 26718E5D279CC22EF8FAB985E75E77A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4587F7FFAC3BBFF1066C5E07095EB0F /* BugfenderSDK */,
-				1627DDFA5AD9A893CA2209203912D455 /* Pods-TestGolf */,
-				6CF439B5D3083C9EC20ACF146DCA3765 /* Pods-TestGolf WatchKit App */,
-				79C0CBADA4AC0414A66AC8070F1186D8 /* Pods-TestGolf WatchKit Extension */,
-				4E63A7BC88642A617304B2F1C39FF82D /* Pods-TestGolfTests */,
-				527D9983A43B82063BAD46A5B4EE1CBE /* Pods-TestGolfUITests */,
+				D45EA6D86BF2C0DF77CAFD5B580ACD51 /* BugfenderSDK */,
+				E4FEE6399F1EDFBE7C5892B0D79C59AC /* Pods-TestGolf */,
+				13F56161F2E8C3517CED72EE792AA7F0 /* Pods-TestGolf WatchKit App */,
+				9C6323AE24467B379A06340274A427C0 /* Pods-TestGolf WatchKit Extension */,
+				B824A5E6C78023403097DCAC5602A1FB /* Pods-TestGolfTests */,
+				1CD6FC2440DC5DC4DD1FC347C124EF04 /* Pods-TestGolfUITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		264A11EFC8B5F9A04E705FA8D0B291FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3749F4E49F33075E82D0599BE8FAE855 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4341D343E5018DEF4C70DCA007B0E7D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54205A436781350FAA399D47D8D09AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B79FA89D74753FF326A431685F561E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAA5D0471D491E8F9BFE5C7E80843CDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		068A680289F891CAB1064A1A1E83A261 /* Sources */ = {
+		3AB7A6968F5BEDF7A27780D79120C99B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E882ABDC50C975DED3E98DC918E15B7 /* Pods-TestGolf WatchKit App-dummy.m in Sources */,
+				3096F5BCA5FFA16132664A6C7D64226D /* Pods-TestGolfUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24FBAF32757DA162DCCA2A44F39E1F14 /* Sources */ = {
+		48DFD157A34634A2BE61597D65BC3095 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E91EB81D28CB7C3556191EC6494E49 /* Bugfender.swift in Sources */,
-				23FB1BB3483395AA68A02768CDFD8D6A /* BugfenderSDK-dummy.m in Sources */,
+				2DF1F8AE26C6241C9541113CF8F26B29 /* Bugfender.swift in Sources */,
+				5DBD2763ECF2A93B5CFAF0F23691D3EF /* BugfenderSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D3B7AD80E65F31F8D453BAAE4A68DF0 /* Sources */ = {
+		74B478D3155B829B85906FF71462390B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2D8DB3D3B704DF013D4E9A6DF77D487 /* Pods-TestGolf WatchKit Extension-dummy.m in Sources */,
+				7328FC646D6CE6B5BB745B54ADEA845D /* Pods-TestGolf WatchKit Extension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		610111AAF1CEF5E990FC536AE5902110 /* Sources */ = {
+		7D949D710AF6E8445FF1FE585285DCE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D0A39FD17E4130DFB1FA2CBB13D5B90 /* Pods-TestGolfUITests-dummy.m in Sources */,
+				CF41B20476FF72F441A121E2F8CA9366 /* Pods-TestGolf-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61DC2D85175749C26D08F6E19F48AF13 /* Sources */ = {
+		F5385691ACF6A210F0A879A588A4B10F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DD19F995B929EA7446D4EB2EA72BA86 /* Pods-TestGolf-dummy.m in Sources */,
+				1E4BAEBD8E4D90EAC0880DD9ED270738 /* Pods-TestGolfTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BA4B4856C48EC66ED361E1522B3943A7 /* Sources */ = {
+		FFCBF0E0F45D4F07245A17C63880351F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042EE5BF01D6860C0FD7E3C869C25658 /* Pods-TestGolfTests-dummy.m in Sources */,
+				431EA16A295BFC04226A4CCACDB2E5A5 /* Pods-TestGolf WatchKit App-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6588ABF081FA8FFAAC721103FB63E069 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TestGolf";
-			target = 1627DDFA5AD9A893CA2209203912D455 /* Pods-TestGolf */;
-			targetProxy = 1E62421898F03FCB9C49EA9753C764D7 /* PBXContainerItemProxy */;
-		};
-		6F2BA1E80A4926080D186251522FEB7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-TestGolf";
-			target = 1627DDFA5AD9A893CA2209203912D455 /* Pods-TestGolf */;
-			targetProxy = 074843893CEBC5B020A818E5C0D6E559 /* PBXContainerItemProxy */;
-		};
-		C160A71A394A3DA9D5FD09E620015EC9 /* PBXTargetDependency */ = {
+		8E6CC4CA0C119F1749B89726A3F89321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BugfenderSDK;
-			target = F4587F7FFAC3BBFF1066C5E07095EB0F /* BugfenderSDK */;
-			targetProxy = DCE64086E070905DAA2644D44902F17C /* PBXContainerItemProxy */;
+			target = D45EA6D86BF2C0DF77CAFD5B580ACD51 /* BugfenderSDK */;
+			targetProxy = 9095F4B5715D68D9160A9A412604DA47 /* PBXContainerItemProxy */;
+		};
+		A0331AFF7BE2599446AB491DDEC43E3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TestGolf";
+			target = E4FEE6399F1EDFBE7C5892B0D79C59AC /* Pods-TestGolf */;
+			targetProxy = D109634B2348853EA575DE5DC02ECDF8 /* PBXContainerItemProxy */;
+		};
+		FF24E934F533DD506B2C1E9EDE639FB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TestGolf";
+			target = E4FEE6399F1EDFBE7C5892B0D79C59AC /* Pods-TestGolf */;
+			targetProxy = C34E7F8D2315674D62B8E047F86B9300 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BE0427D3E1C603A6AA012B7DAC6E143 /* Release */ = {
+		0075397FD2F5048E0D3FDD689A8B7BBE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D969112A95B3AB06B848CE5A648A3F6 /* Pods-TestGolfUITests.release.xcconfig */;
+			baseConfigurationReference = 2840C9D7D9D70EEC765D9B6CF7701580 /* Pods-TestGolfUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -677,7 +710,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfUITests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfUITests/Pods-TestGolfUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -697,9 +730,41 @@
 			};
 			name = Release;
 		};
-		2B2FBD973B43A0AF9D532E3452213483 /* Debug */ = {
+		047804347E51C60474F43ED15134DFCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2F08856C725D565A97E7AAC4571E55A /* Pods-TestGolf WatchKit App.debug.xcconfig */;
+			baseConfigurationReference = 997CFB9C969055FD238170771A73964D /* BugfenderSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BugfenderSDK/BugfenderSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK.modulemap";
+				PRODUCT_MODULE_NAME = BugfenderSDK;
+				PRODUCT_NAME = BugfenderSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2C5C1AD5132BF7C0CF2646E89B19134F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E686EEB2EF3E1660AB9830186198964A /* Pods-TestGolf WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -712,7 +777,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit App/Pods-TestGolf WatchKit App-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
@@ -725,15 +790,16 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
-			name = Debug;
+			name = Release;
 		};
-		3633992933E8AB04EF821D0F89E1EB84 /* Debug */ = {
+		30FEB5BC177F72FB578E4B9CBDB10385 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61B73F1F812894EDA95A4DA391116C88 /* Pods-TestGolfUITests.debug.xcconfig */;
+			baseConfigurationReference = DCFDAF37288A2F15D4C70DECBF9FE313 /* Pods-TestGolfTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -746,143 +812,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestGolfUITests/Pods-TestGolfUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3DF53FCEBD3685637994AA36E26A1D6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F5EC0F3133D4D2F8B60F269E3A42C00 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
-			};
-			name = Debug;
-		};
-		4919D1A16D4614247BC52642DBF32CBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E3AE6D96FF0C3381FC5BF31089AE107 /* Pods-TestGolf WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
-			};
-			name = Release;
-		};
-		5501C1EF5A0B6B9E39D781023DA9D3E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF145ED42E3BED1C7341BDD0BDAB78BC /* BugfenderSDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BugfenderSDK/BugfenderSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BugfenderSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK.modulemap";
-				PRODUCT_MODULE_NAME = BugfenderSDK;
-				PRODUCT_NAME = BugfenderSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		86E79530D5E98CAE6666D9963AE36A84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C2DB43F1C1466F33F07B53167E235A3 /* Pods-TestGolfTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfTests/Pods-TestGolfTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -901,12 +831,12 @@
 			};
 			name = Debug;
 		};
-		907352BCD426F45F5F09A432A10368C9 /* Release */ = {
+		35FD4EBD4945A436ACBC2C30490FE50E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E729FF38667E967E2B82859055B19F84 /* Pods-TestGolfTests.release.xcconfig */;
+			baseConfigurationReference = 4338FA30A4C3A926DE9806722C1D6351 /* Pods-TestGolf WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -916,88 +846,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestGolfTests/Pods-TestGolfTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9FCF24AB876B4A2AC0B5B856B674667C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
-			name = Release;
+			name = Debug;
 		};
-		B8518CDB155BFEEDBDA65FB9695BAA99 /* Debug */ = {
+		481FE64F7E24250032E0E798C9856BBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60EA9884B6B20B82203E8CAFCBEACB93 /* Pods-TestGolf.debug.xcconfig */;
+			baseConfigurationReference = 6FD940F97DAFA4F49FA04DB81322AF15 /* Pods-TestGolf.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1010,7 +880,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf/Pods-TestGolf-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1023,15 +893,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C5C8D56FE83BD45CE9CD2B0C5687703D /* Debug */ = {
+		9436D441D298B798A688BB94954FD142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1063,8 +931,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1085,87 +951,83 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Debug;
 		};
-		D912A6CF27364F1A67C6833F71DA35C5 /* Debug */ = {
+		9820E84D467BBEDD79C1BD6D98E38763 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF145ED42E3BED1C7341BDD0BDAB78BC /* BugfenderSDK.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BugfenderSDK/BugfenderSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BugfenderSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK.modulemap";
-				PRODUCT_MODULE_NAME = BugfenderSDK;
-				PRODUCT_NAME = BugfenderSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DE3E51517E0B903E0F643A2DD566351A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29B4DA925D55C339956592EF3528863B /* Pods-TestGolf.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf/Pods-TestGolf.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
-		EB9801EF54142718371A695BD0BC3667 /* Release */ = {
+		9AA3FACD7983655327FF7F1834454093 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3BFF06CC894F09931ECA307987AFFBA /* Pods-TestGolf WatchKit App.release.xcconfig */;
+			baseConfigurationReference = 0F2503C2C2B2EB5166C71BC3B9D4E708 /* Pods-TestGolf WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
@@ -1178,11 +1040,79 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit App/Pods-TestGolf WatchKit App-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf WatchKit App/Pods-TestGolf WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		A93E50A074F353242E42954E8A08CB2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770D4F388ADB341C2C4A610FFD17FAFD /* Pods-TestGolfUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfUITests/Pods-TestGolfUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestGolfUITests/Pods-TestGolfUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C41C76EBE8DB466A4485533B2006E8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F18888D71632BC1E3A9B4745C2CE2677 /* Pods-TestGolf WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf WatchKit Extension/Pods-TestGolf WatchKit Extension.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1198,73 +1128,174 @@
 			};
 			name = Release;
 		};
+		DFA75BDB3CD16D6D60116504D65EA199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454FE46BB513760083D5254A99AB0D6A /* Pods-TestGolf.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolf/Pods-TestGolf-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestGolf/Pods-TestGolf.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F54EA80250BD11E004E1E31167B5FEA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 997CFB9C969055FD238170771A73964D /* BugfenderSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BugfenderSDK/BugfenderSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BugfenderSDK/BugfenderSDK.modulemap";
+				PRODUCT_MODULE_NAME = BugfenderSDK;
+				PRODUCT_NAME = BugfenderSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FFEE8FF4E7DA61C48BCCA134DE1E2E1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1D7D06B3AAA2B095FD8EB2BFE1C0F4 /* Pods-TestGolfTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestGolfTests/Pods-TestGolfTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestGolfTests/Pods-TestGolfTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E8E5D8656065714C37AED0EAFF55B80 /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit App" */ = {
+		17C4E2AE5655001694166B5D76802513 /* Build configuration list for PBXNativeTarget "Pods-TestGolfUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B2FBD973B43A0AF9D532E3452213483 /* Debug */,
-				EB9801EF54142718371A695BD0BC3667 /* Release */,
+				A93E50A074F353242E42954E8A08CB2A /* Debug */,
+				0075397FD2F5048E0D3FDD689A8B7BBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		28F44D25BB0E29277B41A93907755893 /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C5C8D56FE83BD45CE9CD2B0C5687703D /* Debug */,
-				9FCF24AB876B4A2AC0B5B856B674667C /* Release */,
+				35FD4EBD4945A436ACBC2C30490FE50E /* Debug */,
+				C41C76EBE8DB466A4485533B2006E8AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		500CBB3A1536BDF7908872FD17794AE0 /* Build configuration list for PBXNativeTarget "Pods-TestGolfUITests" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3633992933E8AB04EF821D0F89E1EB84 /* Debug */,
-				0BE0427D3E1C603A6AA012B7DAC6E143 /* Release */,
+				9436D441D298B798A688BB94954FD142 /* Debug */,
+				9820E84D467BBEDD79C1BD6D98E38763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60F2E2D3178F588C53E9F5ACDFA7E0C1 /* Build configuration list for PBXNativeTarget "BugfenderSDK" */ = {
+		6BD40B07D0ABD67ED6431EC4241D74FE /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D912A6CF27364F1A67C6833F71DA35C5 /* Debug */,
-				5501C1EF5A0B6B9E39D781023DA9D3E4 /* Release */,
+				9AA3FACD7983655327FF7F1834454093 /* Debug */,
+				2C5C1AD5132BF7C0CF2646E89B19134F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DD9823D29D262FBAC15979B44B15F6D /* Build configuration list for PBXNativeTarget "Pods-TestGolf" */ = {
+		7F8075378EA1410120BE5B2D46B700E6 /* Build configuration list for PBXNativeTarget "Pods-TestGolfTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8518CDB155BFEEDBDA65FB9695BAA99 /* Debug */,
-				DE3E51517E0B903E0F643A2DD566351A /* Release */,
+				30FEB5BC177F72FB578E4B9CBDB10385 /* Debug */,
+				FFEE8FF4E7DA61C48BCCA134DE1E2E1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D004FCEC990E15D4E15756E353DA3ECD /* Build configuration list for PBXNativeTarget "Pods-TestGolf WatchKit Extension" */ = {
+		812D094C53FF8B1200137A87B25CBE12 /* Build configuration list for PBXNativeTarget "Pods-TestGolf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3DF53FCEBD3685637994AA36E26A1D6D /* Debug */,
-				4919D1A16D4614247BC52642DBF32CBC /* Release */,
+				481FE64F7E24250032E0E798C9856BBF /* Debug */,
+				DFA75BDB3CD16D6D60116504D65EA199 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC97F14A7A157D1C29B17D4DCEC1267C /* Build configuration list for PBXNativeTarget "Pods-TestGolfTests" */ = {
+		AF43625084425C3D55073A3B41ED09B5 /* Build configuration list for PBXNativeTarget "BugfenderSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86E79530D5E98CAE6666D9963AE36A84 /* Debug */,
-				907352BCD426F45F5F09A432A10368C9 /* Release */,
+				F54EA80250BD11E004E1E31167B5FEA2 /* Debug */,
+				047804347E51C60474F43ED15134DFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

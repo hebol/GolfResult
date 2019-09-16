@@ -114,6 +114,9 @@ let PerstorpsGkData = GolfCourse("Perstorps", [], [4, 3, 4, 5, 3, 4, 4, 4, 4, 4,
 let SkyrupGkData = GolfCourse("Skyrup", [], [4, 4, 3, 5, 4, 3, 4, 4, 4, 5, 3, 4, 4, 3, 4, 4, 4, 5], [14, 4, 18, 10, 8, 6, 16, 2, 12, 7, 11, 1, 5, 13, 15, 17, 3, 9])
 let HasslegardenGkData = GolfCourse("Hässlegården", [], [5, 4, 3, 5, 4, 4, 4, 3, 4, 4, 3, 4, 5, 3, 5, 3, 4, 3], [9, 17, 11, 7, 1, 13, 3, 15, 5, 10, 18, 8, 4, 16, 2, 14, 6, 12])
 
+let OldCourseData = GolfCourse("Old Course (Schloss-Ludersburg)", [], [4,5,4,3, 4,5,4,3,4, 4,3,5,4,4,4,5,3,5], [9,7,3,17,11,1,5,13,15, 10, 14, 2, 16,8,12, 6,18,4])
+let LakesCourseData = GolfCourse("Lakes Course (Schloss-Ludersburg)", [], [4, 5, 3, 4,3,4,5,4,3, 5,4,5,4,3, 4,4,3, 5], [11,5,17,1,13,15,9,3,7,16,18,4,6,12,2,8,10,14])
+
 let GolfCourses = [SaroPark54Data, Saro62Data, Saro70Data, GullbringaNyaData, ValldaGkData, SkepparlovsGkData, PerstorpsGkData, SkyrupGkData, HasslegardenGkData];
 var SelectedCourse = SaroPark54Data;
 
